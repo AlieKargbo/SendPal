@@ -3,16 +3,17 @@ import GreetingContainer from "./greetings/greeting_container"
 import LoginFormContainer from "./session_form/login_form_container"
 import SignupFormContainer from "./session_form/signup_form_container"
 import { Route } from "react-router-dom";
+import { AuthRoute } from ".././util/route_util"
 
-// NB: this file is complete - you do not to write/edit anything!
 const App = () => (
     <div>
         <header>
-            <h1>$$SENDPAL$$</h1>
+            <h1>💲ENDPAL</h1>
+            <h2>🐯  🐯  🐯  🐯  🐯  🐯</h2>
             <Route exact path="/" component={GreetingContainer}/>
         </header>
-        <Route path="/login" component={LoginFormContainer}/>
-        <Route path="/signup" component={SignupFormContainer}/>
+        <AuthRoute path="/login" component={LoginFormContainer}/>
+        <AuthRoute path="/signup" component={SignupFormContainer}/>
     </div>
 );
 
