@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ @import './_reset.css';
+ 
+.session-container {
+    background-color: #0070ba;
+    margin: 120px auto 0;
+    padding: 42px 42px 36px;
+    border: 1px solid #eaeced;
+}

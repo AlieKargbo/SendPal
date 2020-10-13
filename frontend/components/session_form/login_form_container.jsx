@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import SessionForm from "./session_form";
-import { login } from "../../actions/session_actions";
+import { login, clearErrors } from "../../actions/session_actions";
 
 const mapSTP = (state, ownProps) => {
     return ({
@@ -11,7 +11,8 @@ const mapSTP = (state, ownProps) => {
 
 const mapDTP = (dispatch) => {
     return ({
-        processForm: (form) => dispatch(login(form))
+        processForm: (form) => dispatch(login(form)),
+        clearErrors: () => dispatch(clearErrors())
     })
 
 }
