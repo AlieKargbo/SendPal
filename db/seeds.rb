@@ -7,6 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.delete_all
 
+me = User.create!(
+  email: 'noblest_cheetah@noblecheetah.io',
+  password: 'password'
+)
+
 u1 = User.create!(
   email: 'jackpack@noblecheetah.io',
   password: 'password'
