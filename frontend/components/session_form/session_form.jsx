@@ -51,31 +51,40 @@ class SessionForm extends React.Component{
         })
         
         return (
-        <div className="session-form">
-            <header>💲ENDPAL</header>
-            <form onSubmit={this.handleSubmit}>
-                {otherButton}
-                <h1>{header}</h1>
-                <label>Email:
-                    <input
-                        type="text"
-                        value={this.state.email}
-                        onChange={this.update('email')}
+            <div className="form-main">
+                <div className="session-container">
+                    <header className="form-header">
+                        <img id="form-logo"
+                            src="/assets/sendpal.jpg"
                         />
-                </label>
-                <label>Password:
-                    <input
-                        type="password"
-                        onChange={this.update('password')}
-                    />
-                </label>
-                {errors}
-                <button>{this.props.formType}</button>
-            </form>
-        </div>
+                    </header>
+                    <form onSubmit={this.handleSubmit}>
+                        <label>Email:
+                            <input
+                                type="text"
+                                value={this.state.email}
+                                onChange={this.update('email')}
+                                />
+                        </label>
+                        <br/>
+                        <label>Password:
+                            <input
+                                type="password"
+                                onChange={this.update('password')}
+                                />
+                        </label>
+                        {errors}
+                        <br/><br/>
+                        <button>{this.props.formType}</button>
+                        <br/>
+                        {header}
+                        <br/>
+                        {otherButton}
+                    </form>
+                </div>
+            </div>
         )
     }
-
 }
 
 export default SessionForm;
