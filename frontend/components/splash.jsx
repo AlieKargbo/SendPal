@@ -32,12 +32,12 @@ class Splash extends React.Component{
                         <div className='demo'>
                             <p className='main-message'>Send Money Today!</p>
                             <Link className='demo-link' to="/">
-                                <button className='demo-button'>Sign Up Now</button>
+                                <button className='demo-button'>Demo</button>
                             </Link>
                         </div>
                     </div>
                 </div>
-                <br/>
+
             </div>
         </>
         )            
