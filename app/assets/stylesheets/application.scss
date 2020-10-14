@@ -15,41 +15,9 @@
  */
 
  @import './_reset.css';
- 
-/* body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #2c2e2f;
-}
+ @import './splash.scss';
+/* background-color: #0070ba; */
 
-.session-container {
-    justify-content: center;
-    align-items: center;
-    background-color: #0070ba;
-    background-color: white;
-    margin: 120px auto 0;
-    padding: 42px 42px 36px;
-    border: 5px solid grey;
-    width: 50%;
-}
-
-.form-header {
-    background-color: yellowgreen;
-}
-
-.form-header > #form-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#form-logo {
-    background-color:#0070ba;
-    position: absolute;
-    z-index: 1;
-    height: 55px;
-    width: 130px;
-    display: block;
-} */
 .sendpal-logo-long{
     display: flex;
     margin: auto;
@@ -65,7 +33,7 @@
 .contentContainer {
    position: relative;
    margin: 130px auto 0;
-   padding: 30px 10% 50px;
+   padding: 30px 10% 200px;
    -webkit-border-radius: 5px;
    -moz-border-radius: 5px;
    -khtml-border-radius: 5px;
