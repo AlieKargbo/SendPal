@@ -1,39 +1,212 @@
-.homepage {
-    // background-color: #2059a2;
+.main {
+    // background-image: linear-gradient(#032c94, #009cde);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    // background-image: linear-gradient(#032c94, #009cde);
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #ededed;
+    margin: 0;
+    padding: 0;
+    line-height: 100px;
+    // position: relative;
+    width: 100vw;
+    z-index: 1;
+}
+.header-logo-a img {
+    width: 25px;
+    height: 25px;
+    z-index: 1;
+}
+
+
+
+.header-container {
     background-image: linear-gradient(#032c94, #009cde);
+    width: 100vw;
+    justify-content: space-between;
     display: flex;
 }
 
 .homepage-img {
-    width: 100%;
+    width: 100vw;
+    z-index: -1;
 }
 
-.homepage-text {
-    font-family: PayPal Sans Big Light, Helvetica Neue,Arial,sans-serif;
-    font-size: small;
-    color: white;
+.header-logo a {
+    width: 100px;
+    height: 40px;
 }
 
-.homepage-text > h1 {
-    font-size: 45px;
-}
-
-.btnSplash {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.homepage-text .btnSplash button {
+.login-button button{
     margin-top: 10px;
-    background-color: transparent;
     color: white;
-    width: 85px;
-    height: 38px;
+    background-color: transparent;
+    width: 80px;
+    height: 35px;
     cursor: pointer;
-    outline: none;
-    border: 2px solid #9da3a6;
-    border-radius: 20px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    border: 2px solid white;
+    border-radius: 24px;
 }
+
+.login-button:hover {
+    opacity: .8;
+    color: #fff;
+    text-decoration: none;
+    padding-right: 28px;
+    // transition: background-color .4s ease-out;
+}
+
+
+// .content {
+//     display: flex;
+//     padding: 25px 2rem 0 2rem;
+//     justify-content: center;
+//     box-sizing: border-box;
+//     /* text-align: center; */
+//     /* background-color: #3D95CE; */
+//     height: 675px;
+//     width: 100%;
+// }
+
+// .content-container {
+//     margin: 0 auto;
+//     display: flex;
+//     align-items: center;
+//     /* width: 100%; */
+// }
+    
+// .content-image-container {
+//     width: 556px;
+//     height: 650px;
+// }
+
+// .content-image {
+//     width: 556px;
+//     height: 650px;
+// }
+    
+// .image {
+//     width: 30%;
+// }
+
+// .demo-link {
+//     margin: 1rem;
+//     padding: 1rem;
+// }
+
+// .demo {
+//     padding: 1rem;
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+//     width: 450px;
+//     font-size: 50px;
+//     font-weight: lighter;
+// }
+
+// .demo-button {
+//     width: 300px;
+//     border-radius: 4px;
+//     padding-left: 25px;
+//     padding-right: 25px;
+//     padding-top: 15px;
+//     padding-bottom: 15px;
+//     font-size: 20px;
+//     background-color: #3D95CE;
+//     color: white;
+//     font-weight: bold;
+// }
+
+// .demo-button:hover {
+//     opacity: .5;
+//     cursor: pointer;
+// }
+
+// .fab {
+//     font-size: 30px;
+//     color: #666;
+//     margin: 30px;
+//     padding-right: 10px;
+// }
+
+// .fab:hover {
+//     cursor: pointer;
+//     transition: 0.5s;
+//     text-shadow: 1px 1px 10px #3D95CE;
+// }
+
+// .main-message {
+//     color: black;
+//     margin: 1rem;
+//     padding: 1rem;
+//     font-family: "HelveticaNeue-Light"
+// }
+
+// .footer {
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+// }
+
+// .icons-container {
+//     margin: auto;
+//     display: flex;
+//     justify-content: flex-end;
+//     padding: 10px;
+// }
+
+// .icons {
+//     width: 4rem;
+// }
+
+// .icons-wrapper {
+//     border-top: 1px solid #ededed;
+//     width: 100%;
+// }
+// .homepage {
+//     background-image: linear-gradient(#032c94, #009cde);
+//     display: flex;
+// }
+
+// .homepage-img {
+//     width: 100%;
+// }
+
+// .homepage-text {
+//     font-family: PayPal Sans Big Light, Helvetica Neue,Arial,sans-serif;
+//     font-size: small;
+//     color: white;
+// }
+
+// .homepage-text > h1 {
+//     font-size: 45px;
+// }
+
+// .btnSplash {
+//     display: flex;
+//     justify-content: flex-end;
+// }
+
+// .homepage-text .btnSplash button {
+//     margin-top: 10px;
+//     background-color: transparent;
+//     color: white;
+//     width: 85px;
+//     height: 38px;
+//     cursor: pointer;
+//     outline: none;
+//     border: 2px solid #9da3a6;
+//     border-radius: 20px;
+//     text-align: center;
+//     align-items: center;
+//     justify-content: center;
+// }
