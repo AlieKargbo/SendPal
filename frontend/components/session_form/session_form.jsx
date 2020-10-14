@@ -98,7 +98,7 @@ class SessionForm extends React.Component{
                                 </div>
                             </form>
 
-                            <Link class="button secondary" id="createAccount">{otherButton}</Link>
+                            <Link class="button secondary">{otherButton}</Link>
                         </div>
                     </div>
                 </section>
