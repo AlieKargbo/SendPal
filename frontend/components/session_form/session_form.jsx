@@ -39,52 +39,73 @@ class SessionForm extends React.Component{
         
         const otherButton = (this.props.formType === "login") ? (
             <Link to="/signup" >
-                <button>Signup</button>
+                Sign Up
             </Link >
         ) : (
             <Link to="/login" >
-                <button>Login</button>
+                Log In
             </Link >    
         );
+
+        const toggleText = (this.props.formType === "login") ? (
+            <text>
+                Log In
+            </text>
+        ) : (
+            <text>
+                Sign Up
+            </text >
+        );
+
         let errors = this.props.errors.map((error, idx) => {
             return <li key={idx}>{error}</li>
         })
         
         return (
             <div className="form-main">
-                <div className="session-container">
-                    <header className="form-header">
-                        <img id="form-logo"
-                            src="/assets/sendpal.jpg"
-                        />
-                    </header>
-                    <form onSubmit={this.handleSubmit}>
-                        <label>Email:
-                            <input
-                                type="text"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                                />
-                        </label>
-                        <br/>
-                        <label>Password:
-                            <input
-                                type="password"
-                                onChange={this.update('password')}
-                                />
-                        </label>
-                        {errors}
-                        <br/><br/>
-                        <button>{this.props.formType}</button>
-                        <br/>
-                        {header}
-                        <br/>
-                        {otherButton}
-                    </form>
-                </div>
-            </div>
-        )
-    }
-}
+                <section className="form-container">
+                    <div className="form-header">
+                        <div className="contentContainer">
+                            <header>
+                                <p className="form-header"></p>
+                                <img className="sendpal-logo-long" src="/assets/sendpal.jpg" />
+                            </header>
+                            <form onSubmit={this.handleSubmit}>
+                                <div className="clearfix">
+                                    <div className="formInput">
+                                        <div className="formField">
+                                            <label className="fieldLabel">Email</label>
+                                            <input type="email" 
+                                                value={this.state.email}
+                                                onChange={this.update('email')} 
+                                                placeholder="Email" 
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="formInput">
+                                        <div className="formField">
+                                            <label className="fieldLabel">Password</label>
+                                            <input type="password" 
+                                                onChange={this.update('password')}
+                                                placeholder="Password"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="actionsSpaced">
+                                    <button className="button actionContinue"
+                                        value={this.props.formType}>{toggleText}
+                                    </button>
+                                </div>
+                            </form>
 
-export default SessionForm;
+                            <Link class="button secondary" id="createAccount">{otherButton}</Link>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            )
+        }
+    }
+
+
+    export default SessionForm;
