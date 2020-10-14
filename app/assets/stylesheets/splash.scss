@@ -1,0 +1,39 @@
+.homepage {
+    // background-color: #2059a2;
+    background-image: linear-gradient(#032c94, #009cde);
+    display: flex;
+}
+
+.homepage-img {
+    width: 100%;
+}
+
+.homepage-text {
+    font-family: PayPal Sans Big Light, Helvetica Neue,Arial,sans-serif;
+    font-size: small;
+    color: white;
+}
+
+.homepage-text > h1 {
+    font-size: 45px;
+}
+
+.btnSplash {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.homepage-text .btnSplash button {
+    margin-top: 10px;
+    background-color: transparent;
+    color: white;
+    width: 85px;
+    height: 38px;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid #9da3a6;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
