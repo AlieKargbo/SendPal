@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Greeting from "./greeting";
+import Dashboard from "./dashboard";
 import { login, logout, signup } from "../../actions/session_actions";
 
 const mapSTP = (state) => {
@@ -17,4 +17,4 @@ const mapDTP = (dispatch) => {
 
 }
 
-export default connect(mapSTP, mapDTP)(Greeting)
+export default connect(mapSTP, mapDTP)(Dashboard)

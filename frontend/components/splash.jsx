@@ -12,7 +12,7 @@ class Splash extends React.Component{
                     <div className='header-container'>
                         <div className='header-logo'>
                             <Link className='header-logo-a' to="/">
-                                <img className='senpal-logo' src="/assets/logo.png" alt=""/>
+                                    <img className='senpal-logo' src={window.sendpalLogo} alt=""/>
                             </Link>
                         </div>
                         <div className='login-button'>
@@ -26,7 +26,7 @@ class Splash extends React.Component{
                 <div className='content'>
                     <div className='content-container'>
                         <div className='content-image-container'>
-                            <img className="homepage-img" src="https://www.paypalobjects.com/marketing/ps/us/MORS_Home_Page_Placement_US_1600x530_V2.png" alt="" />
+                                <img className="homepage-img" src={window.sendpalBanner} alt="" />
                         </div>
                         <div className='signup'>
                             <p className='main-message'>Send Money Today!</p>
@@ -48,19 +48,3 @@ class Splash extends React.Component{
 }
 
 export default Splash;
-
-        // <div className="homepage">
-        //     <div className="homepage-text">
-        //         <h1>SendPal Splash Page</h1>
-        //         <div className="btnSplash">
-        //             <Link to={`/login`}>
-        //                 <button>Login</button>
-        //             </Link>
-        //             <Link to={`/signup`}>
-        //                 <button>Sign Up</button>
-        //             </Link>
-        //         </div>
-        //         <img className="homepage-img" src="https://www.paypalobjects.com/marketing/ps/us/MORS_Home_Page_Placement_US_1600x530_V2.png" alt=""/>
-        //         {/* <img src="https://www.paypalobjects.com/marketing/web/shared/mobile-apps/paypal-app/xoom.png" alt=""/> */}
-        //     </div>
-        // </div>

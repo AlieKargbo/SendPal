@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Redirect } from 'react-router-dom'
 
-class Greeting extends React.Component {
+class Dashboard extends React.Component {
     constructor(props){
         super(props);
         this.handleClick = this.handleClick.bind(this)
@@ -18,7 +18,7 @@ class Greeting extends React.Component {
         if (this.props.user) {
             return (
                 <>
-                    <h2>Welcome to SendPal,  {this.props.user.email}!</h2>
+                    <h2>Welcome to SendPal!</h2>
                     <button onClick={this.handleClick}>Logout</button>
                 </>
             )
@@ -37,4 +37,4 @@ class Greeting extends React.Component {
     }
 }
 
-export default Greeting
+export default Dashboard;
