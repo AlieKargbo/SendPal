@@ -112,3 +112,27 @@ a.button, a.button:link {
    // font-weight: bold;
 }
 
+.orSeparator::after, .orSeparator::before {
+  display: inline-block;
+  width:43%;
+  border-top: 1px solid #333333;
+  content: "";
+  position: absolute;
+  top: .7em;
+}
+
+.orSeparator::after {
+   right: 0;
+}
+.orSeparator::before {
+   left: 0;
+}
+
+.orSeparator {
+  margin: 1em auto;
+  position: relative;
+  text-align: center;
+  font-family: Lucida Grande;
+  font-size: 16px;
+  font-weight: 400;
+}

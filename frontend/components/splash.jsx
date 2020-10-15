@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Splash extends React.Component{
+
+
     render(){
         return(
         <>
@@ -17,9 +19,6 @@ class Splash extends React.Component{
                             <Link to={`/login`}>
                               <button>Log In</button>
                             </Link>
-                            <Link to={`/signup`}>
-                              <button>Sign Up</button>
-                            </Link>
                         </div>
                     </div>
                 </div>
@@ -29,10 +28,14 @@ class Splash extends React.Component{
                         <div className='content-image-container'>
                             <img className="homepage-img" src="https://www.paypalobjects.com/marketing/ps/us/MORS_Home_Page_Placement_US_1600x530_V2.png" alt="" />
                         </div>
-                        <div className='demo'>
+                        <div className='signup'>
                             <p className='main-message'>Send Money Today!</p>
-                            <Link className='demo-link' to="/">
-                                <button className='demo-button'>Demo</button>
+                            {/* <Link to={`/signup`}>
+                              <button>Sign Up</button>
+                            </Link> */}
+
+                            <Link className='signup-link' to="/signup">
+                                <button className='signup-button'>Sign Up</button>
                             </Link>
                         </div>
                     </div>

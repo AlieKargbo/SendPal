@@ -12,7 +12,8 @@ const mapSTP = (state, ownProps) => {
 const mapDTP = (dispatch) => {
     return ({
         processForm: (form) => dispatch(login(form)),
-        clearErrors: () => dispatch(clearErrors())
+        clearErrors: () => dispatch(clearErrors()),
+        demoLogin: (user) => dispatch(login(user))
     })
 
 }

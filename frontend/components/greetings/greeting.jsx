@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Redirect } from 'react-router-dom'
 
 class Greeting extends React.Component {
     constructor(props){
@@ -9,13 +10,15 @@ class Greeting extends React.Component {
 
     handleClick() {
         this.props.logout()
+            .then(() => this.props.history.push("/login"))
     }
 
     render() {
+        // ?<Redirect to="/myaccount" /> 
         if (this.props.user) {
             return (
                 <>
-                    <h2>Welcome to SendPal{this.props.user.email}!</h2>
+                    <h2>Welcome to SendPal,  {this.props.user.email}!</h2>
                     <button onClick={this.handleClick}>Logout</button>
                 </>
             )
