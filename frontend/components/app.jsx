@@ -7,12 +7,8 @@ import { AuthRoute, ProtectedRoute } from ".././util/route_util"
 import Splash from "./splash"
 import FooterLinks from "./footer"
 
-
 const App = () => (
     <div>
-        {/* <header>
-
-        </header> */}
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer}/>
             <AuthRoute exact path="/signup" component={SignupFormContainer}/>
