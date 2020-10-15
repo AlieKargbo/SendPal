@@ -105,7 +105,7 @@ class SessionForm extends React.Component{
                         <div className="contentContainer">
                             <header>
                                 <p className="form-header"></p>
-                                <img className="sendpal-logo-long" src={window.sendpalLogo} />
+                                <img className="sendpal-logo-long" src={window.sendpal} />
                             </header>
                             <form onSubmit={this.handleSubmit}>
                                 <div className="clearfix">
