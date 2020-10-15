@@ -22,18 +22,7 @@ class Dashboard extends React.Component {
                     <button onClick={this.handleClick}>Logout</button>
                 </>
             )
-        } else {
-            return (
-                <>
-                    <Link to={`/signup`}>
-                        <button>Sign Up</button>
-                    </Link>
-                    <Link to={`/login`}>
-                        <button>Login</button>
-                    </Link>
-                </>
-            )
-        }
+        } 
     }
 }
 

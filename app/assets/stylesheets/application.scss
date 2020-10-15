@@ -19,6 +19,13 @@
  @import url(//db.onlinewebfonts.com/c/0930cc324c97c2d3be7b1a09e76fdaa2?family=PayPal+Sans+Big+Light);
 /* background-color: #0070ba; */
 
+body {
+  color: black;
+  font-family: PayPal Sans Big Light, Helvetica Neue,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
 .sendpal-logo-long{
     display: flex;
     margin: auto;
