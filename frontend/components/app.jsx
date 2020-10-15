@@ -6,9 +6,13 @@ import { Route, Switch } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from ".././util/route_util"
 import Splash from "./splash"
 import FooterLinks from "./footer"
+import NavBar from "./navbar"
 
 const App = () => (
     <div>
+        {/* <header>
+            <NavBar/>
+        </header> */}
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer}/>
             <AuthRoute exact path="/signup" component={SignupFormContainer}/>

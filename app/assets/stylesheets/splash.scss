@@ -118,13 +118,6 @@
 }
 
 
-// .demo-link {
-//     z-index: 2;
-//     margin: 10px;
-//     padding: 10px;
-// }
-
-
 .signup-button {
     width: 400px;
     margin-top: 10px;
@@ -142,4 +135,6 @@
     cursor: pointer;
 }
 
-
+.bTnlogin:focus, .signup-button:focus {
+    outline:none;
+}

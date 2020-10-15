@@ -1,0 +1,113 @@
+body {
+  color: #fff;
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  font-family: PayPal Sans Big Light, Helvetica Neue,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.nav {
+  position: absolute;
+  background: rgba(0, 0, 0, .2);
+  width: 100vw;
+  height: 100px;
+  color: #fff;
+}
+
+.nav-logo {
+  position: relative;
+  display: inline-block;
+  left: 75px;
+  top: -7px;
+  width: 150px;
+  z-index: 3;
+}
+
+// .nav-logo img {
+//   width: 125px;
+//   height: 32px;
+//   padding: 7px 7px;
+//   border: 1px solid transparent;
+//   &:active {
+//     border: 1px solid rgba(255, 255, 255, .6);
+//     border-radius: 5px;
+//     outline: none;
+//     box-shadow: 0 0 2px #fff;
+//   }
+// }
+
+.nav-links {
+  position: relative;
+  top: -20px;
+  padding: 0px 40px;
+  display: block;
+  margin: auto;
+}
+
+.nav-link-header {
+  color: #fff;
+  position: relative;
+  float: left;
+  top: 12px;
+  left: 175px;
+  padding: 17px 17px;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 3px solid transparent;
+  z-index: 2;
+  &:hover {
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.nav-buttons {
+//   display: inline-block;
+  position: relative;
+  top: -30px;
+  left: 150px;
+  width: 200px;
+  margin: auto;
+  padding: 30px 0px;
+}
+
+.nav-button {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  padding: 10px 19px;
+  font-weight: bold;
+  font-size: 1;
+  text-decoration: none;
+  &:active {
+    text-decoration: underline;
+  }
+  &:focus{
+    outline: 0;
+  }
+}
+
+#login {
+  color: #fff;
+  margin-right: 5px;
+  background-color: transparent;
+}
+
+#signup {
+  background-color: #fff;
+}
+
+.nav-bar {
+  position: absolute;
+  top: 64px;
+  left: 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+  width: 1230px;
+  margin: 0;
+}

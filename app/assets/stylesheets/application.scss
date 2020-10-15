@@ -133,6 +133,27 @@ a.button, a.button:link {
   position: relative;
   text-align: center;
   font-family: Lucida Grande;
+  color: black;
   font-size: 16px;
   font-weight: 400;
+}
+
+.bTndemo {
+
+   align-items: center;
+   margin-top: 10px;
+   color: white;
+   background-color: rgb(4, 152, 4);
+   width: 120px;
+   height: 35px;
+   cursor: pointer;
+   border: 2px solid E1E7EB;
+   color: black;
+   border-radius: 24px;
+   font-family: PayPal Sans Big Light, Helvetica Neue,Arial,sans-serif;
+   font-weight: bold;
+}
+
+.bTndemo:focus {
+    outline:none;
 }

@@ -17,7 +17,7 @@ class Splash extends React.Component{
                         </div>
                         <div className='login-button'>
                             <Link to={`/login`}>
-                              <button>Log In</button>
+                                    <button className='bTnlogin'> Log In</button>
                             </Link>
                         </div>
                     </div>

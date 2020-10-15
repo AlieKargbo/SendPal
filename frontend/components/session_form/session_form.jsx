@@ -145,7 +145,8 @@ class SessionForm extends React.Component{
                             </form>
 
                             <Link className="button secondary">{otherButton}</Link>
-                            <Link onClick={this.demoLogin}>Demo</Link>
+                            <br/>
+                            <button className="bTndemo" onClick={this.demoLogin}>Demo</button>
                         </div>
                     </div>
                 </section>
