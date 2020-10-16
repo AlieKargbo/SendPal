@@ -10,6 +10,7 @@ class SessionForm extends React.Component{
             password: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this)
     }
 
     componentWillUnmount(){
@@ -20,7 +21,7 @@ class SessionForm extends React.Component{
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
-            .then(() => this.props.history.push("/"))
+            .then(() => this.props.history.push("/myaccount"))
 
         this.setState({
             email: "",
@@ -33,7 +34,43 @@ class SessionForm extends React.Component{
             this.setState({ [field]: e.target.value })
         }
     }
- 
+
+
+    // demo signin credit to ***** aA SF Dec. 2019
+    demoLogin(e) {
+        e.preventDefault()
+        const demo = { email: "demo_user@aa.io", password: "password" }
+        const speed = 100;
+        if (this.state.email !== demo.email) {
+            const inputemail = setInterval(() => {
+                if (this.state.email !== demo.email) {
+                    const temp = demo.email.slice(0, this.state.email.length + 1);
+                    this.setState({ email: temp })
+                } else {
+                    clearInterval(inputemail);
+                    animatePW();
+                }
+            }, speed)
+        }
+        const animatePW = () => {
+            if (this.state.password !== demo.password) {
+                const inputPassword = setInterval(() => {
+                    if (this.state.password !== demo.password) {
+                        const temp = demo.password.slice(0, this.state.password.length + 1);
+                        this.setState({ password: temp });
+                    } else {
+                        clearInterval(inputPassword);
+                        this.props.demoLogin(demo).then(
+                            () => {
+                                this.props.history.push("/myaccount")
+                            })
+                    }
+                }, speed);
+            }
+        }
+    }
+
+
     render(){
         const header = (this.props.formType === "login") ? "Already a Member? Log In." : "Don't have an account? Sign Up Today!"
         
@@ -48,17 +85,17 @@ class SessionForm extends React.Component{
         );
 
         const toggleText = (this.props.formType === "login") ? (
-            <text>
+            <label>
                 Log In
-            </text>
+            </label>
         ) : (
-            <text>
+            <label>
                 Sign Up
-            </text >
+            </label >
         );
 
         let errors = this.props.errors.map((error, idx) => {
-            return <li key={idx}>{error}</li>
+            return <ul key={idx}>{error}</ul>
         })
         
         return (
@@ -68,7 +105,7 @@ class SessionForm extends React.Component{
                         <div className="contentContainer">
                             <header>
                                 <p className="form-header"></p>
-                                <img className="sendpal-logo-long" src="/assets/sendpal.jpg" />
+                                <Link to="/"><img className="sendpal-logo-long" src={window.sendpal} /></Link>
                             </header>
                             <form onSubmit={this.handleSubmit}>
                                 <div className="clearfix">
@@ -82,6 +119,7 @@ class SessionForm extends React.Component{
                                             />
                                         </div>
                                     </div>
+
                                     <div className="formInput">
                                         <div className="formField">
                                             <label className="fieldLabel">Password</label>
@@ -91,14 +129,26 @@ class SessionForm extends React.Component{
                                         </div>
                                     </div>
                                 </div>
+
+                                
                                 <div className="actionsSpaced">
                                     <button className="button actionContinue"
                                         value={this.props.formType}>{toggleText}
                                     </button>
                                 </div>
+
+                                <div className="orSeparator">
+                                    <span>or</span>
+                                </div>
+
                             </form>
 
-                            <Link class="button secondary">{otherButton}</Link>
+                            <button className="button secondary">{otherButton}</button>
+                            <br/>
+                            <button className="bTndemo" onClick={this.demoLogin}>Demo</button>
+                            <div className="errors">
+                                {errors}
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     background: #fff;
-    border-bottom: 1px solid #ededed;
+    // border-bottom: 1px solid #ededed;
     margin: 0;
     padding: 0;
     line-height: 100px;
@@ -22,24 +22,22 @@
     z-index: 1;
 }
 .header-logo-a img {
-    width: 25px;
-    height: 25px;
+    
+    padding-top: 20px;
+    width: 50px;
+    height: 50px;
+    padding-left: 75px;
     z-index: 1;
 }
 
-
-
 .header-container {
-    background-image: linear-gradient(#032c94, #009cde);
+    padding-right: 75px;
+    background: linear-gradient(#032c94, #009cde);
     width: 100vw;
     justify-content: space-between;
     display: flex;
 }
 
-.homepage-img {
-    width: 100vw;
-    z-index: -1;
-}
 
 .header-logo a {
     width: 100px;
@@ -48,12 +46,12 @@
 
 .login-button button{
     margin-top: 10px;
-    color: white;
-    background-color: transparent;
+    color: black;
+    background-color: white;
     width: 80px;
     height: 35px;
     cursor: pointer;
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 24px;
 }
 
@@ -61,152 +59,111 @@
     opacity: .8;
     color: #fff;
     text-decoration: none;
-    padding-right: 28px;
-    // transition: background-color .4s ease-out;
 }
 
 
-// .content {
-//     display: flex;
-//     padding: 25px 2rem 0 2rem;
-//     justify-content: center;
-//     box-sizing: border-box;
-//     /* text-align: center; */
-//     /* background-color: #3D95CE; */
-//     height: 675px;
-//     width: 100%;
-// }
+.content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 662px;
+    width: 100%;
+    // padding: 25px 0 0 0;
+    // box-sizing: border-box;
+    // background-color: green;
+}
 
 // .content-container {
 //     margin: 0 auto;
 //     display: flex;
 //     align-items: center;
-//     /* width: 100%; */
 // }
+        
+.homepage-img {
+    // height: 100vw;
+    background: image-url("sendpal-banner.jpg");
+    background-repeat: no-repeat;
+    position: relative;
+    // background-color: royalblue;      
+    width: 100vw;
+    height: 100vh;
+
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+}
+.signup {
+    display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    // align-items: center;
     
-// .content-image-container {
-//     width: 556px;
-//     height: 650px;
-// }
+    font-size: 60px;
+    font-weight: lighter;
+    font-family: PayPal Sans Big Light, Helvetica Neue,Arial,sans-serif;;
+}
 
-// .content-image {
-//     width: 556px;
-//     height: 650px;
-// }
-    
-// .image {
-//     width: 30%;
-// }
+.main-message {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    width: 100vw;
+    top: 300px;
+    left: -4px;
+    position: absolute;
+    color: ghostwhite;
+    margin: auto 0;
+    z-index: 3;
+    font-weight: bolder;
+}
 
-// .demo-link {
-//     margin: 1rem;
-//     padding: 1rem;
-// }
+.sub-message {
+    display: flex;
+    position: relative;
+    top: 48px;
+    left: 663px;
+}
 
-// .demo {
-//     padding: 1rem;
-//     display: flex;
-//     justify-content: center;
-//     flex-direction: column;
-//     width: 450px;
-//     font-size: 50px;
-//     font-weight: lighter;
-// }
+.signup-button {
+    position: relative;
+    top: 115px;
+    right: 430px;
+    left: 0px;
+    margin-top: 10px;
+    font-size: 15.5px;
+    font-weight: 525;
+    color: ghostwhite;
+    background-color: #14b1b6;
+    width: 320px;
+    height: 48px;
+    cursor: pointer;
+    border: .5px solid #00b1b7;
+    border-radius: 24px;
+    z-index: 5;
+}
 
-// .demo-button {
-//     width: 300px;
-//     border-radius: 4px;
-//     padding-left: 25px;
-//     padding-right: 25px;
-//     padding-top: 15px;
-//     padding-bottom: 15px;
-//     font-size: 20px;
-//     background-color: #3D95CE;
-//     color: white;
-//     font-weight: bold;
-// }
+.signup-button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
 
-// .demo-button:hover {
-//     opacity: .5;
-//     cursor: pointer;
-// }
+.bTnlogin:focus, .signup-button:focus {
+    outline:none;
+}
 
-// .fab {
-//     font-size: 30px;
-//     color: #666;
-//     margin: 30px;
-//     padding-right: 10px;
-// }
+.covid {
+    position: absolute;
+    width: 100vw;
+    height: 131px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 646px;
+    background-color: #fff2dc;
+    border: none;
+}
 
-// .fab:hover {
-//     cursor: pointer;
-//     transition: 0.5s;
-//     text-shadow: 1px 1px 10px #3D95CE;
-// }
-
-// .main-message {
-//     color: black;
-//     margin: 1rem;
-//     padding: 1rem;
-//     font-family: "HelveticaNeue-Light"
-// }
-
-// .footer {
-//     width: 100%;
-//     display: flex;
-//     justify-content: center;
-// }
-
-// .icons-container {
-//     margin: auto;
-//     display: flex;
-//     justify-content: flex-end;
-//     padding: 10px;
-// }
-
-// .icons {
-//     width: 4rem;
-// }
-
-// .icons-wrapper {
-//     border-top: 1px solid #ededed;
-//     width: 100%;
-// }
-// .homepage {
-//     background-image: linear-gradient(#032c94, #009cde);
-//     display: flex;
-// }
-
-// .homepage-img {
-//     width: 100%;
-// }
-
-// .homepage-text {
-//     font-family: PayPal Sans Big Light, Helvetica Neue,Arial,sans-serif;
-//     font-size: small;
-//     color: white;
-// }
-
-// .homepage-text > h1 {
-//     font-size: 45px;
-// }
-
-// .btnSplash {
-//     display: flex;
-//     justify-content: flex-end;
-// }
-
-// .homepage-text .btnSplash button {
-//     margin-top: 10px;
-//     background-color: transparent;
-//     color: white;
-//     width: 85px;
-//     height: 38px;
-//     cursor: pointer;
-//     outline: none;
-//     border: 2px solid #9da3a6;
-//     border-radius: 20px;
-//     text-align: center;
-//     align-items: center;
-//     justify-content: center;
-// }
+.covid-message {
+    font-size: 20px;
+}

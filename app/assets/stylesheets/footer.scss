@@ -1,0 +1,21 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.icons-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.icons-wrapper {
+    border-top: 1px solid #ededed;
+    width: 100%;
+}
+
+.icon {
+    padding: 30px 10px 0 10px;
+}
