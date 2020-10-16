@@ -143,7 +143,7 @@ class SessionForm extends React.Component{
 
                             </form>
 
-                            <button className="button secondary">{otherButton}</button>
+                            <button className="button secondary" >{otherButton}</button>
                             <br/>
                             <button className="bTndemo" onClick={this.demoLogin}>Demo</button>
                             <div className="errors">
@@ -153,9 +153,9 @@ class SessionForm extends React.Component{
                     </div>
                 </section>
             </div>
-            )
-        }
+        )
     }
+}
 
 
     export default SessionForm;
