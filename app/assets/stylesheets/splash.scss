@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     background: #fff;
-    border-bottom: 1px solid #ededed;
+    // border-bottom: 1px solid #ededed;
     margin: 0;
     padding: 0;
     line-height: 100px;
@@ -22,6 +22,7 @@
     z-index: 1;
 }
 .header-logo-a img {
+    
     padding-top: 20px;
     width: 50px;
     height: 50px;
@@ -45,12 +46,12 @@
 
 .login-button button{
     margin-top: 10px;
-    color: white;
-    background-color: transparent;
+    color: black;
+    background-color: white;
     width: 80px;
     height: 35px;
     cursor: pointer;
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 24px;
 }
 
@@ -63,71 +64,83 @@
 
 .content {
     display: flex;
-    // padding: 25px 0 0 0;
     justify-content: center;
-    // box-sizing: border-box;
     text-align: center;
-    // background-color: green;
-    height: 700px;
+    height: 662px;
     width: 100%;
+    // padding: 25px 0 0 0;
+    // box-sizing: border-box;
+    // background-color: green;
 }
 
-.content-container {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    /* width: 100%; */
-}
+// .content-container {
+//     margin: 0 auto;
+//     display: flex;
+//     align-items: center;
+// }
         
 .homepage-img {
     // height: 100vw;
+    background: image-url("sendpal-banner.jpg");
+    background-repeat: no-repeat;
+    position: relative;
+    // background-color: royalblue;      
     width: 100vw;
-    z-index: -1;
+    height: 100vh;
+
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
 }
-
-.main-message {
-    // float: right;
-    // display: flex;
-    // align-items: center;
-    // color: black;
-    // padding-bottom: 25px;
-    // margin: auto 0;
-    // z-index: 3;
-
-    float: center;
-    position: absolute;
-    left: 650px;
-    top: -150px;
-    z-index: 10;
-    // background-color: #92AD40;
-    padding: 5px;
-    color: #FFFFFF;
-    font-weight: bold;
-}
-
 .signup {
-    padding-left: 650px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: absolute;
-    width: 500px;
+    // justify-content: center;
+    // flex-direction: column;
+    // align-items: center;
+    
     font-size: 60px;
     font-weight: lighter;
     font-family: PayPal Sans Big Light, Helvetica Neue,Arial,sans-serif;;
 }
 
+.main-message {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    width: 100vw;
+    top: 300px;
+    left: -4px;
+    position: absolute;
+    color: ghostwhite;
+    margin: auto 0;
+    z-index: 3;
+    font-weight: bolder;
+}
+
+.sub-message {
+    display: flex;
+    position: relative;
+    top: 48px;
+    left: 663px;
+}
 
 .signup-button {
-    width: 400px;
+    position: relative;
+    top: 115px;
+    right: 430px;
+    left: 0px;
     margin-top: 10px;
-    color: white;
-    background-color: transparent;
-    // width: 80px;
-    height: 50px;
+    font-size: 15.5px;
+    font-weight: 525;
+    color: ghostwhite;
+    background-color: #14b1b6;
+    width: 320px;
+    height: 48px;
     cursor: pointer;
-    border: 2px solid white;
+    border: .5px solid #00b1b7;
     border-radius: 24px;
+    z-index: 5;
 }
 
 .signup-button:hover {
@@ -137,4 +150,20 @@
 
 .bTnlogin:focus, .signup-button:focus {
     outline:none;
+}
+
+.covid {
+    position: absolute;
+    width: 100vw;
+    height: 131px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 646px;
+    background-color: #fff2dc;
+    border: none;
+}
+
+.covid-message {
+    font-size: 20px;
 }

@@ -85,17 +85,17 @@ class SessionForm extends React.Component{
         );
 
         const toggleText = (this.props.formType === "login") ? (
-            <text>
+            <label>
                 Log In
-            </text>
+            </label>
         ) : (
-            <text>
+            <label>
                 Sign Up
-            </text >
+            </label >
         );
 
         let errors = this.props.errors.map((error, idx) => {
-            return <li key={idx}>{error}</li>
+            return <ul key={idx}>{error}</ul>
         })
         
         return (
@@ -105,7 +105,7 @@ class SessionForm extends React.Component{
                         <div className="contentContainer">
                             <header>
                                 <p className="form-header"></p>
-                                <img className="sendpal-logo-long" src={window.sendpal} />
+                                <Link to="/"><img className="sendpal-logo-long" src={window.sendpal} /></Link>
                             </header>
                             <form onSubmit={this.handleSubmit}>
                                 <div className="clearfix">
@@ -128,9 +128,8 @@ class SessionForm extends React.Component{
                                                 placeholder="Password"/>
                                         </div>
                                     </div>
-                                    {errors}
                                 </div>
-                                
+
                                 
                                 <div className="actionsSpaced">
                                     <button className="button actionContinue"
@@ -144,9 +143,12 @@ class SessionForm extends React.Component{
 
                             </form>
 
-                            <Link className="button secondary">{otherButton}</Link>
+                            <button className="button secondary">{otherButton}</button>
                             <br/>
                             <button className="bTndemo" onClick={this.demoLogin}>Demo</button>
+                            <div className="errors">
+                                {errors}
+                            </div>
                         </div>
                     </div>
                 </section>

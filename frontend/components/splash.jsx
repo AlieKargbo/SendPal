@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 class Splash extends React.Component{
 
-
     render(){
         return(
         <>
@@ -25,22 +24,20 @@ class Splash extends React.Component{
 
                 <div className='content'>
                     <div className='content-container'>
-                        <div className='content-image-container'>
-                                <img className="homepage-img" src={window.sendpalBanner} alt="" />
-                        </div>
                         <div className='signup'>
-                            <p className='main-message'>Send Money Today!</p>
-                            {/* <Link to={`/signup`}>
-                              <button>Sign Up</button>
-                            </Link> */}
-
-                            <Link className='signup-link' to="/signup">
-                                <button className='signup-button'>Sign Up</button>
-                            </Link>
+                            <div className='main-message'>Send Me Money. Safely.
+                                <p className='sub-message'>Securely.</p>
+                                <button className='signup-button' to="/signup">Sign Up</button>
+                            </div>
                         </div>
                     </div>
+                    <div className='content-image-container'>
+                        <img className="homepage-img"/>
+                    </div>
+                    <div className="covid">
+                        <p className="covid-message">Learn how we're responding to COVID-19 and how we can help your business adapt</p>
+                    </div>
                 </div>
-
             </div>
         </>
         )            

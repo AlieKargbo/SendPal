@@ -6,13 +6,15 @@ import { Route, Switch } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from ".././util/route_util"
 import Splash from "./splash"
 import FooterLinks from "./footer"
-import NavBar from "./navbar"
+import NavBar from "./navbar/navbar_container"
 
-const App = () => (
+const App = () => {
+    return (
     <div>
-        {/* <header>
-            <Route path="/myaccount" component={NavBar}/>
-        </header> */}
+        <header>
+            {/* <Route path="/myaccount" component={NavBar}/> */}
+            {/* <NavBar/> */}
+        </header>
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer}/>
             <AuthRoute exact path="/signup" component={SignupFormContainer}/>
@@ -23,7 +25,8 @@ const App = () => (
             <FooterLinks />
         </footer>
     </div>
-);
+    )
+};
 
 
 

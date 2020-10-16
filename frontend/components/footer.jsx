@@ -11,12 +11,12 @@ import React from 'react';
                 <div className='icons-wrapper'>
                     <div className='icons-container'>
                         <div className='icon'>
-                            <a href={linkedIn} className="footer-links">
+                            <a href={linkedIn} target="_blank" className="footer-links">
                                 <img src={window.linkedIn} alt="" />
                             </a>
                         </div>
                         <div className='icon'>
-                            <a href={gitHub} className="footer-links">
+                            <a href={gitHub} target="_blank" className="footer-links">
                                 <img src={window.gitHub} alt="" />
                             </a>
                         </div>
