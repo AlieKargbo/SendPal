@@ -25,9 +25,11 @@ class Splash extends React.Component{
                 <div className='content'>
                     <div className='content-container'>
                         <div className='signup'>
-                            <div className='main-message'>Send Me Money. Safely.
-                                <p className='sub-message'>Securely.</p>
-                                <button className='signup-button' to="/signup">Sign Up</button>
+                            <div className="message-container">
+                                <div className='main-message'>Send Me Money. Safely.
+                                    <p className='sub-message'>Securely.</p>
+                                    <button className='signup-button' to="/signup">Sign Up</button>
+                                </div>
                             </div>
                         </div>
                     </div>
