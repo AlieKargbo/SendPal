@@ -1,0 +1,131 @@
+// .dashboard {
+// }
+
+.dashboard-content-container {
+    display: flex;
+    background-color: #f5f7fa;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-container {
+    // position: relative;
+    margin-left: 210px;
+    flex: 1;
+    background-color: #f5f7fa;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+.greeting-container {
+    display: flex;
+    font-family: PayPal Sans Big Light, Helvetica Neue,Arial,sans-serif;;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 36px 0;
+}
+
+
+.balance-container {
+    background-color: #fff;
+    border-radius: 4px;
+    width: 575px;
+    height: 194px;
+    color: #2c2e2f;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.1);
+    margin: 36px 0 0 0;
+    text-align: left;
+}
+
+.balance-header-message {
+    color: #0070ba;
+    font-weight: 500;
+}
+
+.currency-balance {
+    color: #2c2e2f;
+    font-size: 44px;
+}
+
+.pay-btn {
+  border: 1px solid#0070ba;
+  border-radius: 25px;
+  padding: 10px 19px;
+  text-decoration: none;
+  background-color: transparent;
+  color: #0070ba;
+  cursor: pointer;
+  &:active {
+    text-decoration: underline;
+    box-shadow: 0 0 2px #0070ba;
+  }
+  &:focus{
+    outline: 0;
+  }
+  &:hover {
+    border: 2px solid #003087;
+    font-weight: bold;
+    color: #003087;
+  }
+}
+
+
+.right-container {
+    margin-right: 210px;
+    flex: 1;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+.transaction-Btns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#transaction-Btn{
+    background-color: #005ea6;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    // &:focus{
+    //     outline: 0;
+    // }
+}
+
+.quicklink-btns {
+    &:hover {
+        border-bottom: 1px solid #2c2e2f;
+    }
+    &:focus{
+    outline: 0;
+  }
+}
+
+#quicklinks {
+    text-align: center;
+    color: #2c2e2f;
+}
+
+
+.pals-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#pals {
+    background-color: pink;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    border: none;
+}
+
+.recent-acivity {
+    background-color: lightseagreen;
+}
+
+#activity {
+    background-color: lightslategray;
+}

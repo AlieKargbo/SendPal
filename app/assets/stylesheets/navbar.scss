@@ -40,8 +40,8 @@ a.nav-logo {
 }
 
 .nav-logo img {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 38px;
   &:active {
     border: 1px solid rgba(255, 255, 255, .6);
     border-radius: 5px;
@@ -86,5 +86,10 @@ a.nav-logo {
   }
   &:focus{
     outline: 0;
+  }
+  &:hover {
+    border: 1.5px solid #fff;
+    font-weight: bold;
+    color: #ffff;
   }
 }

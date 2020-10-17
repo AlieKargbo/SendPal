@@ -27,15 +27,68 @@ class Dashboard extends React.Component {
             //friendsIndex
         if (this.props.user) {
             return (
-                <>
-                    <h1>Welcome to SendPal!</h1>
-                    <h2>Dashboard Component</h2>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
+                <div className="dashboard">
+                    <div className="dashboard-content-container">
+                        <section className="left-container">
+                            <div className="greeting-container">
+                                <p className="greeting-message"></p> Good Evening, Cheetahs 
+                            </div>
+                            <div className="balance-container">
+                                <div className="balance-header"></div>
+                                <h3 className="balance-header-message">SendPal Balance</h3>
+                                {/* <div className="overflow-image">
+                                    <button className="three-dots">* * *</button>
+                                </div> */}
+                                <div>
+                                    <div className="currency-container">
+                                        <span className="currency-balance">$0.00</span>
+                                        <br/>
+                                        <span className="currency-balance-message">Available in your SendPal Cash Account</span>
+                                    </div>
+                                    <button to="/" role="button" className="pay-btn">Transfer Money</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section className="right-container">
+                            <div className="transaction-container">
+                                <ul className="transaction-Btns">
+                                    <div className="quicklink-btns">
+                                        <button id="transaction-Btn">
+                                            <img src="https://www.paypalobjects.com/digitalassets/c/paypal-ui/icons/svg/send.svg" alt=""/>
+                                        </button>
+                                        <div id="quicklinks">Send</div>
+                                    </div>
+                                    <div className="quicklink-btns">
+                                        <button id="transaction-Btn">
+                                            <img src="https://www.paypalobjects.com/digitalassets/c/paypal-ui/icons/svg/request.svg" alt=""/>
+                                        </button>
+                                        <div id="quicklinks">Request</div>
+                                    </div>
+                                </ul>
+                            </div>
+
+                            <div className="pals-container">
+                                <h3 className="pals-header">PALS</h3>
+                                <ul className="pals-list">
+                                    <button id="pals">A B</button>
+                                    <button id="pals">C D</button>
+                                    <button id="pals">E F</button>
+                                    <button id="pals">G H</button>
+                                </ul>
+                            </div>
+
+
+                            <ul className="recent-activity">
+                                <li id="activity">ACTIVITY 1</li>
+                                <li id="activity">ACTIVITY 2</li>
+                                <li id="activity">ACTIVITY 3</li>
+                            </ul>
+                        </section>
+
+                    </div>
                     <button onClick={this.handleClick}>Logout</button>
-                </>
+                </div>
             )
         } 
     }
