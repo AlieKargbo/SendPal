@@ -12,7 +12,7 @@ const App = () => {
     return (
     <div>
         <header>
-            {/* <Route path="/myaccount" component={NavBar}/> */}
+            <Route path="/myaccount" component={NavBar}/>
             {/* <NavBar/> */}
         </header>
         <Switch>

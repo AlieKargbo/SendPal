@@ -14,10 +14,11 @@
  *= require_self
  */
 
- @import './_reset.css';
- @import './splash.scss';
- @import url(//db.onlinewebfonts.com/c/0930cc324c97c2d3be7b1a09e76fdaa2?family=PayPal+Sans+Big+Light);
-/* background-color: #0070ba; */
+@import './_reset.css';
+@import './splash.scss';
+@import url(//db.onlinewebfonts.com/c/0930cc324c97c2d3be7b1a09e76fdaa2?family=PayPal+Sans+Big+Light);
+@import url(//db.onlinewebfonts.com/c/d3398b63eaca40daee65f5fa3b69402c?family=PayPal+Sans+Small);
+ /* background-color: #0070ba; */
 
 body {
   color: black;
