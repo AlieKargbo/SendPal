@@ -12,8 +12,7 @@ const App = () => {
     return (
     <div>
         <header>
-            <Route path="/myaccount" component={NavBar}/>
-            {/* <NavBar/> */}
+            <ProtectedRoute exact path="/myaccount" component={NavBar}/>
         </header>
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer}/>

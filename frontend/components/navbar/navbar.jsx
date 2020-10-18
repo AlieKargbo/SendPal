@@ -3,6 +3,16 @@ import { Link } from "react-router-dom";
 import { Redirect } from 'react-router-dom'
 
 class NavBar extends React.Component{
+    constructor(props){
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+    
+    handleClick() {
+        this.props.logout()
+            .then(() => this.props.history.push("/login"))
+    }
+
     render (){
         if (this.props.user) {
             return (
@@ -23,7 +33,11 @@ class NavBar extends React.Component{
                         </nav>
                         
                         <div className="nav-buttons">
-                            <button className="nav-button" id="logout">Log out</button>
+                            <button 
+                                className="nav-button" 
+                                id="logout"
+                                onClick={this.handleClick}
+                                >Log out</button>
                         </div>
                     </div>
                     

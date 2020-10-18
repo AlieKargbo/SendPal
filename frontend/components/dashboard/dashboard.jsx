@@ -87,7 +87,6 @@ class Dashboard extends React.Component {
                         </section>
 
                     </div>
-                    <button onClick={this.handleClick}>Logout</button>
                 </div>
             )
         } 
