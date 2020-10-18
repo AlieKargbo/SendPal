@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Root from "./components/root";
 import configureStore from "./store/store";
 import { login, signup, logout } from "./actions/session_actions"
+import { fetchAllUsers, fetchUser } from "./actions/user_actions";
 
 document.addEventListener("DOMContentLoaded", () => {
     let store;
@@ -25,6 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // window.login = login;
     // window.logout = logout;
     // window.signup = signup;
-    // window.getState = store.getState;
-    // window.dispatch = store.dispatch;
+    window.fetchAllUsers = fetchAllUsers;
+    window.fetchUser = fetchUser;
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
 })
