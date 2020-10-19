@@ -15,7 +15,7 @@ me = User.create!(
 
 demo = User.create!(
   email: "demo_user@aa.io",
-  password: 'password'
+  password: 'password' 
 )
 
 u1 = User.create!(

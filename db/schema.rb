@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_12_202756) do
+ActiveRecord::Schema.define(version: 2020_10_19_015209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "payments", force: :cascade do |t|
+    t.integer "payer_id", null: false
+    t.integer "payee_id", null: false
+    t.float "amount", null: false
+    t.string "body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["payee_id"], name: "index_payments_on_payee_id"
+    t.index ["payer_id"], name: "index_payments_on_payer_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
@@ -21,6 +32,7 @@ ActiveRecord::Schema.define(version: 2020_10_12_202756) do
     t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "balance", default: 1000.0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
   end
