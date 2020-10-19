@@ -1,0 +1,1 @@
+jspn.partial! "api/payments/payments" payment: @payment

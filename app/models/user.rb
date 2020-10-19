@@ -12,11 +12,18 @@
 #
 class User < ApplicationRecord
     attr_reader :password
-
     validates :email, :password_digest, :session_token, presence: true
     validates :email, uniqueness: true
     validates :password, length: { minimum: 6 }, allow_nil: true
     after_initialize :ensure_session_token
+
+     has_many :paid_payments,
+        foreign_key: :payer_id,
+        class_name: 'Payment'
+
+    has_many :received_payments,
+        foreign_key: :payee_id,
+        class_name: 'Payment'
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)

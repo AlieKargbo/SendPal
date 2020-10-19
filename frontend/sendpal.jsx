@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Root from "./components/root";
 import configureStore from "./store/store";
-import { login, signup, logout } from "./actions/session_actions"
+import { login, signup, logout } from "./actions/session_actions";
 import { fetchAllUsers, fetchUser } from "./actions/user_actions";
+import { fetchAllPayments, fetchPayment, createPayment } from "./actions/payment_actions";
 
 document.addEventListener("DOMContentLoaded", () => {
     let store;
@@ -28,6 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // window.signup = signup;
     window.fetchAllUsers = fetchAllUsers;
     window.fetchUser = fetchUser;
+    window.fetchAllPayments = fetchAllPayments;
+    window.fetchPayment = fetchPayment;
+    window.createPayment = createPayment;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
 })

@@ -36,7 +36,7 @@ class SessionForm extends React.Component{
     }
 
 
-    // demo signin credit to ***** aA SF Dec. 2019
+    // demo signin credit to Erik Thompson aA SF Dec. 20193
     demoLogin(e) {
         e.preventDefault()
         const demo = { email: "demo_user@aa.io", password: "password" }

@@ -2,11 +2,13 @@
 #
 # Table name: payments
 #
-#  id       :bigint           not null, primary key
-#  payer_id :integer          not null
-#  payee_id :integer          not null
-#  amount   :float            not null
-#  body     :string           not null
+#  id         :bigint           not null, primary key
+#  payer_id   :integer          not null
+#  payee_id   :integer          not null
+#  amount     :float            not null
+#  note       :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 require 'test_helper'
 
