@@ -15,7 +15,6 @@ const mapDTP = (dispatch) => {
         clearErrors: () => dispatch(clearErrors()),
         demoLogin: (user) => dispatch(login(user))
     })
-
 }
 
 export default connect(mapSTP, mapDTP)(SessionForm)
