@@ -41,7 +41,7 @@ class Dashboard extends React.Component {
                                 </div> */}
                                 <div>
                                     <div className="currency-container">
-                                        <span className="currency-balance">$0.00</span>
+                            <span className="currency-balance">${this.props.user.balance}</span>
                                         <br/>
                                         <span className="currency-balance-message">Available in your SendPal Cash Account</span>
                                     </div>

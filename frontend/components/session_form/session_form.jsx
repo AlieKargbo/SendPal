@@ -25,7 +25,8 @@ class SessionForm extends React.Component{
 
         this.setState({
             email: "",
-            password: ""
+            password: "",
+            balance: ""
         });
     }
 

@@ -5,7 +5,7 @@ import { fetchUser } from "../../actions/user_actions"
 
 const mapSTP = (state, ownProps) => {
     return ({
-        user: state.entities.users[state.session.id],
+        currentUser: state.entities.users[state.session.id],
         allUsers: Object.values(state.entities.users),
         formType: 'send_payment'
     })
@@ -13,9 +13,9 @@ const mapSTP = (state, ownProps) => {
 
 const mapDTP = (dispatch) => {
     return ({
-        createPayment: (paymentId) => dispatch(createPayment(paymentId))
+        createPayment: (paymentId) => dispatch(createPayment(paymentId)),
         // fetchAllPayments: () => dispatch(fetchAllPayments()),
-        // fetchUser: (userId) => dispatch(fetchUser(userId))
+        fetchUser: (userId) => dispatch(fetchUser(userId))
     })
 }
 
