@@ -5,6 +5,7 @@ import { RECEIVE_PAYMENT } from "../actions/payment_actions";
 const usersReducer = (oldState={}, action) => {
     Object.freeze(oldState);
     let nextState = Object.assign({}, oldState);
+    
     switch (action.type) {
         case RECEIVE_ALL_USERS:
             return action.users;
@@ -16,8 +17,9 @@ const usersReducer = (oldState={}, action) => {
             return nextState;
         case RECEIVE_PAYMENT:
             // debugger
-            nextState[action.payload.payer.id] = action.payer_id;
-            nextState[action.payload.payee.id] = action.payee_id;
+            nextState[action.payload.payer.id] = action.payload.payer;
+            nextState[action.payload.payee.id] = action.payload.payee;
+            // debugger
             return nextState;
         default:
             return oldState;

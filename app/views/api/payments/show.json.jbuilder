@@ -1,6 +1,6 @@
 # debugger
 json.partial! "api/payments/payment", payment: @payment
-# debugger
+debugger
 
 json.payer do
     json.extract! @payer, :id, :balance

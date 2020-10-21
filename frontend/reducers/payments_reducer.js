@@ -10,7 +10,7 @@ const paymentsReducer = (oldState={}, action) => {
             return action.payments;
         case RECEIVE_PAYMENT:
             // debugger
-            nextState[action.payload.id] = action.payment
+            nextState[action.payload.id] = action.payload.amount;
             return nextState;
         // case RECEIVE_UPDATED_USER:
         //     debugger

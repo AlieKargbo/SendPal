@@ -49,6 +49,11 @@ u6 = User.create!(
   password: 'password'
 )
 
+u7 = User.create!(
+  email: 'LisaREALG@noblecheetah.io',
+  password: 'password'
+)
+
 payment1 = Payment.create!(
   amount: 50.00, 
   note: 'wingz & thingz 🍗', 
