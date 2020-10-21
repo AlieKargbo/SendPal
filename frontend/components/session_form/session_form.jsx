@@ -141,7 +141,6 @@ class SessionForm extends React.Component{
                                 <div className="orSeparator">
                                     <span>or</span>
                                 </div>
-
                             </form>
 
                             <button className="button secondary" >{otherButton}</button>

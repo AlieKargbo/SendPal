@@ -2,6 +2,7 @@ import * as UserApiUtil from "../util/user_util";
 
 export const RECEIVE_ALL_USERS = "RECEIVE_ALL_USERS";
 export const RECEIVE_USER = "RECEIVE_USER";
+export const RECEIVE_UPDATED_USER = "RECEIVE_UPDATED_USER"
 
 const receiveAllUsers = (users) => {
     return ({
@@ -16,6 +17,13 @@ const receiveUser = (user) => {
         user
     })
 };
+
+const receiveUpdatedUser = (user) => {
+    return ({
+        type: RECEIVE_UPDATED_USER,
+        user
+    })
+}
 
 export const fetchAllUsers = () => {
     return (dispatch) => {

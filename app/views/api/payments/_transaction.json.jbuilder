@@ -1,1 +1,0 @@
-json.extract! payment, :id, :note, :body, :payer_id, :payee_id

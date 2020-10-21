@@ -34,9 +34,10 @@ export const fetchPayment = (paymentId) => {
 };
 
 export const createPayment = (paymentId) => {
+    // debugger
     return (dispatch) => {
         return PaymentApiUtil.createPayment(paymentId).then((payment) => {
             dispatch(receivePayment(payment))
-        })
+        }).fail((resp) => console.log(resp))
     }
 };

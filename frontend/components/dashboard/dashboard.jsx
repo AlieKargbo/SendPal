@@ -55,7 +55,8 @@ class Dashboard extends React.Component {
                                 <ul className="transaction-Btns">
                                     <div className="quicklink-btns">
                                         <button id="transaction-Btn">
-                                            <img src="https://www.paypalobjects.com/digitalassets/c/paypal-ui/icons/svg/send.svg" alt=""/>
+                                            <Link to="/myaccount/pay" ><img src="https://www.paypalobjects.com/digitalassets/c/paypal-ui/icons/svg/send.svg" alt=""/></Link>
+                                            
                                         </button>
                                         <div id="quicklinks">Send</div>
                                     </div>

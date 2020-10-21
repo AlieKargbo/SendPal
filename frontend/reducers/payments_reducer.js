@@ -3,7 +3,7 @@ import { RECEIVE_ALL_PAYMENTS, RECEIVE_PAYMENT } from "../actions/payment_action
 const paymentsReducer = (oldState={}, action) => {
     Object.freeze(oldState);
     let nextState = Object.assign({}, oldState);
-
+    // debugger
     switch (action.type) {
         case RECEIVE_ALL_PAYMENTS:
             return action.payments;

@@ -14,6 +14,7 @@ const App = () => {
     <div>
         <header>
             <ProtectedRoute exact path="/myaccount" component={NavBar}/>
+            <ProtectedRoute exact path="/myaccount/pay" component={NavBar}/>
         </header>
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer}/>

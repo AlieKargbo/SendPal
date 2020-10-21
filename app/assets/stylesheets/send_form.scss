@@ -1,5 +1,5 @@
 .send-content{
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     margin: auto;
     background-color: #f5f7fa;
@@ -18,11 +18,55 @@
 .send-box {
     border: 1px solid rgba(238, 237, 237, 0.817);
     height: 356px;
+    margin-top: 35px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #ffff;
+}
+
+.send-fields {
+    height: 430px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.send-header {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.send-amount {
+    text-align: center;
+    border: none;
+    width: 100%;
+    margin-top: -70px;
+    height: 48px;
+    font-size: 40px;
+    font-family: PayPalSansBig-Regular, "Helvetica Neue", Arial, sans-serif;
+    &:focus{
+    outline: 0;
+    }
+}
+
+.note-box {
+    width: 85%;
+    height: 70px;
+    margin-bottom: 10px;
+    border: none;
+    border-top: 1px solid rgb(187, 187, 187);
+    &:focus{
+    outline: 0;
+    }
 }
 
 .message-container{
@@ -64,5 +108,21 @@
     font-weight: bold;
     color: white;
     transition: background-color .2s ease-out;
+    }
+}
+
+.cancel-link{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cancel-text{
+    color: #003087;
+    font-size: 15px;
+    &:focus{
+    outline: 0;
+    }
+    &:hover {
+    border-bottom: 1px solid #2c2e2f;
     }
 }
