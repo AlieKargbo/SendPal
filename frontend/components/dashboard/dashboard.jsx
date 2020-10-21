@@ -14,7 +14,7 @@ class Dashboard extends React.Component {
     }
 
     render() {
-        debugger
+        // debugger
         // ?<Redirect to="/myaccount" /> 
         // if (!this.props.path && !this.props.authPath){
         //     this.props.history.push("/")
@@ -27,7 +27,7 @@ class Dashboard extends React.Component {
           // friends comp
             //friendsIndex
         if (this.props.user) {
-            debugger
+            // debugger
             return (
                 <div className="dashboard">
                     <div className="dashboard-content-container">
