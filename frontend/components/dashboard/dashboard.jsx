@@ -34,19 +34,13 @@ class Dashboard extends React.Component {
                                 <p className="greeting-message"></p> Good Evening, Cheetahs 
                             </div>
                             <div className="balance-container">
-                                <div className="balance-header"></div>
                                 <h3 className="balance-header-message">SendPal Balance</h3>
                                 {/* <div className="overflow-image">
                                     <button className="three-dots">* * *</button>
                                 </div> */}
-                                <div>
-                                    <div className="currency-container">
-                            <span className="currency-balance">${this.props.user.balance}</span>
-                                        <br/>
-                                        <span className="currency-balance-message">Available in your SendPal Cash Account</span>
-                                    </div>
-                                    <button to="/" role="button" className="pay-btn">Transfer Money</button>
-                                </div>
+                                <span className="currency-balance">${this.props.user.balance}</span>
+                                <span className="currency-balance-message">Available in your SendPal Cash Account</span>
+                                <button to="/" role="button" className="pay-btn">Transfer Money</button>
                             </div>
                         </section>
 

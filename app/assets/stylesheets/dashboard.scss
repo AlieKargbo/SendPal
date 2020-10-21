@@ -3,13 +3,16 @@
 
 .dashboard-content-container {
     display: flex;
+    justify-content: space-evenly;
     background-color: #f5f7fa;
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
 }
 
 .left-container {
     // position: relative;
+    display: flex;
+    flex-direction: column;
     margin-left: 210px;
     flex: 1;
     background-color: #f5f7fa;
@@ -28,51 +31,70 @@
 
 .balance-container {
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     border-radius: 4px;
-    width: 575px;
+    width: 90%;
     height: 194px;
     color: #2c2e2f;
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.1);
-    margin: 36px 0 0 0;
+    margin: 10px 0 0 0;
     text-align: left;
 }
 
 .balance-header-message {
     color: #0070ba;
     font-weight: 500;
+    margin-left: 20px;
+    font-size: 20px;
 }
 
 .currency-balance {
     color: #2c2e2f;
     font-size: 44px;
+    margin-left: 20px;
+    margin-top: 10px;
+    height: 13px;
+}
+
+.currency-balance-message {
+    margin-left: 20px;
+    margin-bottom: -5px;
+    color: #687173;
+    font-size: 12px;
 }
 
 .pay-btn {
-  border: 1px solid#0070ba;
-  border-radius: 25px;
-  padding: 10px 19px;
-  text-decoration: none;
-  background-color: transparent;
-  color: #0070ba;
-  cursor: pointer;
-  &:active {
+    margin-top: 5px;    
+    margin-left: 20px;
+    border: 1px solid#0070ba;
+    border-radius: 25px;
+    height: 30px;
+    width: 125px;
+    text-decoration: none;
+    background-color: transparent;
+    color: #0070ba;
+    cursor: pointer;
+    &:active {
     text-decoration: underline;
     box-shadow: 0 0 2px #0070ba;
-  }
-  &:focus{
+    }
+    &:focus{
     outline: 0;
-  }
-  &:hover {
+    }
+    &:hover {
     border: 2px solid #003087;
     font-weight: bold;
     color: #003087;
-  }
+    }
 }
 
 
 .right-container {
     margin-right: 210px;
     flex: 1;
+    margin-top: 30px;
     // border: 1px solid grey;
     // border-radius: 4px;
 }
@@ -115,17 +137,18 @@
 }
 
 #pals {
-    background-color: pink;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'PayPal Sans Big Light';
+    background: linear-gradient(217deg, #bb2c2d, #5d67cc);
     height: 48px;
     width: 48px;
     border-radius: 50%;
     border: none;
 }
 
-.recent-acivity {
-    background-color: lightseagreen;
-}
 
 #activity {
-    background-color: lightslategray;
+    border: 2px solid lightslategray;
 }
