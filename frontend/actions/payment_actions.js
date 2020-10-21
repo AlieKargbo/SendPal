@@ -10,10 +10,10 @@ const receiveAllPayments = (payments) => {
     })
 };
 
-const receivePayment = (payment) => {
+const receivePayment = (payload) => {
     return ({
         type: RECEIVE_PAYMENT,
-        payment
+        payload
     })
 };
 
@@ -36,8 +36,17 @@ export const fetchPayment = (paymentId) => {
 export const createPayment = (paymentId) => {
     // debugger
     return (dispatch) => {
-        return PaymentApiUtil.createPayment(paymentId).then((payment) => {
-            dispatch(receivePayment(payment))
+        return PaymentApiUtil.createPayment(paymentId).then((payload) => {
+            dispatch(receivePayment(payload))
         }).fail((resp) => console.log(resp))
     }
 };
+
+// export const updateUser = (userId) => {
+//     debugger
+//     return (dispatch) => {
+//         return UserApiUtil.updateUser(userId).then((user) => {
+//             dispatch(receiveUpdatedUser(user))
+//         })
+//     }
+// }

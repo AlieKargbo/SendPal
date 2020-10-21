@@ -116,6 +116,15 @@
     // }
 }
 
+#transaction-Btn-icon1 {
+    height: 35px
+}
+
+#transaction-Btn-icon2 {
+    margin-top: 5px;;
+    height: 35px
+}
+
 .quicklink-btns {
     &:hover {
         border-bottom: 1px solid #2c2e2f;
@@ -151,4 +160,9 @@
 
 #activity {
     border: 2px solid lightslategray;
+}
+
+.pay-link{
+    color: #003087;
+    font-weight: bold;
 }

@@ -18,10 +18,10 @@ const receiveUser = (user) => {
     })
 };
 
-const receiveUpdatedUser = (user) => {
+const receiveUpdatedUser = (payload) => {
     return ({
         type: RECEIVE_UPDATED_USER,
-        user
+        payload
     })
 }
 
@@ -41,3 +41,12 @@ export const fetchUser = (userId) => {
         })
     }
 };
+
+// export const updateUser = (userId) => {
+//     debugger
+//     return (dispatch) => {
+//         return UserApiUtil.updateUser(userId).then((payload) => {
+//             dispatch(receiveUpdatedUser(payload))
+//         })
+//     }
+// }

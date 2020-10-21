@@ -31,7 +31,7 @@ class Dashboard extends React.Component {
                     <div className="dashboard-content-container">
                         <section className="left-container">
                             <div className="greeting-container">
-                                <p className="greeting-message"></p> Good Evening, Cheetahs 
+                                <p className="greeting-message"></p> Why, Hello There.
                             </div>
                             <div className="balance-container">
                                 <h3 className="balance-header-message">SendPal Balance</h3>
@@ -40,7 +40,9 @@ class Dashboard extends React.Component {
                                 </div> */}
                                 <span className="currency-balance">${this.props.user.balance}</span>
                                 <span className="currency-balance-message">Available in your SendPal Cash Account</span>
-                                <button to="/" role="button" className="pay-btn">Transfer Money</button>
+                                <button className="pay-btn">
+                                    <Link className="pay-link" to="/myaccount/pay">Transfer Money</Link>
+                                </button>
                             </div>
                         </section>
 
@@ -49,14 +51,13 @@ class Dashboard extends React.Component {
                                 <ul className="transaction-Btns">
                                     <div className="quicklink-btns">
                                         <button id="transaction-Btn">
-                                            <Link to="/myaccount/pay" ><img src="https://www.paypalobjects.com/digitalassets/c/paypal-ui/icons/svg/send.svg" alt=""/></Link>
-                                            
+                                            <Link to="/myaccount/pay" ><img id="transaction-Btn-icon1" src={window.send_icon} alt=""/></Link>
                                         </button>
                                         <div id="quicklinks">Send</div>
                                     </div>
                                     <div className="quicklink-btns">
                                         <button id="transaction-Btn">
-                                            <img src="https://www.paypalobjects.com/digitalassets/c/paypal-ui/icons/svg/request.svg" alt=""/>
+                                            <Link to="/myaccount/request" ><img id="transaction-Btn-icon2" src={window.request_icon} alt=""/></Link>
                                         </button>
                                         <div id="quicklinks">Request</div>
                                     </div>

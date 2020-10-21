@@ -12,7 +12,7 @@ class Api::PaymentsController < ApplicationController
         # debugger
         @payee = User.find_by(id: params[:payment][:payee_id])
         
-        debugger
+        # debugger
         if @payment.save
             # current_user.balance = (@payer.balance - @payment.amount)
             # debugger
@@ -30,12 +30,12 @@ class Api::PaymentsController < ApplicationController
         end
     end
 
-    def show
-        # debugger
-        @payment = Payment.find(params[:id])
-        # extract user information and the payee
-        render :show
-    end
+    # def show
+    #     # debugger
+    #     @payment = Payment.find(params[:id])
+    #     # extract user information and the payee
+    #     render :show
+    # end
 
     private
     def payment_params

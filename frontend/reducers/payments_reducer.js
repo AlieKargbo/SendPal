@@ -1,5 +1,6 @@
-import { RECEIVE_ALL_PAYMENTS, RECEIVE_PAYMENT } from "../actions/payment_actions";
+import { RECEIVE_ALL_PAYMENTS, RECEIVE_PAYMENT, RECEIVE_UPDATED_USER } from "../actions/payment_actions";
 
+ 
 const paymentsReducer = (oldState={}, action) => {
     Object.freeze(oldState);
     let nextState = Object.assign({}, oldState);
@@ -8,8 +9,13 @@ const paymentsReducer = (oldState={}, action) => {
         case RECEIVE_ALL_PAYMENTS:
             return action.payments;
         case RECEIVE_PAYMENT:
-            nextState[action.payment.id] = action.payment
+            // debugger
+            nextState[action.payload.id] = action.payment
             return nextState;
+        // case RECEIVE_UPDATED_USER:
+        //     debugger
+        //     nextState[action.user.id] = action.user
+        //     return nextState;
         default:
             return oldState;
     }

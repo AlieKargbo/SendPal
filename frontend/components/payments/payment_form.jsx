@@ -33,7 +33,7 @@ class PaymentForm extends React.Component {
                     note: this.state.note,
                     payer_id: this.props.currentUser.id,
                     payee_id: this.userId
-                })
+                }).then(() => this.props.history.push("/myaccount"))
         } else {
             return "errors" // create error props
         }
@@ -79,7 +79,6 @@ class PaymentForm extends React.Component {
                                         className="continue-Btn"
                                         value="Continue"
                                         // onClick={() => this.props.createPayment(this.props.payments.id)}
-                                        
                                         />
                                 </div>
                             </form>
@@ -90,7 +89,7 @@ class PaymentForm extends React.Component {
                     </div>
                     <div className="message-container">
                         <div className="message">
-                            Are you sure you want to send money to me?
+                            Are you sure you want to send the payment? There are no take-backs!
                         </div>
                     </div>
                 </div>
