@@ -75,10 +75,17 @@ payment3 = Payment.create!(
   payee_id: u6.id
 )
 
-payment4 = Payment.create!(quit
+payment4 = Payment.create!(
   amount: 220, 
   note: 'best snowboarding trip ever ❄️ 🏂', 
   payer_id: u1.id, 
   payee_id: u2.id
+)
+
+payment5 = Payment.create!(
+  amount: 30, 
+  note: 'donuts!', 
+  payer_id: u2.id, 
+  payee_id: u7.id
 )
 

@@ -12,10 +12,6 @@ const paymentsReducer = (oldState={}, action) => {
             // debugger
             nextState[action.payload.id] = action.payload.amount;
             return nextState;
-        // case RECEIVE_UPDATED_USER:
-        //     debugger
-        //     nextState[action.user.id] = action.user
-        //     return nextState;
         default:
             return oldState;
     }

@@ -1,11 +1,11 @@
-.send-content{
+.form-content{
     height: 80vh;
     width: 100%;
     margin: auto;
     background-color: #f5f7fa;
 }
 
-.send-container{
+.form-container{
     // border: 2px solid yellow;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
     height: 100%;
 }
 
-.send-box {
+.form-box {
     border: 1px solid rgba(238, 237, 237, 0.817);
     height: 356px;
     margin-top: 35px;
@@ -26,7 +26,7 @@
     background-color: #ffff;
 }
 
-.send-fields {
+.form-fields {
     height: 430px;
     flex-direction: column;
     display: flex;
@@ -36,7 +36,7 @@
     margin-top: 50px;
 }
 
-.send-header {
+.form-header {
     width: 80%;
     display: flex;
     justify-content: center;
@@ -45,7 +45,7 @@
     font-size: 20px;
 }
 
-.send-amount {
+.form-amount {
     text-align: center;
     border: none;
     width: 100%;

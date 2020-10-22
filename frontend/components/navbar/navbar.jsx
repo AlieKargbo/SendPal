@@ -29,7 +29,7 @@ class NavBar extends React.Component{
                         <nav className="nav-section">
                             <ul className="nav-list">
                                 <Link to="/myaccount/pay" className="nav-link">Send</Link>
-                                <li to="/myaccount/request" className="nav-link">Request</li>
+                                <Link to="/myaccount/request" className="nav-link">Request</Link>
                                 {/* <li to="/myaccount" className="nav-link-header">REQUEST</li> */}
                             </ul>
                         </nav>

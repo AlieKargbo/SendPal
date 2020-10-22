@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_19_032609) do
+ActiveRecord::Schema.define(version: 2020_10_21_222623) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 2020_10_19_032609) do
     t.datetime "updated_at", null: false
     t.index ["payee_id"], name: "index_payments_on_payee_id"
     t.index ["payer_id"], name: "index_payments_on_payer_id"
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.integer "requestor_id", null: false
+    t.integer "requestee_id", null: false
+    t.float "amount", null: false
+    t.string "note", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["requestee_id"], name: "index_requests_on_requestee_id"
+    t.index ["requestor_id"], name: "index_requests_on_requestor_id"
   end
 
   create_table "users", force: :cascade do |t|

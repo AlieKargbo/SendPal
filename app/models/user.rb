@@ -25,11 +25,14 @@ class User < ApplicationRecord
         foreign_key: :payee_id,
         class_name: 'Payment'
 
-    # def increase_payee_balance(amount)
-    #     # user = User.find_by(id: payee.id)
-    #     self.balance = (self.balance + amount)
-    #     debugger
-    # end
+    has_many :requested_payments,
+        foreign_key: :requestor_id,
+        class_name: 'Request'
+
+    has_many :received_requests,
+        foreign_key: :requestee_id,
+        class_name: 'Request'
+
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)

@@ -22,9 +22,7 @@ class Api::PaymentsController < ApplicationController
             @payer = payer 
             @payee = payee
             # debugger
-            # payment amount must be a number
-            # payer balance must be > 0
-            # debugger
+
             render :show 
         else
             # render json: ['Invalid transaction details! All fields must be complete.'], status: 418
@@ -32,12 +30,11 @@ class Api::PaymentsController < ApplicationController
         end
     end
 
-    # def show
-    #     # debugger
-    #     @payment = Payment.find(params[:id])
-    #     # extract user information and the payee
-    #     render :show
-    # end
+    def show
+        
+        @payment = Payment.find(params[:id])
+        render :show
+    end
 
     private
     def payment_params

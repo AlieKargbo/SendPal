@@ -1,6 +1,7 @@
 import { RECEIVE_CURRENT_USER } from "../actions/session_actions";
 import { RECEIVE_ALL_USERS, RECEIVE_USER, RECEIVE_UPDATED_USER } from "../actions/user_actions";
 import { RECEIVE_PAYMENT } from "../actions/payment_actions";
+import { RECEIVE_REQUEST } from "../actions/request_actions";
 
 const usersReducer = (oldState={}, action) => {
     Object.freeze(oldState);
@@ -19,8 +20,11 @@ const usersReducer = (oldState={}, action) => {
             // debugger
             nextState[action.payload.payer.id] = action.payload.payer;
             nextState[action.payload.payee.id] = action.payload.payee;
-            // debugger
             return nextState;
+        case RECEIVE_REQUEST:
+            // debugger
+            nextState[action.payload.requestor.id] = action.payload.requestor;
+            nextState[action.payload.requestee.id] = action.payload.requestee;
         default:
             return oldState;
     }
