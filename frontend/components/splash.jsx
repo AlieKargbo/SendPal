@@ -26,8 +26,8 @@ class Splash extends React.Component{
                         <div className='content-container'>
                             <div className='signup'>
                                 <div className="message-container">
-                                    <p className='main-message'>Send Me Money. Safely.</p>
-                                    <p className='sub-message'>Securely.</p>
+                                    <p className='main-message'>Send Your Pals Money.</p>
+                                    <p className='sub-message'>Safely. Securely.</p>
                                     <Link to="/signup">
                                         <button className='signup-button'>Sign Up</button>
                                     </Link>
@@ -40,7 +40,9 @@ class Splash extends React.Component{
                     </div>
                 </div>
                 <div className="covid">
-                    <p className="covid-message">Learn how we're responding to COVID-19 and how we can help your business adapt</p>
+                    <p className="covid-message">
+                        SendPal is a demonstration web application clone of PayPal. Thank you for visiting.
+                    </p>
                 </div>
             </>
         )            
