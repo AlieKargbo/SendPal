@@ -31,7 +31,7 @@ class Api::PaymentsController < ApplicationController
     end
 
     def show
-        
+        # debugger
         @payment = Payment.find(params[:id])
         render :show
     end

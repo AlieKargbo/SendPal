@@ -27,13 +27,13 @@
 }
 
 .form-fields {
-    height: 430px;
+    height: 450px;
     flex-direction: column;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .form-header {
@@ -45,11 +45,22 @@
     font-size: 20px;
 }
 
+.form-email{
+    text-decoration: none;
+    width: 80%;
+    border: none;
+    margin-top: -25px;
+    font-size: 20px;
+    text-align: center;
+    font-family: PayPalSansBig-Regular, "Helvetica Neue", Arial, sans-serif;
+}
+
 .form-amount {
     text-align: center;
+    -webkit-appearance: none;
     border: none;
     width: 100%;
-    margin-top: -70px;
+    margin-top: -30px;
     height: 48px;
     font-size: 40px;
     font-family: PayPalSansBig-Regular, "Helvetica Neue", Arial, sans-serif;
@@ -61,7 +72,7 @@
 .note-box {
     width: 85%;
     height: 70px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: none;
     border-top: 1px solid rgb(187, 187, 187);
     &:focus{

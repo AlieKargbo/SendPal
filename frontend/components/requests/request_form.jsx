@@ -6,9 +6,10 @@ class RequestForm extends React.Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         // this.handleChange = this.handleChange.bind(this);
-        // this.state = {
-        //     value: '',
-        // };
+        this.state = {
+            email: '',
+            payment: ''
+        };
     }
 
     componentDidMount(){
@@ -28,14 +29,14 @@ class RequestForm extends React.Component {
         });
         // debugger
 
-        if (Number(this.state.amount) !== 0) {
+        if (Number(this.state.amount) >= 0) {
             // debugger
             this.props.createRequest({
                 amount: this.state.amount,
                 note: this.state.note,
                 requestor_id: this.props.currentUser.id,
                 requestee_id: this.userId
-            }).then(() => this.props.history.push("/myaccount"))
+            }).then(() => this.props.history.push(`/req_confirmation/${this.props.request.id}`))
         } else {
             return "errors" // create error props
         }
@@ -49,16 +50,24 @@ class RequestForm extends React.Component {
     // }
 
     render(){
+        let users = this.props.allUsers;
+        let options = users.map((user) =>
+            <option key={user.email}>{user.email}</option>)
         return (
             <div className="form-content">
                 <div className="form-container">
                     <div className="form-box">
                         <div>
-                            <form className="form-fields" onSubmit={() => this.handleSubmit("jdeezy@noblecheetah.io")}>
+                            <form className="form-fields" onSubmit={() => this.handleSubmit(this.state.email)}>
                                 <div className="form-header">
                                     <img src={window.test_user} alt="" />
-                                    <h1>YourPal@cheetahs.io</h1>
                                 </div>
+                                <select className="form-email"
+                                    // type="email"
+                                    placeholder="Email"
+                                    onChange={this.update('email')}>
+                                    {options}
+                                </select>
                                 <input className="form-amount"
                                     type="text"
                                     // pattern="[0-9]*" 
@@ -88,7 +97,7 @@ class RequestForm extends React.Component {
                     </div>
                     <div className="message-container">
                         <div className="message">
-                            Are you sure you want request payment? There are no take-backs!
+                            Are you sure you want Request payment? There are no take-backs!
                         </div>
                     </div>
                 </div>

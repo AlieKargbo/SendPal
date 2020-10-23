@@ -25,7 +25,7 @@ export const fetchAllRequests = () => {
     };
 };
 
-export const fetchRequest = () => {
+export const fetchRequest = (requestId) => {
     return (dispatch) => {
         return RequestApiUtil.fetchRequest(requestId).then((request) => {
             dispatch(receiveRequest(request))

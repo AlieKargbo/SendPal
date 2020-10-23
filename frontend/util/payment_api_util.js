@@ -1,3 +1,4 @@
+
 export const fetchAllPayments = () => {
     return $.ajax({
         url: `/api/payments`,
@@ -13,6 +14,7 @@ export const fetchPayment = (paymentId) => {
 };
 
 export const createPayment = (payment) => {
+    // debugger
     return $.ajax({
         url: `/api/payments/`,
         method: `POST`,

@@ -78,9 +78,9 @@ class Dashboard extends React.Component {
 
 
                             <ul className="recent-activity">
-                                <li id="activity">ACTIVITY 1</li>
-                                <li id="activity">ACTIVITY 2</li>
-                                <li id="activity">ACTIVITY 3</li>
+                                <li id="activity"></li>
+                                <li id="activity"></li>
+                                <li id="activity"></li>
                             </ul>
                         </section>
 

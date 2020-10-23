@@ -1,9 +1,11 @@
 # debugger
-json.partial! "api/requests/request", request: @request
+json.request do
+    json.partial! "api/requests/request", request: @request
+end
 
 json.requestor do
-    json.extract! @requestor, :id, :balance
+    json.extract! @requestor, :id, :balance, :email
 end
 json.requestee do
-    json.extract! @requestee, :id, :balance
+    json.extract! @requestee, :id, :balance, :email
 end

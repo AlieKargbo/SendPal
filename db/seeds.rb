@@ -54,38 +54,38 @@ u7 = User.create!(
   password: 'password'
 )
 
-payment1 = Payment.create!(
-  amount: 50.00, 
-  note: 'wingz & thingz 🍗', 
-  payer_id: u1.id, 
-  payee_id: u2.id
-)
+# payment1 = Payment.create!(
+#   amount: 50.00, 
+#   note: 'wingz & thingz 🍗', 
+#   payer_id: u1.id, 
+#   payee_id: u2.id
+# )
 
-payment2 = Payment.create!(
-  amount: 25.00, 
-  note: 'claws 🍻', 
-  payer_id: u3.id, 
-  payee_id: u4.id
-)
+# payment2 = Payment.create!(
+#   amount: 25.00, 
+#   note: 'claws 🍻', 
+#   payer_id: u3.id, 
+#   payee_id: u4.id
+# )
 
-payment3 = Payment.create!(
-  amount: 22.25, 
-  note: 'Shochu 🍶', 
-  payer_id: u5.id, 
-  payee_id: u6.id
-)
+# payment3 = Payment.create!(
+#   amount: 22.25, 
+#   note: 'Shochu 🍶', 
+#   payer_id: u5.id, 
+#   payee_id: u6.id
+# )
 
-payment4 = Payment.create!(
-  amount: 220, 
-  note: 'best snowboarding trip ever ❄️ 🏂', 
-  payer_id: u1.id, 
-  payee_id: u2.id
-)
+# payment4 = Payment.create!(
+#   amount: 220, 
+#   note: 'best snowboarding trip ever ❄️ 🏂', 
+#   payer_id: u1.id, 
+#   payee_id: u2.id
+# )
 
-payment5 = Payment.create!(
-  amount: 30, 
-  note: 'donuts!', 
-  payer_id: u2.id, 
-  payee_id: u7.id
-)
+# payment5 = Payment.create!(
+#   amount: 30, 
+#   note: 'donuts!', 
+#   payer_id: u2.id, 
+#   payee_id: u7.id
+# )
 

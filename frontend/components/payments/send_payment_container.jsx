@@ -7,6 +7,7 @@ const mapSTP = (state, ownProps) => {
     return ({
         currentUser: state.entities.users[state.session.id],
         allUsers: Object.values(state.entities.users),
+        payment: state.entities.payments,
         // payments: Object.values(state.entities.payments),
         formType: 'send_payment'
     })
@@ -20,4 +21,4 @@ const mapDTP = (dispatch) => {
     });
 }
 
-export default connect(mapSTP, mapDTP)(PaymentForm)
+export default connect(mapSTP, mapDTP)(PaymentForm) 

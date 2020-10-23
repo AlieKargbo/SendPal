@@ -5,7 +5,6 @@ class Splash extends React.Component{
 
     render(){
         return(
-        <>
             <div className='main'>
                 <div className='header'>
                     <div className='header-container'>
@@ -41,7 +40,6 @@ class Splash extends React.Component{
                     </div>
                 </div>
             </div>
-        </>
         )            
     }
 }
