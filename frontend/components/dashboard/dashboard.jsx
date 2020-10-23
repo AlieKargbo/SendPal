@@ -33,7 +33,7 @@ class Dashboard extends React.Component {
                     <div className="dashboard-content-container">
                         <section className="left-container">
                             <div className="greeting-container">
-                                <p className="greeting-message"></p> Why, Hello There.
+                                <p className="greeting-message"></p> Welcome to SendPal
                             </div>
                             <div className="balance-container">
                                 <h3 className="balance-header-message">SendPal Balance</h3>
@@ -67,7 +67,7 @@ class Dashboard extends React.Component {
                             </div>
 
                             <div className="pals-container">
-                                <h3 className="pals-header">PALS</h3>
+                                <h3 className="pals-header">Your Pals</h3>
                                 <ul className="pals-list">
                                     <button id="pals">A B</button>
                                     <button id="pals">C D</button>

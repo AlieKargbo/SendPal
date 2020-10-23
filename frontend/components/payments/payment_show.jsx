@@ -8,7 +8,7 @@ class PaymentShow extends React.Component {
     // }
     
     render() {
-        debugger
+        // debugger
         return (
             <div className="confirmation-container">
                 <div className="confirmation-wrapper">

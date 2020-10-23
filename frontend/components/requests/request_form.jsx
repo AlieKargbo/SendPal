@@ -95,7 +95,7 @@ class RequestForm extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="message-container">
+                    <div className="form-message-container">
                         <div className="message">
                             Are you sure you want REQUEST payment? There are no take-backs!
                         </div>

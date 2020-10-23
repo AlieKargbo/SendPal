@@ -12,8 +12,9 @@
 .left-container {
     // position: relative;
     display: flex;
+    padding-top: 15px;
     flex-direction: column;
-    margin-left: 210px;
+    margin-left: 275px;
     flex: 1;
     background-color: #f5f7fa;
     // border: 1px solid grey;
@@ -96,8 +97,13 @@
     margin-right: 210px;
     flex: 1;
     margin-top: 30px;
+    padding-top: 15px;
     // border: 1px solid grey;
     // border-radius: 4px;
+}
+
+.transaction-container{
+    height: 15%;
 }
 
 .transaction-Btns {
@@ -140,6 +146,15 @@
     color: #2c2e2f;
 }
 
+.pals-container{
+    text-align: center;
+    font-size: 22px;
+        // padding-top: 15px;
+}
+
+.pals-header{
+    margin-bottom: 25px;
+}
 
 .pals-list {
     display: flex;

@@ -80,7 +80,7 @@
     }
 }
 
-.message-container{
+.form-message-container{
     height: 70px;
     width: 100%
 }
@@ -89,10 +89,11 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    width: 100%;
+    width: 405px;
     height: 100%;
     font-size: 13px;
-        margin-top: 10px;
+    margin-top: 20px;
+    padding-left: 45px;
 }
 
 .continue-Btn {
@@ -121,6 +122,7 @@
     color: white;
     transition: background-color .2s ease-out;
     }
+    z-index: 10;
 }
 
 .cancel-link{
