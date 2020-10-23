@@ -115,7 +115,7 @@ class PaymentForm extends React.Component {
                     </div>
                     <div className="message-container">
                         <div className="message">
-                            Are you sure you want to send the payment? There are no take-backs!
+                            Are you sure you want to SEND this payment? There are no take-backs!
                         </div>
                     </div>
                 </div>

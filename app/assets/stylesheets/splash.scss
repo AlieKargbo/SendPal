@@ -7,45 +7,26 @@
 }
 
 .header {
-    // background-image: linear-gradient(#032c94, #009cde);
-    background-color: yellow;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    // border-bottom: 1px solid #ededed;
-    margin: 0;
-    padding: 0;
-    line-height: 100px;
-    // position: relative;
-    width: 100vw;
-    z-index: 1;
-}
-
-.header-logo {
-    height: 0;
-}
-
-.header-logo-a img {
-    padding-top: 20px;
-    width: 60px;
-    height: 60px;
-    padding-left: 75px;
-    z-index: 1;
-}
-
-.header-container {
-    padding-right: 75px;
     background: linear-gradient(#032c94, #009cde);
     width: 100vw;
     justify-content: space-between;
     display: flex;
+    height: 90px;
+    padding-top: 35px;
+    border-bottom: 1px solid #ffffff99;
+}
+.header-wrapper {
+    width: 80%;
+    height: 100%;
+    // border: 2px solid;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
-
-.header-logo a {
-    width: 100px;
-    height: 40px;
+.header-logo-a img {
+    width: 60px;
+    height: 60px;
 }
 
 .login-button button{
@@ -57,92 +38,67 @@
     cursor: pointer;
     border: 1px solid white;
     border-radius: 24px;
-}
-
-.login-button:hover {
+    &:hover {
     opacity: .8;
-    color: #fff;
     text-decoration: none;
+    }
 }
-
 
 .content {
     display: flex;
     justify-content: center;
-    text-align: center;
-    height: 662px;
+    background-color: #009cde;  
+    // padding-top: 48px;
+    align-items: center;
+    // border: 2px solid;
+    height: 60vh;
     width: 100%;
-    // padding: 25px 0 0 0;
-    // box-sizing: border-box;
-    // background-color: green;
 }
-
-// .content-container {
-//     margin: 0 auto;
-//     display: flex;
-//     align-items: center;
-// }
-        
-.homepage-img {
-    // height: 100vw;
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    // border: 2px solid red;
+    width: 88vw;
     background: image-url("sendpal-banner.jpg");
     background-repeat: no-repeat;
-    position: relative;
-    background-color: #009cde;      
-    width: 100vw;
-    height: 80%;
-
-    // -webkit-background-size: cover;
-    // -moz-background-size: cover;
-    // -o-background-size: cover;
-    // background-size: cover;
 }
+
 .signup {
     display: flex;
-    // justify-content: center;
-    // flex-direction: column;
-    // align-items: center;
-    
+    justify-content: center;;
+    font-weight: bolder;
     font-size: 60px;
     font-weight: lighter;
     font-family: PayPal Sans Big Light, Helvetica Neue,Arial,sans-serif;;
 }
 
+.message-container{
+    height: 35vh;
+    width: 60%;
+    // border: 2px solid green;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .main-message {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     text-align: center;
     width: 100vw;
-    top: 265px;
-    left: 147px;
-    position: absolute;
     color: ghostwhite;
-    margin: auto 0;
-    z-index: 3;
     font-weight: bolder;
 }
 
 .sub-message {
-    // display: flex;
-    // position: relative;
-    // top: 48px;
-    // left: 663px;
     text-align: center;
-    width: 100vw;
-    top: 101px;
-    left: -158px;
-    position: absolute;
     color: ghostwhite;
-    margin: auto 0;
-    z-index: 3;
     font-weight: bolder;
 }
 
 .signup-button {
-    position: relative;
-    top: 175px;
-    left: -464px;
     margin-top: 10px;
     font-size: 15.5px;
     font-weight: 525;
@@ -153,7 +109,6 @@
     cursor: pointer;
     border: .5px solid #00b1b7;
     border-radius: 24px;
-    z-index: 5;
 }
 
 .signup-button:hover {
@@ -166,13 +121,11 @@
 }
 
 .covid {
-    position: absolute;
     width: 100vw;
     height: 133px;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 630px;
     background-color: #fff2dc;
     border: none;
 }

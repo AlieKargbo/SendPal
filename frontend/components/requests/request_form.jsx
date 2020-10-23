@@ -97,7 +97,7 @@ class RequestForm extends React.Component {
                     </div>
                     <div className="message-container">
                         <div className="message">
-                            Are you sure you want Request payment? There are no take-backs!
+                            Are you sure you want REQUEST payment? There are no take-backs!
                         </div>
                     </div>
                 </div>
