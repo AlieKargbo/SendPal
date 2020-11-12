@@ -41,7 +41,7 @@
     // opacity: .8;
         text-decoration: none;
         background-color: #fbda93;
-        font-weight: bolder;
+        // font-weight: bolder;
         border: none;
         transition: background-color .4s ease-out;
     }
@@ -125,7 +125,7 @@
     }
     &:active{
         text-decoration: underline;
-        color: black;
+        color: white;
         font-weight: bolder;
         box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
         border: none;

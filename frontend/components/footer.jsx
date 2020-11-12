@@ -4,6 +4,7 @@ import React from 'react';
 
     const linkedIn = "https://www.linkedin.com/in/trivta/"
     const gitHub = "https://github.com/iamtreetop"
+    const angelList = "https://angel.co/u/trivta"
 
     return (
         <>
@@ -18,6 +19,11 @@ import React from 'react';
                         <div className='icon'>
                             <a href={gitHub} target="_blank" className="footer-links">
                                 <img src={window.gitHub} alt="" />
+                            </a>
+                        </div>
+                        <div className='icon'>
+                            <a href={angelList} target="_blank" className="footer-links">
+                                <img src={window.angelList} alt="" />
                             </a>
                         </div>
                     </div>
