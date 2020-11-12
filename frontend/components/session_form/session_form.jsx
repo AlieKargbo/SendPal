@@ -86,13 +86,9 @@ class SessionForm extends React.Component{
         );
 
         const toggleText = (this.props.formType === "login") ? (
-            <label>
-                Log In
-            </label>
+            "Log In"
         ) : (
-            <label>
-                Sign Up
-            </label >
+            "Sign Up"
         );
 
         let errors = this.props.errors.map((error, idx) => {
@@ -133,9 +129,12 @@ class SessionForm extends React.Component{
 
                                 
                                 <div className="actionsSpaced">
-                                    <button className="button actionContinue"
-                                        value={this.props.formType}>{toggleText}
-                                    </button>
+                                    <input className="button actionContinue"
+                                        type="submit"
+                                        value={this.props.formType}
+                                        placeholder={toggleText}
+                                        >
+                                    </input>
                                 </div>
 
                                 <div className="orSeparator">

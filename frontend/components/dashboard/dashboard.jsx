@@ -8,6 +8,10 @@ class Dashboard extends React.Component {
         this.handleClick = this.handleClick.bind(this)
     }
 
+    componentDidMount(){
+        
+    }
+
     handleClick() {
         this.props.logout()
             .then(() => this.props.history.push("/login"))
