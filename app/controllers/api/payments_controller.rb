@@ -1,5 +1,6 @@
 class Api::PaymentsController < ApplicationController
     def index
+        # @payments = Payment.where(payerId: payer_id) #where payerid is
         @payments = Payment.all
         render :index
     end

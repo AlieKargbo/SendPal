@@ -37,7 +37,7 @@ class Dashboard extends React.Component {
                     <div className="dashboard-content-container">
                         <section className="left-container">
                             <div className="greeting-container">
-                                <p className="greeting-message"></p> Welcome to SendPal
+                                <p className="greeting-message">Welcome, {this.props.user.email} </p>
                             </div>
                             <div className="balance-container">
                                 <h3 className="balance-header-message">SendPal Balance</h3>
