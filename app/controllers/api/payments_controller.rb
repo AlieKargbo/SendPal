@@ -1,6 +1,7 @@
 class Api::PaymentsController < ApplicationController
     def index
-        # @payments = Payment.where(payerId: payer_id) #where payerid is
+        # @payments = Payment.where(payer_id: 2) #where payerid is payer_id
+        # debugger
         @payments = Payment.all
         render :index
     end
@@ -13,7 +14,7 @@ class Api::PaymentsController < ApplicationController
         # debugger
         payee = User.find_by(id: params[:payment][:payee_id])
         
-        # debugger
+        debugger
         if @payment.save
             # current_user.balance = (@payer.balance - @payment.amount)
             # debugger
@@ -32,7 +33,7 @@ class Api::PaymentsController < ApplicationController
     end
 
     def show
-        # debugger
+        debugger
         @payment = Payment.find(params[:id])
         render :show
     end

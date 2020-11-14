@@ -18,18 +18,22 @@ const receivePayment = (payload) => {
 };
 
 export const fetchAllPayments = () => {
+    debugger
     return (dispatch) => {
         return PaymentApiUtil.fetchAllPayments().then((payload) => {
             dispatch(receiveAllPayments(payload))
         })
+        .catch(err => console.log(err))
     }
 };
 
 export const fetchPayment = (paymentId) => {
+    debugger
     return (dispatch) => {
         return PaymentApiUtil.fetchPayment(paymentId).then((payment) => {
             dispatch(receivePayment(payment))
         })
+        .catch(err => console.log(err))
     }
 };
 
@@ -39,6 +43,7 @@ export const createPayment = (paymentId) => {
         return PaymentApiUtil.createPayment(paymentId).then((payload) => {
             dispatch(receivePayment(payload))
         })
+        .catch(err => console.log(err))
         // .fail((resp) => console.log(resp))
     }
 };

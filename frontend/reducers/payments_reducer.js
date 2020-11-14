@@ -4,12 +4,12 @@ import { RECEIVE_ALL_PAYMENTS, RECEIVE_PAYMENT, RECEIVE_UPDATED_USER } from "../
 const paymentsReducer = (oldState={}, action) => {
     Object.freeze(oldState);
     let nextState = Object.assign({}, oldState);
-    // debugger
     switch (action.type) {
         case RECEIVE_ALL_PAYMENTS:
+            debugger
             return action.payments;
         case RECEIVE_PAYMENT:
-            // debugger
+            debugger
             // nextState[action.payload.payment.id] = action.payload.payment;
             nextState = action.payload.payment;
             return nextState;

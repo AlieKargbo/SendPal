@@ -9,7 +9,8 @@ class Dashboard extends React.Component {
     }
 
     componentDidMount(){
-        
+        // debugger
+        // this.props.fetchPayments();
     }
 
     handleClick() {
