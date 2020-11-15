@@ -6,10 +6,10 @@ const paymentsReducer = (oldState={}, action) => {
     let nextState = Object.assign({}, oldState);
     switch (action.type) {
         case RECEIVE_ALL_PAYMENTS:
-            debugger
+            // debugger
             return action.payments;
         case RECEIVE_PAYMENT:
-            debugger
+            // debugger
             // nextState[action.payload.payment.id] = action.payload.payment;
             nextState = action.payload.payment;
             return nextState;

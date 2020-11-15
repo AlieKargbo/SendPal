@@ -1,8 +1,8 @@
 class Api::PaymentsController < ApplicationController
     def index
-        # @payments = Payment.where(payer_id: 2) #where payerid is payer_id
-        # debugger
-        @payments = Payment.all
+        debugger
+        @payments = Payment.where(payer_id: params[:id]) #if only need all payments from current user
+        # @payments = Payment.all
         render :index
     end
     

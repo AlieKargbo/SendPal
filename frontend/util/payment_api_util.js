@@ -1,14 +1,14 @@
 
-export const fetchAllPayments = () => {
+export const fetchAllPayments = (id) => {
     debugger
     return $.ajax({
         url: `/api/payments`,
-        method: `GET`
+        method: `GET`,
+        data: { id }
     });
 };
 
 export const fetchPayment = (paymentId) => {
-    debugger
     return $.ajax({
         url: `/api/payments/${paymentId}`,
         method: 'GET'
@@ -16,7 +16,6 @@ export const fetchPayment = (paymentId) => {
 };
 
 export const createPayment = (payment) => {
-    // debugger
     return $.ajax({
         url: `/api/payments/`,
         method: `POST`,

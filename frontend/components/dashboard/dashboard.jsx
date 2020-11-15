@@ -9,8 +9,9 @@ class Dashboard extends React.Component {
     }
 
     componentDidMount(){
-        // debugger
-        // this.props.fetchPayments();
+        debugger
+        this.props.fetchPayments(this.props.user.id);
+        // this.props.fetchAllUsers()
     }
 
     handleClick() {
@@ -19,6 +20,17 @@ class Dashboard extends React.Component {
     }
 
     render() {
+        debugger
+        let paymentList = this.props.payments.map(
+            (payment) => {
+                return (
+                    <li className="payment-list">
+                        You sent {payment.amount} to {payment.payee_id}
+                        {/* You sent {payment.amount} to {users[payee_id].email} */}
+                    </li>
+                )
+            }
+        )
         // debugger
         // ?<Redirect to="/myaccount" /> 
         // if (!this.props.path && !this.props.authPath){
@@ -83,7 +95,7 @@ class Dashboard extends React.Component {
 
 
                             <ul className="recent-activity">
-                                <li id="activity"></li>
+                                {paymentList}
                                 <li id="activity"></li>
                                 <li id="activity"></li>
                             </ul>
