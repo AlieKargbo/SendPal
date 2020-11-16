@@ -22,9 +22,9 @@ class Dashboard extends React.Component {
     render() {
         debugger
         let paymentList = this.props.payments.map(
-            (payment) => {
+            (payment, idx) => {
                 return (
-                    <li className="payment-list">
+                    <li key={idx} className="payment-list">
                         You sent {payment.amount} to {payment.payee_id}
                         {/* You sent {payment.amount} to {users[payee_id].email} */}
                     </li>

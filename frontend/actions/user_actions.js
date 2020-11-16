@@ -26,6 +26,7 @@ const receiveUpdatedUser = (payload) => {
 }
 
 export const fetchAllUsers = () => {
+    debugger
     return (dispatch) => {
         return UserApiUtil.fetchAllUsers().then((payload) => {
             dispatch(receiveAllUsers(payload))

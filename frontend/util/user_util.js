@@ -1,6 +1,7 @@
 const { $CombinedState } = require("redux")
 
 export const fetchAllUsers = () => {
+    debugger
     return $.ajax ({
         url: `/api/users`,
         method: `GET`

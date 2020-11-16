@@ -1,6 +1,6 @@
 
 export const fetchAllPayments = (id) => {
-    debugger
+    // debugger
     return $.ajax({
         url: `/api/payments`,
         method: `GET`,

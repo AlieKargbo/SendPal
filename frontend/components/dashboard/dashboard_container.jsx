@@ -1,10 +1,11 @@
 import { connect } from "react-redux";
 import Dashboard from "./dashboard";
 import { fetchAllPayments } from "../../actions/payment_actions";
+import { fetchAllUsers } from "../../actions/user_actions";
 import { login, logout, signup } from "../../actions/session_actions";
 
 const mapSTP = (state, ownProps) => {
-    // debugger
+    debugger
     return ({
         payments: Object.values(state.entities.payments),
         user: state.entities.users[state.session.id],
@@ -22,7 +23,7 @@ const mapDTP = (dispatch, ownProps) => {
         logout: () => dispatch(logout()),
         resetUrl: () => ownProps.history.push("/"),
         fetchPayments: (userId) => dispatch(fetchAllPayments(userId)),
-        fetchUsers: () => dispatch(receiveAllUsers())
+        fetchUsers: () => dispatch(fetchAllUsers())
     })
 
 }
