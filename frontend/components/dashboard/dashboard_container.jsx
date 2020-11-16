@@ -21,7 +21,8 @@ const mapDTP = (dispatch, ownProps) => {
         login: (user) => dispatch(login(user)),
         logout: () => dispatch(logout()),
         resetUrl: () => ownProps.history.push("/"),
-        fetchPayments: (userId) => dispatch(fetchAllPayments(userId))
+        fetchPayments: (userId) => dispatch(fetchAllPayments(userId)),
+        fetchUsers: () => dispatch(receiveAllUsers())
     })
 
 }

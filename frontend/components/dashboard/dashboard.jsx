@@ -11,7 +11,7 @@ class Dashboard extends React.Component {
     componentDidMount(){
         debugger
         this.props.fetchPayments(this.props.user.id);
-        // this.props.fetchAllUsers()
+        this.props.fetchUsers();
     }
 
     handleClick() {
@@ -31,18 +31,6 @@ class Dashboard extends React.Component {
                 )
             }
         )
-        // debugger
-        // ?<Redirect to="/myaccount" /> 
-        // if (!this.props.path && !this.props.authPath){
-        //     this.props.history.push("/")
-        // }
-        // render navbar at top
-        // render left component
-          // balance component
-        // render right component
-          // send and request buttons
-          // friends comp
-            //friendsIndex
         if (this.props.user) {
             // debugger
             return (
@@ -93,12 +81,11 @@ class Dashboard extends React.Component {
                                 </ul>
                             </div>
 
-
-                            <ul className="recent-activity">
-                                {paymentList}
-                                <li id="activity"></li>
-                                <li id="activity"></li>
-                            </ul>
+                            <div className="activities-container">
+                                <ul className="activity-list-items">
+                                    {paymentList}
+                                </ul>
+                            </div>
                         </section>
 
                     </div>
