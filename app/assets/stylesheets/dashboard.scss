@@ -184,8 +184,6 @@
     display: flex;
     flex-direction: column;
     padding: 0 50px;
-    overflow: auto;
-    // height: 300px;
     // border: 2px solid green;
 }
 
@@ -198,14 +196,19 @@
     font-family: PayPal Sans Big Medium;
 }
 
-.payment-list{
-    padding: 4px 0 12px 25px;
+.activity-list-items{
+    overflow: auto;
+    height: 42vh;
+}
+
+.payment-list-items{
+    padding: 6px 0 4px 25px;
     border-bottom: 1px solid grey;
     border-style: dotted;
 }
 
-.payment-list:hover{
-    background-color: #d3e0f7c8;
+.payment-list-items:hover{
+    background-color: #d3e0f79c;
     border-left: 3px solid #003087;
 }
 
@@ -223,6 +226,18 @@
 .payment-amount{
     font-size: 14.5px;
     padding-right: 20px;
+}
+
+.payment-date, .payment-note{
+    font-size: 11px;
+}
+
+.payment-date{
+    padding-top: 12px;
+}
+
+.payment-note{
+    margin-top: -6px;
 }
 
 .pay-link{
