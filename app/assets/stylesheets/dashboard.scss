@@ -151,11 +151,16 @@
 .pals-container{
     text-align: center;
     font-size: 22px;
-        // padding-top: 15px;
+    padding: 0 50px;
 }
 
 .pals-header{
+    font-size: 18px;
     margin-bottom: 25px;
+    text-align: left;
+    font-weight: 800;
+    color: #0070ba;
+    font-family: PayPal Sans Big Medium;
 }
 
 .pals-list {
@@ -175,9 +180,49 @@
     border: none;
 }
 
+.activities-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    overflow: auto;
+    // height: 300px;
+    // border: 2px solid green;
+}
 
-#activity {
-    border: 2px solid lightslategray;
+.activities-header{
+    text-align: left;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: #0070ba;
+    font-family: PayPal Sans Big Medium;
+}
+
+.payment-list{
+    padding: 4px 0 12px 25px;
+    border-bottom: 1px solid grey;
+    border-style: dotted;
+}
+
+.payment-list:hover{
+    background-color: #d3e0f7c8;
+    border-left: 3px solid #003087;
+}
+
+.payment-list-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.payment-user{
+    font-size: 14.5px;
+    font-family: PayPal Sans Big Medium;
+}
+
+.payment-amount{
+    font-size: 14.5px;
+    padding-right: 20px;
 }
 
 .pay-link{

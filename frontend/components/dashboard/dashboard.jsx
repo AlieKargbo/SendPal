@@ -9,7 +9,7 @@ class Dashboard extends React.Component {
     }
 
     componentDidMount(){
-        debugger
+        // debugger
         this.props.fetchUsers();
         this.props.fetchPayments(this.props.user.id);
     }
@@ -21,13 +21,18 @@ class Dashboard extends React.Component {
 
     render() {
         let allUsers = this.props.users;
-        debugger
+        // debugger
         let paymentList = this.props.payments.map(
             (payment, idx) => {
                 return (
                     <li key={idx} className="payment-list">
                         {/* You sent {payment.amount} to {payment.payee_id} */}
-                        You sent {payment.amount} to {allUsers[payment.payee_id].email}
+                        <div className="payment-list-header">
+                            <div className="payment-user">{allUsers[payment.payee_id].email}</div>
+                            <div className="payment-amount">- ${payment.amount}</div>
+                        </div>
+                        <div>{payment.date}</div>
+                        <div className="payment-note">"{payment.note}"</div>
                     </li>
                 )
             }
@@ -83,6 +88,7 @@ class Dashboard extends React.Component {
                             </div>
 
                             <div className="activities-container">
+                                <h3 className="activities-header">Payments</h3>
                                 <ul className="activity-list-items">
                                     {paymentList}
                                 </ul>

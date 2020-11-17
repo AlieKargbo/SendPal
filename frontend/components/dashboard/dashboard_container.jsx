@@ -5,7 +5,7 @@ import { fetchAllUsers } from "../../actions/user_actions";
 import { login, logout, signup } from "../../actions/session_actions";
 
 const mapSTP = (state, ownProps) => {
-    debugger
+    // debugger
     return ({
         payments: Object.values(state.entities.payments),
         user: state.entities.users[state.session.id],
@@ -16,7 +16,7 @@ const mapSTP = (state, ownProps) => {
 }
 
 const mapDTP = (dispatch, ownProps) => {
-    debugger
+    // debugger
     return ({
         signup: (user) => dispatch(signup(user)),
         login: (user) => dispatch(login(user)),

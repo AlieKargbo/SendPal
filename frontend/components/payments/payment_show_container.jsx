@@ -3,7 +3,7 @@ import PaymentShow from './payment_show';
 import { fetchPayment } from '../../actions/payment_actions';
 
 const mapSTP = (state, ownProps) => {
-    debugger
+    // debugger
     return ({
         payment: state.entities.payments
         // payment: state.entities.payments[ownProps.match.params.paymentId],
