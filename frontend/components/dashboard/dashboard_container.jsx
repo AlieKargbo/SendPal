@@ -16,7 +16,7 @@ const mapSTP = (state, ownProps) => {
 }
 
 const mapDTP = (dispatch, ownProps) => {
-    // debugger
+    debugger
     return ({
         signup: (user) => dispatch(signup(user)),
         login: (user) => dispatch(login(user)),

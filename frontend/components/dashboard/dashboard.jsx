@@ -10,8 +10,8 @@ class Dashboard extends React.Component {
 
     componentDidMount(){
         debugger
-        this.props.fetchPayments(this.props.user.id);
         this.props.fetchUsers();
+        this.props.fetchPayments(this.props.user.id);
     }
 
     handleClick() {
@@ -20,13 +20,14 @@ class Dashboard extends React.Component {
     }
 
     render() {
+        let allUsers = this.props.users;
         debugger
         let paymentList = this.props.payments.map(
             (payment, idx) => {
                 return (
                     <li key={idx} className="payment-list">
-                        You sent {payment.amount} to {payment.payee_id}
-                        {/* You sent {payment.amount} to {users[payee_id].email} */}
+                        {/* You sent {payment.amount} to {payment.payee_id} */}
+                        You sent {payment.amount} to {allUsers[payment.payee_id].email}
                     </li>
                 )
             }
