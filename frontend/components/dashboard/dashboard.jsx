@@ -12,6 +12,7 @@ class Dashboard extends React.Component {
         // debugger
         this.props.fetchUsers();
         this.props.fetchPayments(this.props.user.id);
+        this.props.fetchRequests(this.props.user.id);
     }
 
     handleClick() {
@@ -22,9 +23,9 @@ class Dashboard extends React.Component {
     render() {
         
         let allUsers = this.props.users;
-
         if (Object.values(allUsers).length <= 1) return null
-        // debugger
+        debugger
+
         let paymentList = this.props.payments.map(
             (payment, idx) => {
                 return (
@@ -39,7 +40,24 @@ class Dashboard extends React.Component {
                     </li>
                 )
             }
+            )
+            
+            let requestList = this.props.requests.map(
+                (request, idx) => {
+                    return (
+                        <li key={idx} className="request-list-items">
+                        {/* You requested {request.amount} from {request.requestee_id} */}
+                        <div className="request-list-header">
+                            <div className="request-user">{allUsers[request.requestee_id].email}</div>
+                            <div className="request-amount">+ ${request.amount}</div>
+                        </div>
+                        <div className="request-date">{request.date}</div>
+                        <div className="request-note">"{request.note}"</div>
+                    </li>
+                )
+            }
         )
+
         if (this.props.user) {
             // debugger
             return (
@@ -60,7 +78,9 @@ class Dashboard extends React.Component {
                                     <Link className="pay-link" to="/myaccount/pay">Transfer Money</Link>
                                 </button>
                             </div>
-                            <div></div>
+                            <div>
+                                {requestList}
+                            </div>
                         </section>
 
                         <section className="right-container">

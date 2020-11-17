@@ -201,42 +201,51 @@
     height: 42vh;
 }
 
-.payment-list-items{
+.payment-list-items, .request-list-items{
     padding: 6px 0 4px 25px;
     border-bottom: 1px solid grey;
     border-style: dotted;
+    list-style: none;
 }
 
-.payment-list-items:hover{
+.payment-list-items:hover, .request-list-items:hover{
     background-color: #d3e0f79c;
     border-left: 3px solid #003087;
 }
 
-.payment-list-header{
+.payment-list-header, .request-list-header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.payment-user{
+.payment-user, .request-user{
     font-size: 14.5px;
     font-family: PayPal Sans Big Medium;
 }
 
-.payment-amount{
+.payment-amount, .request-amount{
     font-size: 14.5px;
     padding-right: 20px;
 }
 
-.payment-date, .payment-note{
+.payment-amount{
+    color: red;
+}
+
+.request-amount{
+    color: green;
+}
+
+.payment-date, .payment-note, .request-date, .request-note{
     font-size: 11px;
 }
 
-.payment-date{
+.payment-date, .request-date{
     padding-top: 12px;
 }
 
-.payment-note{
+.payment-note, .request-note{
     margin-top: -6px;
 }
 

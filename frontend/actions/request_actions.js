@@ -17,9 +17,10 @@ const receiveRequest = (payload) => {
     });
 };
 
-export const fetchAllRequests = () => {
+export const fetchAllRequests = (userId) => {
+    debugger
     return (dispatch) => {
-        return RequestApiUtil.fetchAllRequests().then((payload) => {
+        return RequestApiUtil.fetchAllRequests(userId).then((payload) => {
             dispatch(receiveAllRequests(payload))
         });
     };

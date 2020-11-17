@@ -1,6 +1,7 @@
 class Api::RequestsController < ApplicationController
     def index
-        @requests = Request.all
+        # @requests = Request.all
+        @requests = Request.where(requestor_id: params[:id])
         render :index
     end
     
@@ -8,15 +9,13 @@ class Api::RequestsController < ApplicationController
         @request = Request.new(request_params)
         requestor = User.find_by(id: params[:request][:requestor_id])
         requestee = User.find_by(id: params[:request][:requestee_id])
-        # debugger
+        
         if @request.save
             requestor.update_attributes(balance: requestor.balance + @request.amount)
-            # debugger
             requestee.update_attributes(balance: requestee.balance - @request.amount)
             @requestor = requestor 
-            @requestee = requestee
+            @requestee = requestee     
             
-            # debugger
             render :show 
         else
             render json: @request.errors.full_messages, status: 400

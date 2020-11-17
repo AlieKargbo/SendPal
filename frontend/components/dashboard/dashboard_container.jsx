@@ -1,17 +1,19 @@
 import { connect } from "react-redux";
 import Dashboard from "./dashboard";
 import { fetchAllPayments } from "../../actions/payment_actions";
+import { fetchAllRequests } from "../../actions/request_actions";
 import { fetchAllUsers } from "../../actions/user_actions";
 import { login, logout, signup } from "../../actions/session_actions";
 
 const mapSTP = (state, ownProps) => {
     // debugger
     return ({
-        payments: Object.values(state.entities.payments),
+        authPath: (ownProps.location.pathname === "/login") || (ownProps.location.pathname === "/signup"),
+        path: ownProps.location.pathname === "/",
         user: state.entities.users[state.session.id],
         users: state.entities.users,
-        authPath: (ownProps.location.pathname === "/login") || (ownProps.location.pathname === "/signup"),
-        path: ownProps.location.pathname === "/"
+        payments: Object.values(state.entities.payments),
+        requests: Object.values(state.entities.requests)
     })
 }
 
@@ -22,8 +24,9 @@ const mapDTP = (dispatch, ownProps) => {
         login: (user) => dispatch(login(user)),
         logout: () => dispatch(logout()),
         resetUrl: () => ownProps.history.push("/"),
+        fetchUsers: () => dispatch(fetchAllUsers()),
         fetchPayments: (userId) => dispatch(fetchAllPayments(userId)),
-        fetchUsers: () => dispatch(fetchAllUsers())
+        fetchRequests: (userId) => dispatch(fetchAllRequests(userId))
     })
 
 }

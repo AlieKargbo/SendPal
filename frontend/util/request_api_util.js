@@ -1,7 +1,9 @@
-export const fetchAllRequests = () => {
+export const fetchAllRequests = (id) => {
+    // debugger
     return $.ajax({
         url: `/api/requests`,
-        method: `GET`
+        method: `GET`,
+        data: { id }
     })
 }
 

@@ -5,8 +5,8 @@ const requestsReducer = (oldState={}, action) => {
     let nextState = Object.assign({}, oldState);
     
     switch (action.type) {
-        
         case RECEIVE_ALL_REQUESTS:
+            // debugger
             return action.requests;
         case RECEIVE_REQUEST:
             // debugger

@@ -1,29 +1,22 @@
 class Api::PaymentsController < ApplicationController
     def index
-        # debugger
         @payments = Payment.where(payer_id: params[:id]) #if only need all payments from current user
         # @payments = Payment.all
         render :index
     end
     
     def create
-        # debugger
         @payment = Payment.new(payment_params)
-        # debugger
         payer = User.find_by(id: params[:payment][:payer_id])
-        # debugger
         payee = User.find_by(id: params[:payment][:payee_id])
         
-        # debugger
         if @payment.save
             # current_user.balance = (@payer.balance - @payment.amount)
-            # debugger
             # User.find_by(id: @payee.id).increase_payee_balance(@payment.amount)
             payee.update_attributes(balance: payee.balance + @payment.amount)
             payer.update_attributes(balance: payer.balance - @payment.amount)
             @payer = payer 
             @payee = payee
-            # debugger
 
             render :show 
         else
@@ -33,7 +26,6 @@ class Api::PaymentsController < ApplicationController
     end
 
     def show
-        # debugger
         @payment = Payment.find(params[:id])
         render :show
     end
