@@ -6,10 +6,8 @@ const requestsReducer = (oldState={}, action) => {
     
     switch (action.type) {
         case RECEIVE_ALL_REQUESTS:
-            // debugger
             return action.requests;
         case RECEIVE_REQUEST:
-            // debugger
             // nextState[action.payload.id] = action.payload.amount;
             nextState = action.payload.request;
             return nextState;

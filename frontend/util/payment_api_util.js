@@ -1,6 +1,5 @@
 
 export const fetchAllPayments = (id) => {
-    // debugger
     return $.ajax({
         url: `/api/payments`,
         method: `GET`,
@@ -24,7 +23,6 @@ export const createPayment = (payment) => {
 }
 
 // export const updateUser = (user) => {
-//     debugger
 //     return $.ajax({
 //         url: `/api/users/${user.id}`,
 //         method: 'PATCH',

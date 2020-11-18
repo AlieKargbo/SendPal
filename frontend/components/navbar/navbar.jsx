@@ -14,9 +14,9 @@ class NavBar extends React.Component{
     }
 
     render (){
-        // debugger
+
         if (this.props.user) {
-            // debugger
+        
             return (
                 <>
                     <div className="nav-main">

@@ -23,7 +23,6 @@ class Api::RequestsController < ApplicationController
     end
 
     # def show
-    #     # debugger
     #     @request = request.find(params[:id])
     #     render :show
     # end

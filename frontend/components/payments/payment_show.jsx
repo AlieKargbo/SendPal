@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 
 class PaymentShow extends React.Component {
     // componentDidMount() {
-    //     // debugger
     //     this.props.fetchPayment(this.props.match.params.paymentId)
     // }
     
     render() {
-        // debugger
+        
         return (
             <div className="confirmation-container">
                 <div className="confirmation-wrapper">

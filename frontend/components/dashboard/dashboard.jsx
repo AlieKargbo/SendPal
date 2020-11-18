@@ -9,7 +9,6 @@ class Dashboard extends React.Component {
     }
 
     componentDidMount(){
-        // debugger
         this.props.fetchUsers();
         this.props.fetchPayments(this.props.user.id);
         this.props.fetchRequests(this.props.user.id);
@@ -24,7 +23,6 @@ class Dashboard extends React.Component {
         
         let allUsers = this.props.users;
         if (Object.values(allUsers).length <= 1) return null
-        debugger
 
         let paymentList = this.props.payments.map(
             (payment, idx) => {
@@ -40,12 +38,12 @@ class Dashboard extends React.Component {
                     </li>
                 )
             }
-            )
+        )
             
-            let requestList = this.props.requests.map(
-                (request, idx) => {
-                    return (
-                        <li key={idx} className="request-list-items">
+        let requestList = this.props.requests.map(
+            (request, idx) => {
+                return (
+                    <li key={idx} className="request-list-items">
                         {/* You requested {request.amount} from {request.requestee_id} */}
                         <div className="request-list-header">
                             <div className="request-user">{allUsers[request.requestee_id].email}</div>
@@ -59,7 +57,7 @@ class Dashboard extends React.Component {
         )
 
         if (this.props.user) {
-            // debugger
+
             return (
                 <div className="dashboard">
                     <div className="dashboard-content-container">

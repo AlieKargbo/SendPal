@@ -18,7 +18,6 @@ const receiveRequest = (payload) => {
 };
 
 export const fetchAllRequests = (userId) => {
-    debugger
     return (dispatch) => {
         return RequestApiUtil.fetchAllRequests(userId).then((payload) => {
             dispatch(receiveAllRequests(payload))
@@ -35,7 +34,6 @@ export const fetchRequest = (requestId) => {
 };
 
 export const createRequest = (requestId) => {
-    // debugger
     return (dispatch) => {
         return RequestApiUtil.createRequest(requestId).then((payload) => {
             dispatch(receiveRequest(payload))

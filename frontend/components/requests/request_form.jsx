@@ -27,10 +27,8 @@ class RequestForm extends React.Component {
                 this.userId = user.id
             };
         });
-        // debugger
 
         if (Number(this.state.amount) >= 0) {
-            // debugger
             this.props.createRequest({
                 amount: this.state.amount,
                 note: this.state.note,

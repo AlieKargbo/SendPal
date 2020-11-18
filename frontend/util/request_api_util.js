@@ -1,5 +1,4 @@
 export const fetchAllRequests = (id) => {
-    // debugger
     return $.ajax({
         url: `/api/requests`,
         method: `GET`,
@@ -15,7 +14,6 @@ export const fetchRequest = (requestId) => {
 }
 
 export const createRequest = (request) => {
-    // debugger
     return $.ajax({
         url: `/api/requests`,
         method: `POST`,

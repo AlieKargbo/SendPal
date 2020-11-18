@@ -6,7 +6,6 @@ import { fetchAllUsers } from "../../actions/user_actions";
 import { login, logout, signup } from "../../actions/session_actions";
 
 const mapSTP = (state, ownProps) => {
-    // debugger
     return ({
         authPath: (ownProps.location.pathname === "/login") || (ownProps.location.pathname === "/signup"),
         path: ownProps.location.pathname === "/",
@@ -18,7 +17,6 @@ const mapSTP = (state, ownProps) => {
 }
 
 const mapDTP = (dispatch, ownProps) => {
-    // debugger
     return ({
         signup: (user) => dispatch(signup(user)),
         login: (user) => dispatch(login(user)),

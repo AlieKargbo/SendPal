@@ -3,7 +3,6 @@ import PaymentShow from './payment_show';
 import { fetchPayment } from '../../actions/payment_actions';
 
 const mapSTP = (state, ownProps) => {
-    // debugger
     return ({
         payment: state.entities.payments
         // payment: state.entities.payments[ownProps.match.params.paymentId],
@@ -11,7 +10,6 @@ const mapSTP = (state, ownProps) => {
 }
 
 const mapDTP = (dispatch) => {
-    // debugger
     return ({
         fetchPayment: (paymentId) => {
             return dispatch(fetchPayment(paymentId));

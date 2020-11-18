@@ -26,7 +26,6 @@ const receiveUpdatedUser = (payload) => {
 }
 
 export const fetchAllUsers = () => {
-    // debugger
     return (dispatch) => {
         return UserApiUtil.fetchAllUsers().then((payload) => {
             dispatch(receiveAllUsers(payload))
@@ -44,7 +43,6 @@ export const fetchUser = (userId) => {
 };
 
 // export const updateUser = (userId) => {
-//     debugger
 //     return (dispatch) => {
 //         return UserApiUtil.updateUser(userId).then((payload) => {
 //             dispatch(receiveUpdatedUser(payload))

@@ -1,5 +1,4 @@
 @payments.each do |payment|
-    # debugger
     json.set! payment.id do 
         json.id payment.id
         json.amount payment.amount

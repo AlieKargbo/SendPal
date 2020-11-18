@@ -1,4 +1,3 @@
-debugger
 @requests.each do |request|
     json.set! request.id do 
         json.id request.id

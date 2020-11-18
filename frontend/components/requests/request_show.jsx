@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 
 class RequestShow extends React.Component {
     // componentDidMount() {
-    //     // debugger
     //     this.props.fetchRequest(this.props.match.params.requestId)
     // }
 
     render() {
-        // debugger
+        
         return (
             <div className="confirmation-container">
                 <div className="confirmation-wrapper">

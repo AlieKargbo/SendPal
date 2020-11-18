@@ -6,7 +6,6 @@ class PaymentForm extends React.Component {
         super(props);
         // this.state = this.props.payments;
         // this.handleChange = this.handleChange.bind(this);
-        // debugger
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             email: '',
@@ -15,7 +14,6 @@ class PaymentForm extends React.Component {
     };
 
     componentDidMount(){
-        // debugger
         this.props.fetchUsers();
     };
 
@@ -26,9 +24,7 @@ class PaymentForm extends React.Component {
                 this.userId = user.id 
             }
         })
-        // debugger
         if(this.props.currentUser.balance >= Number(this.state.amount) && Number(this.state.amount) !== 0){
-            // debugger
             this.props.createPayment({
                     amount: this.state.amount, 
                     note: this.state.note,
@@ -36,7 +32,6 @@ class PaymentForm extends React.Component {
                     payee_id: this.userId
                 })
                 .then((res) => {
-                    // debugger    
                     this.props.history.push(`/confirmation/${this.props.payment.id}`)})                
                     // .then(() => this.props.history.push("/myaccount"))
         } else {
@@ -59,11 +54,12 @@ class PaymentForm extends React.Component {
     // })
 
     render() {
-    // debugger
+        
         let users = this.props.allUsers;
-        let options = users.map((user) => 
-            <option key={user.email}>{user.email}</option>)
-        return (
+        let options = users.map((user) => <option key={user.email}>{user.email}</option>)
+        
+            return (
+                
             <div className="form-content">
                 <div className="form-container">
                     <div className="form-box">

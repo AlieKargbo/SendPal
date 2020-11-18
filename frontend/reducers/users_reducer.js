@@ -9,7 +9,6 @@ const usersReducer = (oldState={}, action) => {
     
     switch (action.type) {
         case RECEIVE_ALL_USERS:
-            // debugger
             return action.users;
         case RECEIVE_USER:
             nextState[action.user.id] = action.user
@@ -18,12 +17,10 @@ const usersReducer = (oldState={}, action) => {
             nextState[action.user.id] = action.user
             return nextState;
         case RECEIVE_PAYMENT:
-            // debugger
             nextState[action.payload.payer.id] = action.payload.payer;
             nextState[action.payload.payee.id] = action.payload.payee;
             return nextState;
         case RECEIVE_REQUEST:
-            // debugger
             nextState[action.payload.requestor.id] = action.payload.requestor;
             nextState[action.payload.requestee.id] = action.payload.requestee;
         default:

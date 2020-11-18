@@ -18,7 +18,6 @@ const receivePayment = (payload) => {
 };
 
 export const fetchAllPayments = (userId) => {
-    // debugger
     return (dispatch) => {
         return PaymentApiUtil.fetchAllPayments(userId).then((payload) => {
             dispatch(receiveAllPayments(payload))
@@ -27,7 +26,6 @@ export const fetchAllPayments = (userId) => {
 };
 
 export const fetchPayment = (paymentId) => {
-    // debugger
     return (dispatch) => {
         return PaymentApiUtil.fetchPayment(paymentId).then((payment) => {
             dispatch(receivePayment(payment))
@@ -36,7 +34,6 @@ export const fetchPayment = (paymentId) => {
 };
 
 export const createPayment = (paymentId) => {
-    // debugger
     return (dispatch) => {
         return PaymentApiUtil.createPayment(paymentId).then((payload) => {
             dispatch(receivePayment(payload))
@@ -46,7 +43,6 @@ export const createPayment = (paymentId) => {
 };
 
 // export const updateUser = (userId) => {
-//     debugger
 //     return (dispatch) => {
 //         return UserApiUtil.updateUser(userId).then((user) => {
 //             dispatch(receiveUpdatedUser(user))
