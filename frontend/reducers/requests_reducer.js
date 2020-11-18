@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_REQUESTS, RECEIVE_REQUEST } from "../actions/request_actions";
+import { RECEIVE_ALL_REQUESTS, RECEIVE_REQUEST, REMOVE_REQUEST } from "../actions/request_actions";
 
 const requestsReducer = (oldState={}, action) => {
     Object.freeze(oldState);

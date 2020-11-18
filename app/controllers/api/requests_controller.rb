@@ -22,6 +22,22 @@ class Api::RequestsController < ApplicationController
         end
     end
 
+    def edit 
+        debugger
+        @request = Request.find(params[:id])
+        render :show
+    end
+
+    def update
+        debugger
+        @request = Request.find(params[:id])
+        if @request.update(request_params)
+            render :show
+        else
+            render json: @request.errors.full_messages, status: 400
+        end
+    end
+
     # def show
     #     @request = request.find(params[:id])
     #     render :show

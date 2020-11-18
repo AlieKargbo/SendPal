@@ -21,6 +21,15 @@ export const createRequest = (request) => {
     })
 }
 
+export const updateRequest = (request) => {
+    debugger
+    return $.ajax({
+        url: `api/requests/${request.id}`,
+        method: `patch`,
+        data: { request }
+    })
+}
+
 // export const deleteRequest = (requestId) => {
 //     return $.ajax({
 //         url: `/api/requests/${requestId}`,
