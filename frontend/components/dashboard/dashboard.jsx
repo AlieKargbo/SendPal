@@ -5,7 +5,13 @@ import { Redirect } from 'react-router-dom'
 class Dashboard extends React.Component {
     constructor(props){
         super(props);
-        this.handleClick = this.handleClick.bind(this)
+        this.state = {
+            selectedHeader: 'payments'
+        }
+        
+        this.handleClick = this.handleClick.bind(this);
+        this.changeHeaderToRequest = this.changeHeaderToRequest.bind(this);
+        this.changeHeaderToPayment = this.changeHeaderToPayment.bind(this);
     }
 
     componentDidMount(){
@@ -19,42 +25,56 @@ class Dashboard extends React.Component {
             .then(() => this.props.history.push("/login"))
     }
 
+    changeHeaderToRequest() {
+        this.setState({selectedHeader: "requests"})
+    }
+
+    changeHeaderToPayment() {
+        this.setState({selectedHeader: "payments"})
+    }
+
+
     render() {
         
         let allUsers = this.props.users;
         if (Object.values(allUsers).length <= 1) return null
 
-        let paymentList = this.props.payments.map(
-            (payment, idx) => {
-                return (
-                    <li key={idx} className="payment-list-items">
-                        {/* You sent {payment.amount} to {payment.payee_id} */}
-                        <div className="payment-list-header">
-                            <div className="payment-user">{allUsers[payment.payee_id].email}</div>
-                            <div className="payment-amount">- ${payment.amount}</div>
-                        </div>
-                        <div className="payment-date">{payment.date}</div>
-                        <div className="payment-note">"{payment.note}"</div>
-                    </li>
-                )
-            }
-        )
+        let activityList;
+        if (this.state.selectedHeader === "payments"){
+            activityList = this.props.payments.map(
+                (payment, idx) => {
+                    return (
+                        <li key={idx} className="payment-list-items">
+                            {/* You sent {payment.amount} to {payment.payee_id} */}
+                            <div className="payment-list-header">
+                                <div className="payment-user">{allUsers[payment.payee_id].email}</div>
+                                <div className="payment-amount">- ${payment.amount}</div>
+                            </div>
+                            <div className="payment-date">{payment.date}</div>
+                            <div className="payment-note">"{payment.note}"</div>
+                        </li>
+                    )
+                }
+            )
+        } else {
+            activityList = this.props.requests.map(
+                (request, idx) => {
+                    return (
+                        <li key={idx} className="request-list-items">
+                            {/* You requested {request.amount} from {request.requestee_id} */}
+                            <div className="request-list-header">
+                                <div className="request-user">{allUsers[request.requestee_id].email}</div>
+                                <div className="request-amount">+ ${request.amount}</div>
+                            </div>
+                            <div className="request-date">{request.date}</div>
+                            <div className="request-note">"{request.note}"</div>
+                        </li>
+                    )
+                }
+            )
+        }
+
             
-        let requestList = this.props.requests.map(
-            (request, idx) => {
-                return (
-                    <li key={idx} className="request-list-items">
-                        {/* You requested {request.amount} from {request.requestee_id} */}
-                        <div className="request-list-header">
-                            <div className="request-user">{allUsers[request.requestee_id].email}</div>
-                            <div className="request-amount">+ ${request.amount}</div>
-                        </div>
-                        <div className="request-date">{request.date}</div>
-                        <div className="request-note">"{request.note}"</div>
-                    </li>
-                )
-            }
-        )
 
         if (this.props.user) {
 
@@ -76,9 +96,9 @@ class Dashboard extends React.Component {
                                     <Link className="pay-link" to="/myaccount/pay">Transfer Money</Link>
                                 </button>
                             </div>
-                            <div>
+                            {/* <div>
                                 {requestList}
-                            </div>
+                            </div> */}
                         </section>
 
                         <section className="right-container">
@@ -110,9 +130,13 @@ class Dashboard extends React.Component {
                             </div>
 
                             <div className="activities-container">
-                                <h3 className="activities-header">Payments  |  Requests</h3>
+                                <div className="toggle-activity">
+                                    <h3 className="activities-header" onClick={this.changeHeaderToPayment} >Payments</h3>
+                                    <h3 className="activities-header"> | </h3>
+                                    <h3 className="activities-header" onClick={this.changeHeaderToRequest} >Requests</h3>
+                                </div>
                                 <ul className="activity-list-items">
-                                    {paymentList}
+                                    {activityList}
                                 </ul>
                             </div>
                         </section>

@@ -187,13 +187,20 @@
     // border: 2px solid green;
 }
 
+.toggle-activity{
+    display: flex;
+    flex-direction: row;
+}
+
 .activities-header{
     text-align: left;
+    padding-right: 10px;
     margin: 20px 0;
     font-size: 18px;
     font-weight: 800;
     color: #0070ba;
     font-family: PayPal Sans Big Medium;
+    
 }
 
 .activity-list-items{
