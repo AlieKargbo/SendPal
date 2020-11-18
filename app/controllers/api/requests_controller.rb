@@ -23,15 +23,18 @@ class Api::RequestsController < ApplicationController
     end
 
     def edit 
-        debugger
+        # debugger
         @request = Request.find(params[:id])
         render :show
     end
 
     def update
-        debugger
+        # debugger
+        
         @request = Request.find(params[:id])
         if @request.update(request_params)
+            @requestor = User.find_by(id: @request.requestor_id)
+            @requestee = User.find_by(id: @request.requestee_id)
             render :show
         else
             render json: @request.errors.full_messages, status: 400
