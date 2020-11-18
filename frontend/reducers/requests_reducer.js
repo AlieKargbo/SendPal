@@ -8,6 +8,7 @@ const requestsReducer = (oldState={}, action) => {
         case RECEIVE_ALL_REQUESTS:
             return action.requests;
         case RECEIVE_REQUEST:
+            debugger
             // nextState[action.payload.id] = action.payload.amount;
             nextState = action.payload.request;
             return nextState;

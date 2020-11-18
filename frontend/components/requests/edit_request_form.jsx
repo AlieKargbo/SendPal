@@ -7,27 +7,29 @@ class EditRequestForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             email: '',
-            payment: ''
+            amount: '',
+            note: ''
         };
     }
     
     componentDidMount(){
-        this.props.fetchRequest(this.props.match.params.requestId);
+        debugger
+        if(this.props.formType === "update_request") {
+            this.props.fetchRequest(this.props.match.params.requestId);
+        }
     }
 
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value })
     }
 
-    handleSubmit(email) {
+    handleSubmit() {
         event.preventDefault();
 
         if (Number(this.state.amount) >= 0) {
             this.props.updateRequest({
                 amount: this.state.amount,
                 note: this.state.note,
-                requestor_id: this.props.currentUser.id,
-                requestee_id: this.userId
             })
         } else { 
             return "errors"
@@ -36,25 +38,30 @@ class EditRequestForm extends React.Component {
 
 
     render() {
-        const { formType, request, updateRequest } = this.props;
-        
-        if (!request) return null;
+        // const { formType, request, updateRequest } = this.props;
+        debugger
+        // const request = this.props.requests;
+        // if (!request) return null;
         return (
             <div>
-                <form action="">
-                    <input className="form-amount"
+                <form action="" onSubmit={this.handleSubmit}>
+                    <br/>
+                    <label>AMOUNT</label>
+                    <input
                         type="text"
                         value={this.state.amount} //prefilled
+                        placeholder="AMOUNT"
                         onChange={this.update('amount')}
                         required={true}
                     />
-                    <input className="note-box"
+                    <label>NOTE</label>
+                    <input 
                         type="text"
                         value={this.state.note}
                         onChange={this.update('note')}
                         required={true}
                     />
-                    <input className="edit-request-btn"
+                    <input 
                         type="submit"
                         value="Edit Request"
                     />

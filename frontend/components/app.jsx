@@ -6,6 +6,7 @@ import SendPaymentContainer from "./payments/send_payment_container.jsx";
 import RequestPaymentContainer from "./requests/request_payment_container";
 import PaymentShowContainer from "./payments/payment_show_container";
 import RequestShowContainer from "./requests/request_show_container";
+import EditRequestFormContainer from "./requests/edit_request_form_container";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from ".././util/route_util"
 import Splash from "./splash"
@@ -27,6 +28,7 @@ const App = () => {
             <AuthRoute exact path="/signup" component={SignupFormContainer}/>
             <Route path="/myaccount/pay" component={SendPaymentContainer}/>
             <Route path="/myaccount/request" component={RequestPaymentContainer}/>
+            <Route path="/myaccount/edit_request" component={EditRequestFormContainer} />
             <Route path="/confirmation/:paymentId" component={PaymentShowContainer} />
             <Route path="/req_confirmation/:requestId" component={RequestShowContainer} />
             <ProtectedRoute exact path="/myaccount" component={DashboardContainer}/>
