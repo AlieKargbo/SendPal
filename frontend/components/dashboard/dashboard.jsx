@@ -131,9 +131,9 @@ class Dashboard extends React.Component {
 
                             <div className="activities-container">
                                 <div className="toggle-activity">
-                                    <h3 className="activities-header" onClick={this.changeHeaderToPayment} >Payments</h3>
-                                    <h3 className="activities-header"> | </h3>
-                                    <h3 className="activities-header" onClick={this.changeHeaderToRequest} >Requests</h3>
+                                    <h3 className="activities-header" onClick={this.changeHeaderToPayment}>Payments</h3>
+                                    <h3 className="activity-separator"> | </h3>
+                                    <h3 className="activities-header" onClick={this.changeHeaderToRequest}>Requests</h3>
                                 </div>
                                 <ul className="activity-list-items">
                                     {activityList}

@@ -194,13 +194,26 @@
 
 .activities-header{
     text-align: left;
-    padding-right: 10px;
+    padding-bottom: 4px;
     margin: 20px 0;
     font-size: 18px;
     font-weight: 800;
     color: #0070ba;
     font-family: PayPal Sans Big Medium;
-    
+    cursor: pointer;
+    &:hover {
+        border-bottom: 1px solid #003087;
+    }
+}
+
+.activity-separator{
+    align-self: center;
+    padding-bottom: 4px;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 0 10px;
+    color: #0070ba;
+    font-family: PayPal Sans Big Medium;
 }
 
 .activity-list-items{
