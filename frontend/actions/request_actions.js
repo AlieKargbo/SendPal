@@ -2,6 +2,7 @@ import * as RequestApiUtil from "../util/request_api_util";
 
 export const RECEIVE_ALL_REQUESTS = "RECEIVE_ALL_REQUESTS";
 export const RECEIVE_REQUEST = "RECEIVE_REQUEST";
+export const REMOVE_REQUEST = "REMOVE_REQUEST"
 
 const receiveAllRequests = (requests) => {
     return ({
@@ -17,6 +18,13 @@ const receiveRequest = (payload) => {
     });
 };
 
+const removeRequest = (requestId) => {
+    return ({
+        type: REMOVE_REQUEST,
+        requestId
+    });
+};
+
 export const fetchAllRequests = (userId) => {
     return (dispatch) => {
         return RequestApiUtil.fetchAllRequests(userId).then((payload) => {
@@ -26,6 +34,7 @@ export const fetchAllRequests = (userId) => {
 };
 
 export const fetchRequest = (requestId) => {
+    debugger
     return (dispatch) => {
         return RequestApiUtil.fetchRequest(requestId).then((request) => {
             dispatch(receiveRequest(request))
@@ -41,3 +50,11 @@ export const createRequest = (requestId) => {
     };
 };
 
+export const updateRequest = (request) => {
+    debugger
+    return (dispatch) => {
+        return RequestApiUtil.updateRequest(request).then((payload) => {
+            dispatch(receiveRequest(payload))
+        });
+    };
+};

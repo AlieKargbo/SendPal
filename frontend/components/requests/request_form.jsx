@@ -22,6 +22,8 @@ class RequestForm extends React.Component {
 
     handleSubmit(email) {
         event.preventDefault();
+        // if formtype === "create"
+        
         this.props.allUsers.map((user) => {
             if (user.email === email) {
                 this.userId = user.id
@@ -35,7 +37,7 @@ class RequestForm extends React.Component {
                 requestor_id: this.props.currentUser.id,
                 requestee_id: this.userId
             }).then(() => this.props.history.push(`/req_confirmation/${this.props.request.id}`))
-        } else {
+        } else { 
             return "errors" // create error props
         }
     };
@@ -51,7 +53,9 @@ class RequestForm extends React.Component {
         let users = this.props.allUsers;
         let options = users.map((user) =>
             <option key={user.email}>{user.email}</option>)
+        
         return (
+            
             <div className="form-content">
                 <div className="form-container">
                     <div className="form-box">
