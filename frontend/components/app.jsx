@@ -28,7 +28,7 @@ const App = () => {
             <AuthRoute exact path="/signup" component={SignupFormContainer}/>
             <Route path="/myaccount/pay" component={SendPaymentContainer}/>
             <Route path="/myaccount/request" component={RequestPaymentContainer}/>
-            <Route path="/myaccount/edit_request" component={EditRequestFormContainer} />
+            {/* <Route path="/myaccount/edit_request" component={EditRequestFormContainer} /> */}
             <Route path="/confirmation/:paymentId" component={PaymentShowContainer} />
             <Route path="/req_confirmation/:requestId" component={RequestShowContainer} />
             <ProtectedRoute exact path="/myaccount" component={DashboardContainer}/>

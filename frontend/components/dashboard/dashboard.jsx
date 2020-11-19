@@ -73,8 +73,17 @@ class Dashboard extends React.Component {
                 }
             )
         }
-
             
+        // const editForm = (
+        //     <>
+        //         <div>
+        //             <button 
+        //                 onClick={() => this.props.openModal('request')}
+        //                 className="sidebar-channel-items">
+        //             </button>
+        //         </div>
+        //     </>
+        // );
 
         if (this.props.user) {
 

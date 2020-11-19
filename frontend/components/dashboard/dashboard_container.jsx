@@ -4,6 +4,7 @@ import { fetchAllPayments } from "../../actions/payment_actions";
 import { fetchAllRequests } from "../../actions/request_actions";
 import { fetchAllUsers } from "../../actions/user_actions";
 import { login, logout, signup } from "../../actions/session_actions";
+import { openModal } from "../../actions/modal_action";
 
 const mapSTP = (state, ownProps) => {
     return ({
@@ -24,9 +25,9 @@ const mapDTP = (dispatch, ownProps) => {
         resetUrl: () => ownProps.history.push("/"),
         fetchUsers: () => dispatch(fetchAllUsers()),
         fetchPayments: (userId) => dispatch(fetchAllPayments(userId)),
-        fetchRequests: (userId) => dispatch(fetchAllRequests(userId))
+        fetchRequests: (userId) => dispatch(fetchAllRequests(userId)),
+        openModal: (modal, id) => dispatch(openModal(modal,id))
     })
-
 }
 
 export default connect(mapSTP, mapDTP)(Dashboard)
