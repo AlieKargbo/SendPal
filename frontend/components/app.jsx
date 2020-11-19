@@ -7,6 +7,7 @@ import RequestPaymentContainer from "./requests/request_payment_container";
 import PaymentShowContainer from "./payments/payment_show_container";
 import RequestShowContainer from "./requests/request_show_container";
 import EditRequestFormContainer from "./requests/edit_request_form_container";
+import Modal from "../components/modal/modal";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from ".././util/route_util"
 import Splash from "./splash"
@@ -15,7 +16,8 @@ import NavBar from "./navbar/navbar_container"
 
 const App = () => {
     return (
-    <div>
+    <div className="app-main">
+        <Modal/>
         <header>
             <ProtectedRoute exact path="/myaccount" component={NavBar}/>
             <ProtectedRoute exact path="/myaccount/pay" component={NavBar}/>

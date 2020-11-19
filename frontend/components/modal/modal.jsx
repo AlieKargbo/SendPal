@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import { closeModal } from '../../actions/modal_actions';
+import { closeModal } from '../../actions/modal_action';
 import EditRequestFormContainer from "../requests/edit_request_form_container";
-import "./modal.css"
 
 
 const Modal = ({ modal, closeModal }) => {
@@ -13,7 +12,8 @@ const Modal = ({ modal, closeModal }) => {
     let component = null;
     switch (modal) {
         case 'request':
-            component = <EditRequestFormContainer />;
+            component = <EditRequestFormContainer 
+                id={modal.id} />;
             break;
         default:
             return null;

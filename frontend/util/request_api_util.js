@@ -22,7 +22,7 @@ export const createRequest = (request) => {
 }
 
 export const updateRequest = (request) => {
-    debugger
+    // debugger
     return $.ajax({
         url: `api/requests/${request.id}`,
         method: `patch`,

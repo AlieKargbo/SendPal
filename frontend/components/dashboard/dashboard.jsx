@@ -39,6 +39,8 @@ class Dashboard extends React.Component {
         let allUsers = this.props.users;
         if (Object.values(allUsers).length <= 1) return null
 
+        // debugger
+
         let activityList;
         if (this.state.selectedHeader === "payments"){
             activityList = this.props.payments.map(
@@ -59,8 +61,11 @@ class Dashboard extends React.Component {
         } else {
             activityList = this.props.requests.map(
                 (request, idx) => {
+                    // debugger
                     return (
-                        <li key={idx} className="request-list-items">
+                        <li 
+                            onClick={() => this.props.openModal('request', request.id)} 
+                            key={idx} className="request-list-items">
                             {/* You requested {request.amount} from {request.requestee_id} */}
                             <div className="request-list-header">
                                 <div className="request-user">{allUsers[request.requestee_id].email}</div>
@@ -68,6 +73,7 @@ class Dashboard extends React.Component {
                             </div>
                             <div className="request-date">{request.date}</div>
                             <div className="request-note">"{request.note}"</div>
+                            {/* <button onClick={() => this.props.openModal('request', request.id)} >edit modal</button> */}
                         </li>
                     )
                 }

@@ -5,32 +5,31 @@ class EditRequestForm extends React.Component {
     constructor(props){
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.state = {
-            email: '',
-            amount: '',
-            note: ''
-        };
+        this.state = this.props.request;
+        // {
+        //     // id: this.props.request.id,
+        //     email: this.props.requestee.email,
+        //     amount: this.props.request.amount,
+        //     note: this.props.request.note
+        // };
     }
     
-    componentDidMount(){
-        debugger
-        if(this.props.formType === "update_request") {
-            this.props.fetchRequest(this.props.match.params.requestId);
-        }
-    }
+    // componentDidMount(){
+    //     debugger
+    //     this.props.fetchRequest(this.props.requestId);
+    // }
 
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value })
     }
 
     handleSubmit() {
+        // debugger
         event.preventDefault();
 
         if (Number(this.state.amount) >= 0) {
-            this.props.updateRequest({
-                amount: this.state.amount,
-                note: this.state.note,
-            })
+            this.props.updateRequest(this.state)
+            .then(() => this.props.closeModal())
         } else { 
             return "errors"
         }
@@ -39,7 +38,7 @@ class EditRequestForm extends React.Component {
 
     render() {
         // const { formType, request, updateRequest } = this.props;
-        debugger
+        // debugger
         // const request = this.props.requests;
         // if (!request) return null;
         return (
