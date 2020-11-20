@@ -71,6 +71,7 @@ class EditRequestForm extends React.Component {
                             <input className="edit-note"
                                 type="text"
                                 value={this.state.note}
+                                placeholder="NOTE"
                                 onChange={this.update('note')}
                                 required={true}
                             />
@@ -79,7 +80,7 @@ class EditRequestForm extends React.Component {
                                 <div className="edit-details-right">
                                     <p>Sent by {this.props.requestee.email}</p>
                                     <div className="details-right-amount">
-                                        <span>$</span>
+                                        <span>$ </span>
                                         <input className="edit-amount"
                                             type="text"
                                             value={this.state.amount} //prefilled
@@ -89,6 +90,10 @@ class EditRequestForm extends React.Component {
                                         />
                                     </div>
                                 </div>
+                            </div>
+                            <div className="edit-total">
+                                <h2>TOTAL</h2>
+                                <p>$ {this.state.amount}</p>
                             </div>
                             <input className="edit-request-btn"
                                 type="submit"
