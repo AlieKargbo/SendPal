@@ -35,6 +35,8 @@ class Api::RequestsController < ApplicationController
         if @request.update(request_params)
             @requestor = User.find_by(id: @request.requestor_id)
             @requestee = User.find_by(id: @request.requestee_id)
+            @requestor.update_attributes(balance: @requestor.balance + @request.amount)
+            @requestee.update_attributes(balance: @requestee.balance - @request.amount)
             render :show
         else
             render json: @request.errors.full_messages, status: 400

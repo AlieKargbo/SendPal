@@ -26,10 +26,13 @@ class EditRequestForm extends React.Component {
     handleSubmit() {
         // debugger
         event.preventDefault();
-
+        // this.props.currentUser // {id: 9, email: "LisaREALG@noblecheetah.io", balance: 1006}
         if (Number(this.state.amount) >= 0) {
             this.props.updateRequest(this.state)
-            .then(() => this.props.closeModal())
+                .then(() => {
+                    this.props.closeModal()
+                    this.props.updateBalance(this.state.amount)
+                })
         } else { 
             return "errors"
         }

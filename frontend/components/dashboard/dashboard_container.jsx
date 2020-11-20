@@ -27,7 +27,7 @@ const mapDTP = (dispatch, ownProps) => {
         fetchUsers: () => dispatch(fetchAllUsers()),
         fetchPayments: (userId) => dispatch(fetchAllPayments(userId)),
         fetchRequests: (userId) => dispatch(fetchAllRequests(userId)),
-        openModal: (modal, id) => dispatch(openModal(modal,id))
+        openModal: (modal, id, updateBalance) => dispatch(openModal(modal,id, updateBalance)),
     })
 }
 

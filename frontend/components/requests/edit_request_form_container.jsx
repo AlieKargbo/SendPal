@@ -12,6 +12,7 @@ const mapSTP = (state, ownProps) => {
         request: request,
         requestee: requestee,
         formType: 'update_request',
+        updateBalance: (balance) => state.ui.modal.balance(balance)
     })
 }
 
@@ -19,7 +20,7 @@ const mapDTP = (dispatch) => {
     return ({
         fetchRequest: (requestId) => dispatch(fetchRequest(requestId)),
         updateRequest: (request) => dispatch(updateRequest(request)),
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
     });
 }
 

@@ -6,18 +6,29 @@ class Dashboard extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            selectedHeader: 'payments'
+            selectedHeader: 'payments',
+            balance: this.props.user.balance
         }
-        
+
+
         this.handleClick = this.handleClick.bind(this);
         this.changeHeaderToRequest = this.changeHeaderToRequest.bind(this);
         this.changeHeaderToPayment = this.changeHeaderToPayment.bind(this);
+        this.updateBalance = this.updateBalance.bind(this);
     }
 
+    
     componentDidMount(){
+         // this.props.user {id: 9, email: "LisaREALG@noblecheetah.io", balance: 1006}
         this.props.fetchUsers();
         this.props.fetchPayments(this.props.user.id);
         this.props.fetchRequests(this.props.user.id);
+    }
+    
+    updateBalance(balance){
+        this.setState({
+            balance: this.state.balance + balance
+        })
     }
 
     handleClick() {
@@ -64,7 +75,7 @@ class Dashboard extends React.Component {
                     // debugger
                     return (
                         <li 
-                            onClick={() => this.props.openModal('request', request.id)} 
+                            onClick={() => this.props.openModal('request', request.id, this.updateBalance)}
                             key={idx} 
                             className="request-list-items">
                             {/* You requested {request.amount} from {request.requestee_id} */}
@@ -106,7 +117,7 @@ class Dashboard extends React.Component {
                                 {/* <div className="overflow-image">
                                     <button className="three-dots">* * *</button>
                                 </div> */}
-                                <span className="currency-balance">${this.props.user.balance}</span>
+                                <span className="currency-balance">${this.state.balance}</span>
                                 <span className="currency-balance-message">Available in your SendPal Cash Account</span>
                                 <button className="pay-btn">
                                     <Link className="pay-link" to="/myaccount/pay">Transfer Money</Link>

@@ -13,7 +13,10 @@ const Modal = ({ modal, closeModal }) => {
     switch (modal) {
         case 'request':
             component = <EditRequestFormContainer 
-                id={modal.id} />;
+                id={modal.id} 
+                balance={modal.balance}
+                />;
+
             break;
         default:
             return null;
