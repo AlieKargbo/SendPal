@@ -25,9 +25,24 @@
   border-style: dashed;
 }
 
-.edit-request-header > h1{
-  font-size: 18px;
+.edit-left-head{
+  font-size: 20px;
   font-family: PayPal Sans Big Medium;
+}
+
+.edit-header-left > h1 {
+  padding-bottom: 5px;
+}
+
+.edit-header-left > p {
+  font-size: 11px;
+  margin-bottom: -8px;
+}
+
+.edit-request-amount{
+  color: green;
+  font-size: 20px;
+  font-family: PayPal Sans Big Light, Helvetica Neue,Arial,sans-serif;
 }
 
 .edit-details-wrapper{
@@ -57,6 +72,20 @@
   font-family: PayPal Sans Big Medium;
 }
 
+.left-details > p, .edit-details-right > p {
+  font-size: 12px;
+}
+
+#edit-email{
+  color: #0070ba;
+}
+
+.edit-details-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .edit-form {
   display: flex;
   flex-direction: column;
@@ -65,9 +94,15 @@
 }
 
 .edit-note, .edit-amount{
-  border: none;
+  border: 1px solid lightgray;
+  border-radius: 2px;
   outline: none;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
+  // padding-bottom: 25px;
+}
+
+.edit-amount{
+  width: 65px;
 }
 
 .edit-request-btn{

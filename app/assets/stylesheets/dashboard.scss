@@ -181,7 +181,7 @@
     flex-direction: row;
 }
 
-.activities-header{
+.activities-header, #activities-separator{
     text-align: left;
     padding-right: 10px;
     margin: 20px 0;
@@ -189,7 +189,13 @@
     font-weight: 800;
     color: #0070ba;
     font-family: PayPal Sans Big Medium;
-    
+}
+
+.activities-header:hover{
+    cursor: pointer;
+    &:hover {
+    text-decoration: underline;
+    }
 }
 
 .activity-list-items{
@@ -207,6 +213,10 @@
 .payment-list-items:hover, .request-list-items:hover{
     background-color: #d3e0f79c;
     border-left: 3px solid #003087;
+}
+
+.request-list-items:hover{
+    cursor: pointer;
 }
 
 .payment-list-header, .request-list-header{

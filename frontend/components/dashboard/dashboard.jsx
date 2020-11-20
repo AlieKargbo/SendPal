@@ -65,7 +65,8 @@ class Dashboard extends React.Component {
                     return (
                         <li 
                             onClick={() => this.props.openModal('request', request.id)} 
-                            key={idx} className="request-list-items">
+                            key={idx} 
+                            className="request-list-items">
                             {/* You requested {request.amount} from {request.requestee_id} */}
                             <div className="request-list-header">
                                 <div className="request-user">{allUsers[request.requestee_id].email}</div>
@@ -147,7 +148,7 @@ class Dashboard extends React.Component {
                             <div className="activities-container">
                                 <div className="toggle-activity">
                                     <h3 className="activities-header" onClick={this.changeHeaderToPayment} >Payments</h3>
-                                    <h3 className="activities-header"> | </h3>
+                                    <h3 id="activities-separator"> | </h3>
                                     <h3 className="activities-header" onClick={this.changeHeaderToRequest} >Requests</h3>
                                 </div>
                                 <ul className="activity-list-items">
