@@ -42,29 +42,47 @@ class EditRequestForm extends React.Component {
         // const request = this.props.requests;
         // if (!request) return null;
         return (
-            <div>
-                <form action="" onSubmit={this.handleSubmit}>
-                    <br/>
-                    <label>AMOUNT</label>
-                    <input
-                        type="text"
-                        value={this.state.amount} //prefilled
-                        placeholder="AMOUNT"
-                        onChange={this.update('amount')}
-                        required={true}
-                    />
-                    <label>NOTE</label>
-                    <input 
-                        type="text"
-                        value={this.state.note}
-                        onChange={this.update('note')}
-                        required={true}
-                    />
-                    <input 
-                        type="submit"
-                        value="Edit Request"
-                    />
-                </form>
+            <div className="edit-request-container" >
+                <div className="edit-request-wrapper">
+                    <div className="edit-request-header">
+                        <h1>REQUESTEE EMAIL HERE</h1>
+                        <h1>AMOUNT HERE</h1>
+                    </div>
+                    <div className="edit-details-wrapper">
+                        <div className="left-details-wrapper">
+                            <div className="left-details">
+                                <h2>Requested By</h2>
+                                <p>Requestor Email</p>
+                            </div>
+                            <div className="left-details">
+                                <h2>Transaction ID</h2>
+                                <p>request ID here</p>
+                            </div>
+                        </div>
+                        <form className="edit-form" onSubmit={this.handleSubmit}>
+                            <br/>
+                            <label>AMOUNT</label>
+                            <input
+                                type="text"
+                                value={this.state.amount} //prefilled
+                                placeholder="AMOUNT"
+                                onChange={this.update('amount')}
+                                required={true}
+                            />
+                            <label>NOTE</label>
+                            <input 
+                                type="text"
+                                value={this.state.note}
+                                onChange={this.update('note')}
+                                required={true}
+                            />
+                            <input 
+                                type="submit"
+                                value="Edit Request"
+                            />
+                        </form>
+                    </div>
+                </div>
             </div>
             // <RequestForm
             // formType={formType}

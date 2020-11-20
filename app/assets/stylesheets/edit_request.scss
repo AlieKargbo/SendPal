@@ -1,0 +1,61 @@
+.edit-request-container{
+//   border: 2px solid green;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 60vw;
+}
+
+.edit-request-wrapper {
+  height: 80%;
+  width: 87%;
+  border: 1px solid gray;
+}
+
+.edit-request-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
+  border-bottom: 1px solid darkgray;
+  border-style: dashed;
+}
+
+.edit-request-header > h1{
+  font-size: 16px;
+  font-family: PayPal Sans Big Medium;
+}
+
+.edit-details-wrapper{
+  display: flex;
+  flex-direction: row;
+//   border: 2px solid green;
+  height: 75%;
+  width: 90%;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.left-details-wrapper{
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.left-details{
+  padding-bottom: 25px;
+}
+
+.left-details > h2{
+  font-size: 13px;
+  font-family: PayPal Sans Big Medium;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+}
