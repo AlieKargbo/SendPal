@@ -1,0 +1,88 @@
+.edit-request-container{
+//   border: 2px solid green;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 60vw;
+}
+
+.edit-request-wrapper {
+  height: 80%;
+  width: 87%;
+  border: 0.6px solid #d3d3d3;
+}
+
+.edit-request-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
+  border-bottom: 1px solid darkgray;
+  border-style: dashed;
+}
+
+.edit-request-header > h1{
+  font-size: 18px;
+  font-family: PayPal Sans Big Medium;
+}
+
+.edit-details-wrapper{
+  display: flex;
+  flex-direction: row;
+//   border: 2px solid green;
+  height: 75%;
+  width: 90%;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.left-details-wrapper{
+//   border: 2px solid;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-top: 20px;
+}
+
+.left-details{
+  padding-bottom: 25px;
+}
+
+.left-details > h2, .edit-form > label{
+  font-size: 14px;
+  font-family: PayPal Sans Big Medium;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+//   border: 2px solid;
+}
+
+.edit-request-btn{
+//   margin-left: 84px;
+  border: 1px solid #003087;
+  border-radius: 25px;
+  padding: 10px 19px;
+  width: 185px;
+  text-decoration: none;
+  background-color: transparent;
+  color: #0070ba;
+  cursor: pointer;
+  &:active {
+    text-decoration: underline;
+  }
+  &:focus{
+    outline: 0;
+  }
+  &:hover {
+    // border: 1.5px solid #fff;
+    font-weight: bold;
+    color: #003087;
+  }
+}

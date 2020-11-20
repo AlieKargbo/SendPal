@@ -1,13 +1,16 @@
 import EditRequestForm from "./edit_request_form";
 import { connect } from 'react-redux';
 import { fetchRequest, updateRequest } from "../../actions/request_actions";
+import { closeModal } from '../../actions/modal_action';
 
 const mapSTP = (state, ownProps) => {
-    debugger
+    // debugger
+    let request = state.entities.requests[state.ui.modal.id];
+    let requestee = state.entities.users[state.entities.requests.requestee_id]
     return ({
         currentUser: state.entities.users[state.session.id],
-        // request: state.entities.requests[ownProps.match.params.requestId],
-        request: state.entities.requests,
+        request: request,
+        requestee: requestee,
         formType: 'update_request',
     })
 }
@@ -15,7 +18,8 @@ const mapSTP = (state, ownProps) => {
 const mapDTP = (dispatch) => {
     return ({
         fetchRequest: (requestId) => dispatch(fetchRequest(requestId)),
-        updateRequest: (request) => dispatch(updateRequest(request))
+        updateRequest: (request) => dispatch(updateRequest(request)),
+        closeModal: () => dispatch(closeModal())
     });
 }
 

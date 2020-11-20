@@ -34,7 +34,7 @@ export const fetchAllRequests = (userId) => {
 };
 
 export const fetchRequest = (requestId) => {
-    debugger
+    // debugger
     return (dispatch) => {
         return RequestApiUtil.fetchRequest(requestId).then((request) => {
             dispatch(receiveRequest(request))
@@ -51,7 +51,7 @@ export const createRequest = (requestId) => {
 };
 
 export const updateRequest = (request) => {
-    debugger
+    // debugger
     return (dispatch) => {
         return RequestApiUtil.updateRequest(request).then((payload) => {
             dispatch(receiveRequest(payload))
