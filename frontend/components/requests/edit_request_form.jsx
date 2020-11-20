@@ -46,7 +46,7 @@ class EditRequestForm extends React.Component {
                 <div className="edit-request-wrapper">
                     <div className="edit-request-header">
                         <h1>REQUESTEE EMAIL HERE</h1>
-                        <h1>AMOUNT HERE</h1>
+                        <h1 className="request-amount">$ AMOUNT HERE</h1>
                     </div>
                     <div className="edit-details-wrapper">
                         <div className="left-details-wrapper">
@@ -76,7 +76,7 @@ class EditRequestForm extends React.Component {
                                 onChange={this.update('note')}
                                 required={true}
                             />
-                            <input 
+                            <input className="edit-request-btn"
                                 type="submit"
                                 value="Edit Request"
                             />
