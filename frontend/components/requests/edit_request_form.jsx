@@ -61,19 +61,19 @@ class EditRequestForm extends React.Component {
                         </div>
                         <form className="edit-form" onSubmit={this.handleSubmit}>
                             <br/>
+                            <label>NOTE</label>
+                            <input 
+                                type="text"
+                                value={this.state.note}
+                                onChange={this.update('note')}
+                                required={true}
+                            />
                             <label>AMOUNT</label>
                             <input
                                 type="text"
                                 value={this.state.amount} //prefilled
                                 placeholder="AMOUNT"
                                 onChange={this.update('amount')}
-                                required={true}
-                            />
-                            <label>NOTE</label>
-                            <input 
-                                type="text"
-                                value={this.state.note}
-                                onChange={this.update('note')}
                                 required={true}
                             />
                             <input className="edit-request-btn"
