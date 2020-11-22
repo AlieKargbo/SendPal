@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchContainer from "../search/search_container";
 
 class PaymentForm extends React.Component {
     constructor(props){
@@ -63,21 +64,14 @@ class PaymentForm extends React.Component {
             <div className="form-content">
                 <div className="form-container">
                     <div className="form-box">
-                        <div>
+                        <>
                             <form className="form-fields" onSubmit={() => this.handleSubmit(this.state.email)}>
                                 <div className="form-header">
                                     <img src={window.test_user} alt=""/>
                                 </div>
-                                <select className="form-email"
-                                    // type="email"
-                                    placeholder="Email"
-                                    onChange={this.update('email')}>
-                                    {options} 
-                                </select>
-                                {/* <input className="form-email"
-                                    type="email" 
-                                    placeholder="email"
-                                    onChange={this.update('email')}/> */}
+                                <div>
+                                    <SearchContainer/>
+                                </div>
                                 <input className="form-amount"
                                     // type="number"
                                     inputMode="numeric"
@@ -107,7 +101,7 @@ class PaymentForm extends React.Component {
                             <div className="cancel-link">
                                 <Link className="cancel-text" to="/myaccount">Cancel</Link>
                             </div>
-                        </div>
+                        </>
                     </div>
                     <div className="form-message-container">
                         <div className="message">
