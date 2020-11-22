@@ -201,6 +201,8 @@
 .activity-list-items{
     overflow: auto;
     height: 42vh;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .payment-list-items, .request-list-items{

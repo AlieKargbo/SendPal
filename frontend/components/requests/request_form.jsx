@@ -23,7 +23,7 @@ class RequestForm extends React.Component {
     handleSubmit(email) {
         event.preventDefault();
         // if formtype === "create"
-        
+        // debugger
         this.props.allUsers.map((user) => {
             if (user.email === email) {
                 this.userId = user.id
@@ -53,7 +53,7 @@ class RequestForm extends React.Component {
         let users = this.props.allUsers;
         let options = users.map((user) =>
             <option key={user.email}>{user.email}</option>)
-        
+        // debugger
         return (
             
             <div className="form-content">

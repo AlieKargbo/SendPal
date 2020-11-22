@@ -10,7 +10,6 @@ class Dashboard extends React.Component {
             balance: this.props.user.balance
         }
 
-
         this.handleClick = this.handleClick.bind(this);
         this.changeHeaderToRequest = this.changeHeaderToRequest.bind(this);
         this.changeHeaderToPayment = this.changeHeaderToPayment.bind(this);

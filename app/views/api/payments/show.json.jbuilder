@@ -1,3 +1,4 @@
+# debugger
 json.payment do 
     json.partial! "api/payments/payment", payment: @payment
 end

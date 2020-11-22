@@ -4,11 +4,13 @@ import { createRequest } from "../../actions/request_actions";
 import { fetchUser, fetchAllUsers } from "../../actions/user_actions"
 
 const mapSTP = (state, ownProps) => {
+    // debugger
     return ({
         currentUser: state.entities.users[state.session.id],
         allUsers: Object.values(state.entities.users),
+        request: state.entities.requests,
+        // Object.values(state.entities.requests)
         formType: 'request_payment',
-        request: state.entities.requests
     })
 }
 
