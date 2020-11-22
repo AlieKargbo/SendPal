@@ -82,7 +82,7 @@ class PaymentForm extends React.Component {
                                     // onChange={this.handleChange}
                                     // value={this.state.amount}
                                     />
-                                <input className="note-box"
+                                <input className="note-box-pay"
                                     type="text" 
                                     placeholder="Add a note"
                                     onChange={this.update('note')}

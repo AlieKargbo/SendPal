@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchContainer from "../search/search_container";
 
 class RequestForm extends React.Component {
     constructor(props){
@@ -64,12 +65,7 @@ class RequestForm extends React.Component {
                                 <div className="form-header">
                                     <img src={window.test_user} alt="" />
                                 </div>
-                                <select className="form-email"
-                                    // type="email"
-                                    placeholder="Email"
-                                    onChange={this.update('email')}>
-                                    {options}
-                                </select>
+                                <SearchContainer/>
                                 <input className="form-amount"
                                     type="text"
                                     // pattern="[0-9]*" 
@@ -78,11 +74,16 @@ class RequestForm extends React.Component {
                                     // onChange={this.handleChange}
                                     // value={this.state.value}
                                 />
-                                <input className="note-box"
+                                <input className="note-box-request"
                                     type="text"
                                     placeholder="Add a note"
                                     onChange={this.update('note')}
                                 />
+                                <div className="form-message-container">
+                                    <div className="message">
+                                        Are you sure you want REQUEST payment? There are no take-backs!
+                                    </div>
+                                </div>
                                 <div className="request-button">
                                     <input
                                         type="submit"
@@ -95,11 +96,6 @@ class RequestForm extends React.Component {
                             <div className="cancel-link">
                                 <Link className="cancel-text" to="/myaccount">Cancel</Link>
                             </div>
-                        </div>
-                    </div>
-                    <div className="form-message-container">
-                        <div className="message">
-                            Are you sure you want REQUEST payment? There are no take-backs!
                         </div>
                     </div>
                 </div>

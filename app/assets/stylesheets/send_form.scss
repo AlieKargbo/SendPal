@@ -75,7 +75,7 @@
     }
 }
 
-.note-box {
+.note-box-pay, .note-box-request {
     width: 85%;
     height: 70px;
     margin-bottom: 20px;
@@ -85,6 +85,11 @@
     outline: 0;
     }
 }
+
+.note-box-request {
+    width: 96.5%;
+}
+
 
 .form-message-container{
     height: 70px;
