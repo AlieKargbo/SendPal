@@ -45,7 +45,7 @@ class Search extends React.Component {
             return <ul className='search-results-container'>
                 {searchResults.map ((user) => {
                 return (
-                    <option 
+                    <option className="search-list-items"
                         key={user.id}
                         onClick={this.handleClick}
                         >{user.email}

@@ -69,9 +69,7 @@ class PaymentForm extends React.Component {
                                 <div className="form-header">
                                     <img src={window.test_user} alt=""/>
                                 </div>
-                                <div>
-                                    <SearchContainer/>
-                                </div>
+                                <SearchContainer/>
                                 <input className="form-amount"
                                     // type="number"
                                     inputMode="numeric"
@@ -89,6 +87,11 @@ class PaymentForm extends React.Component {
                                     placeholder="Add a note"
                                     onChange={this.update('note')}
                                     />
+                                <div className="form-message-container">
+                                    <div className="message">
+                                        Are you sure you want to SEND this payment? There are no take-backs!
+                                    </div>
+                                </div>
                                 <div className="form-button">
                                     <input
                                         type="submit"
@@ -102,11 +105,6 @@ class PaymentForm extends React.Component {
                                 <Link className="cancel-text" to="/myaccount">Cancel</Link>
                             </div>
                         </>
-                    </div>
-                    <div className="form-message-container">
-                        <div className="message">
-                            Are you sure you want to SEND this payment? There are no take-backs!
-                        </div>
                     </div>
                 </div>
             </div>

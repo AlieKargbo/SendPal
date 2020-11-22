@@ -63,13 +63,13 @@
 
 .form-amount {
     text-align: center;
-    -webkit-appearance: none;
     border: none;
     width: 100%;
-    margin-top: -30px;
+    background-color: transparent;
     height: 48px;
     font-size: 40px;
     font-family: PayPalSansBig-Regular, "Helvetica Neue", Arial, sans-serif;
+    padding-bottom: 20px;
     &:focus{
     outline: 0;
     }
@@ -95,11 +95,10 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    width: 405px;
     height: 100%;
     font-size: 13px;
-    margin-top: 20px;
-    padding-left: 45px;
+    margin: auto;
+    padding-top: 30px;
 }
 
 .continue-Btn {
