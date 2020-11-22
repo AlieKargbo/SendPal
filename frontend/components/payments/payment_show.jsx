@@ -7,18 +7,22 @@ class PaymentShow extends React.Component {
     // }
     
     render() {
-        
+        // debugger
         return (
             <div className="confirmation-container">
                 <div className="confirmation-wrapper">
                     <div className="confirmation-content">
                         <img className="confirmation-image" src={window.check_icon} alt=""/>
-                        <div className="confirmation-text">You've sent ${this.props.payment.amount}</div>
+                        <div className="confirmation-text">
+                            <span>You've sent </span>
+                            <h3> ${this.props.payment.amount}  </h3>
+                            <span> to </span> 
+                            <p> {this.props.payee.email}</p>
+                        </div>
                     </div>
                     <Link className="confirmation-button" to="/myaccount/pay">Send More Money
                         {/* <button className="confirmation-link1"></button> */}
                     </Link>
-                    
                     <Link className="confirmation-link" to="/myaccount">Go to Summary</Link>
                 </div>
             </div>

@@ -181,7 +181,7 @@
     flex-direction: row;
 }
 
-.activities-header{
+.activities-header, #activities-separator{
     text-align: left;
     padding-bottom: 4px;
     margin: 20px 0;
@@ -208,6 +208,8 @@
 .activity-list-items{
     overflow: auto;
     height: 42vh;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .payment-list-items, .request-list-items{
@@ -220,6 +222,10 @@
 .payment-list-items:hover, .request-list-items:hover{
     background-color: #d3e0f79c;
     border-left: 3px solid #003087;
+}
+
+.request-list-items:hover{
+    cursor: pointer;
 }
 
 .payment-list-header, .request-list-header{

@@ -4,7 +4,9 @@ import { fetchPayment } from '../../actions/payment_actions';
 
 const mapSTP = (state, ownProps) => {
     return ({
-        payment: state.entities.payments
+        payment: state.entities.payments,
+        payer: state.entities.users[state.entities.payments.payer_id],
+        payee: state.entities.users[state.entities.payments.payee_id]
         // payment: state.entities.payments[ownProps.match.params.paymentId],
     })
 }

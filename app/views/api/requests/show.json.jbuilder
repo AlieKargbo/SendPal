@@ -1,3 +1,4 @@
+# debugger
 json.request do
     json.partial! "api/requests/request", request: @request
 end
