@@ -11,6 +11,7 @@ class RequestForm extends React.Component {
             email: '',
             payment: ''
         };
+        this.updateEmail = this.updateEmail.bind(this);
     }
 
     componentDidMount(){
@@ -21,10 +22,15 @@ class RequestForm extends React.Component {
         return (e) => this.setState({ [field]: e.currentTarget.value })
     }
 
+    updateEmail(email) {
+        this.setState({
+            email: email
+        })
+    }
+
     handleSubmit(email) {
         event.preventDefault();
-        // if formtype === "create"
-        // debugger
+
         this.props.allUsers.map((user) => {
             if (user.email === email) {
                 this.userId = user.id
@@ -65,7 +71,9 @@ class RequestForm extends React.Component {
                                 <div className="form-header">
                                     <img src={window.test_user} alt="" />
                                 </div>
-                                <SearchContainer/>
+                                <SearchContainer
+                                    updateEmail={this.updateEmail}
+                                />
                                 <input className="form-amount"
                                     type="text"
                                     // pattern="[0-9]*" 

@@ -16,6 +16,7 @@ class Search extends React.Component {
         this.setState({ 
             search: e.target.value,
             searchResults: []});
+        this.props.updateEmail(e.target.value)
     }
 
     handleSearch(e) {

@@ -26,7 +26,7 @@ class Dashboard extends React.Component {
     
     updateBalance(balance){
         this.setState({
-            balance: this.state.balance + balance
+            balance: this.state.balance += balance
         })
     }
 
@@ -145,15 +145,15 @@ class Dashboard extends React.Component {
                                 </ul>
                             </div>
 
-                            <div className="pals-container">
-                                <h3 className="pals-header">Your Pals</h3>
+                            {/* <div className="pals-container">
+                                <h3 className="pals-header">Send Again</h3>
                                 <ul className="pals-list">
                                     <button id="pals">A B</button>
                                     <button id="pals">C D</button>
                                     <button id="pals">E F</button>
                                     <button id="pals">G H</button>
                                 </ul>
-                            </div>
+                            </div> */}
 
                             <div className="activities-container">
                                 <div className="toggle-activity">

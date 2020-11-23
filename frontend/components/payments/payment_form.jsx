@@ -12,14 +12,20 @@ class PaymentForm extends React.Component {
             email: '',
             payment: ''
         };
+        this.updateEmail = this.updateEmail.bind(this);
     };
 
     componentDidMount(){
         this.props.fetchUsers();
     };
 
+    update(field) {
+        return (e) => this.setState({ [field]: (e.currentTarget.value) })
+    }
+
     handleSubmit(email) {
         event.preventDefault();
+
         this.props.allUsers.map((user) => {
             if(user.email === email){
                 this.userId = user.id 
@@ -39,11 +45,12 @@ class PaymentForm extends React.Component {
             return "errors"
         }
     };
-
-    update(field) {
-        return (e) => this.setState({ [field]: (e.currentTarget.value) })
-    }
     
+    updateEmail(email) {
+        this.setState({
+            email: email
+        })
+    }
     // handleChange(e) {
         // const re = /[0-9.]+/g;
         // if (e.target.value === '' || re.test(e.target.value)) {
@@ -64,12 +71,19 @@ class PaymentForm extends React.Component {
             <div className="form-content">
                 <div className="form-container">
                     <div className="form-box">
-                        <>
+                        <div>
                             <form className="form-fields" onSubmit={() => this.handleSubmit(this.state.email)}>
                                 <div className="form-header">
                                     <img src={window.test_user} alt=""/>
                                 </div>
-                                <SearchContainer/>
+                                <div>
+                                    <SearchContainer
+                                    updateEmail={this.updateEmail}/>
+                                </div>
+                                {/* <input className="form-email"
+                                    type="email" 
+                                    placeholder="email"
+                                    onChange={this.update('email')}/> */}
                                 <input className="form-amount"
                                     // type="number"
                                     inputMode="numeric"
@@ -104,7 +118,7 @@ class PaymentForm extends React.Component {
                             <div className="cancel-link">
                                 <Link className="cancel-text" to="/myaccount">Cancel</Link>
                             </div>
-                        </>
+                        </div>
                     </div>
                 </div>
             </div>
