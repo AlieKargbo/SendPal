@@ -39,7 +39,6 @@ class PaymentForm extends React.Component {
                     payee_id: this.userId
                 })
                 .then((res) => {
-                    // debugger
                     this.props.history.push(`/confirmation/${res.payload.payment.id}`)})                
                     // .then(() => this.props.history.push("/myaccount"))
         } else {

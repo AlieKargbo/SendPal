@@ -6,12 +6,12 @@ class RequestForm extends React.Component {
     constructor(props){
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleChange = this.handleChange.bind(this);
         this.state = {
             email: '',
             payment: ''
         };
         this.updateEmail = this.updateEmail.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount(){
@@ -43,7 +43,9 @@ class RequestForm extends React.Component {
                 note: this.state.note,
                 requestor_id: this.props.currentUser.id,
                 requestee_id: this.userId
-            }).then(() => this.props.history.push(`/req_confirmation/${this.props.request.id}`))
+            })
+            .then((res) => {
+                this.props.history.push(`/req_confirmation/${res.payload.request.id}`)})
         } else { 
             return "errors" // create error props
         }
@@ -57,12 +59,8 @@ class RequestForm extends React.Component {
     // }
 
     render(){
-        let users = this.props.allUsers;
-        let options = users.map((user) =>
-            <option key={user.email}>{user.email}</option>)
-        // debugger
-        return (
-            
+
+        return (            
             <div className="form-content">
                 <div className="form-container">
                     <div className="form-box">

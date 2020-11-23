@@ -4,10 +4,11 @@ import { fetchRequest } from '../../actions/request_actions';
 
 const mapSTP = (state, ownProps) => {
     // debugger
+    let request = state.entities.requests[(parseInt(ownProps.match.params.requestId))]
     return ({
-        request: state.entities.requests,
-        requestor: state.entities.users[state.entities.requests.requestor_id],
-        requestee: state.entities.users[state.entities.requests.requestee_id]
+        request: request,
+        requestor: state.entities.users[request.requestor_id],
+        requestee: state.entities.users[request.requestee_id]
     })
 }
 

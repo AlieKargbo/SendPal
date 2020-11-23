@@ -32,6 +32,7 @@ class Dashboard extends React.Component {
     // }
 
     updateBalance(balance){
+        // debugger
         this.setState({
             balance: this.state.balance + parseInt(balance)
         })
@@ -51,7 +52,7 @@ class Dashboard extends React.Component {
     }
 
     render() {
-        debugger
+        // debugger
         let allUsers = this.props.users;
         if (Object.values(allUsers).length <= 1) return null
 
@@ -151,7 +152,7 @@ class Dashboard extends React.Component {
                                 </ul>
                             </div>
 
-                            {/* <div className="pals-container">
+                            <div className="pals-container">
                                 <h3 className="pals-header">Send Again</h3>
                                 <ul className="pals-list">
                                     <button id="pals">A B</button>
@@ -159,7 +160,7 @@ class Dashboard extends React.Component {
                                     <button id="pals">E F</button>
                                     <button id="pals">G H</button>
                                 </ul>
-                            </div> */}
+                            </div>
 
                             <div className="activities-container">
                                 <div className="toggle-activity">
