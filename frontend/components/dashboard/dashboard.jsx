@@ -24,9 +24,16 @@ class Dashboard extends React.Component {
         this.props.fetchRequests(this.props.user.id);
     }
     
+    // componentDidUpdate(prevProps) {
+    //     debugger
+    //     if (prevProps.location.state === "/confirmation/") {
+    //         this.props.history.push("/myaccount")
+    //     }
+    // }
+
     updateBalance(balance){
         this.setState({
-            balance: this.state.balance += balance
+            balance: this.state.balance + parseInt(balance)
         })
     }
 
@@ -43,9 +50,8 @@ class Dashboard extends React.Component {
         this.setState({selectedHeader: "payments"})
     }
 
-
     render() {
-        
+        debugger
         let allUsers = this.props.users;
         if (Object.values(allUsers).length <= 1) return null
 
