@@ -11,7 +11,7 @@ ActiveRecord::Base.connection.reset_pk_sequence!('users')
 ActiveRecord::Base.connection.reset_pk_sequence!('payments')
 
 me = User.create!( email: 'noblest_cheetah@noblecheetah.io', password: 'password')
-demo = User.create!(email: "demo_user@aa.io", passord: 'password')
+demo = User.create!(email: "demo_user@aa.io", password: 'password')
 
 u1 = User.create!( email: 'jackpack@noblecheetah.io', password: 'password')
 u2 = User.create!( email: 'jdeezy@noblecheetah.io', password: 'password')
