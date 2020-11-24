@@ -24,9 +24,17 @@ class Dashboard extends React.Component {
         this.props.fetchRequests(this.props.user.id);
     }
     
+    // componentDidUpdate(prevProps) {
+    //     debugger
+    //     if (prevProps.location.state === "/confirmation/") {
+    //         this.props.history.push("/myaccount")
+    //     }
+    // }
+
     updateBalance(balance){
+        // debugger
         this.setState({
-            balance: this.state.balance + balance
+            balance: this.state.balance + parseInt(balance)
         })
     }
 
@@ -43,9 +51,8 @@ class Dashboard extends React.Component {
         this.setState({selectedHeader: "payments"})
     }
 
-
     render() {
-        
+        // debugger
         let allUsers = this.props.users;
         if (Object.values(allUsers).length <= 1) return null
 
@@ -146,7 +153,7 @@ class Dashboard extends React.Component {
                             </div>
 
                             <div className="pals-container">
-                                <h3 className="pals-header">Your Pals</h3>
+                                <h3 className="pals-header">Send Again</h3>
                                 <ul className="pals-list">
                                     <button id="pals">A B</button>
                                     <button id="pals">C D</button>

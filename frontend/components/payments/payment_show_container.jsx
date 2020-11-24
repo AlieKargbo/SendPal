@@ -3,10 +3,11 @@ import PaymentShow from './payment_show';
 import { fetchPayment } from '../../actions/payment_actions';
 
 const mapSTP = (state, ownProps) => {
+    let payment = state.entities.payments[(parseInt(ownProps.match.params.paymentId))]
     return ({
-        payment: state.entities.payments,
-        payer: state.entities.users[state.entities.payments.payer_id],
-        payee: state.entities.users[state.entities.payments.payee_id]
+        payment: payment,
+        payer: state.entities.users[payment.payer_id],
+        payee: state.entities.users[payment.payee_id]
         // payment: state.entities.payments[ownProps.match.params.paymentId],
     })
 }

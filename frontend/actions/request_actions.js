@@ -45,8 +45,9 @@ export const fetchRequest = (requestId) => {
 export const createRequest = (requestId) => {
     return (dispatch) => {
         return RequestApiUtil.createRequest(requestId).then((payload) => {
-            dispatch(receiveRequest(payload))
-        }).fail((resp) => console.log(resp));
+            return dispatch(receiveRequest(payload))
+        })
+        // .fail((resp) => console.log(resp));
     };
 };
 

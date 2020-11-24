@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchContainer from "../search/search_container";
 
 class RequestForm extends React.Component {
     constructor(props){
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleChange = this.handleChange.bind(this);
         this.state = {
             email: '',
             payment: ''
         };
+        this.updateEmail = this.updateEmail.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount(){
@@ -20,10 +22,15 @@ class RequestForm extends React.Component {
         return (e) => this.setState({ [field]: e.currentTarget.value })
     }
 
+    updateEmail(email) {
+        this.setState({
+            email: email
+        })
+    }
+
     handleSubmit(email) {
         event.preventDefault();
-        // if formtype === "create"
-        // debugger
+
         this.props.allUsers.map((user) => {
             if (user.email === email) {
                 this.userId = user.id
@@ -36,7 +43,9 @@ class RequestForm extends React.Component {
                 note: this.state.note,
                 requestor_id: this.props.currentUser.id,
                 requestee_id: this.userId
-            }).then(() => this.props.history.push(`/req_confirmation/${this.props.request.id}`))
+            })
+            .then((res) => {
+                this.props.history.push(`/req_confirmation/${res.payload.request.id}`)})
         } else { 
             return "errors" // create error props
         }
@@ -50,12 +59,8 @@ class RequestForm extends React.Component {
     // }
 
     render(){
-        let users = this.props.allUsers;
-        let options = users.map((user) =>
-            <option key={user.email}>{user.email}</option>)
-        // debugger
-        return (
-            
+
+        return (            
             <div className="form-content">
                 <div className="form-container">
                     <div className="form-box">
@@ -64,12 +69,9 @@ class RequestForm extends React.Component {
                                 <div className="form-header">
                                     <img src={window.test_user} alt="" />
                                 </div>
-                                <select className="form-email"
-                                    // type="email"
-                                    placeholder="Email"
-                                    onChange={this.update('email')}>
-                                    {options}
-                                </select>
+                                <SearchContainer
+                                    updateEmail={this.updateEmail}
+                                />
                                 <input className="form-amount"
                                     type="text"
                                     // pattern="[0-9]*" 
@@ -78,11 +80,16 @@ class RequestForm extends React.Component {
                                     // onChange={this.handleChange}
                                     // value={this.state.value}
                                 />
-                                <input className="note-box"
+                                <input className="note-box-request"
                                     type="text"
                                     placeholder="Add a note"
                                     onChange={this.update('note')}
                                 />
+                                <div className="form-message-container">
+                                    <div className="message">
+                                        Are you sure you want REQUEST payment? There are no take-backs!
+                                    </div>
+                                </div>
                                 <div className="request-button">
                                     <input
                                         type="submit"
@@ -95,11 +102,6 @@ class RequestForm extends React.Component {
                             <div className="cancel-link">
                                 <Link className="cancel-text" to="/myaccount">Cancel</Link>
                             </div>
-                        </div>
-                    </div>
-                    <div className="form-message-container">
-                        <div className="message">
-                            Are you sure you want REQUEST payment? There are no take-backs!
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchContainer from "../search/search_container";
 
 class PaymentForm extends React.Component {
     constructor(props){
@@ -11,14 +12,20 @@ class PaymentForm extends React.Component {
             email: '',
             payment: ''
         };
+        this.updateEmail = this.updateEmail.bind(this);
     };
 
     componentDidMount(){
         this.props.fetchUsers();
     };
 
+    update(field) {
+        return (e) => this.setState({ [field]: (e.currentTarget.value) })
+    }
+
     handleSubmit(email) {
         event.preventDefault();
+
         this.props.allUsers.map((user) => {
             if(user.email === email){
                 this.userId = user.id 
@@ -32,17 +39,18 @@ class PaymentForm extends React.Component {
                     payee_id: this.userId
                 })
                 .then((res) => {
-                    this.props.history.push(`/confirmation/${this.props.payment.id}`)})                
+                    this.props.history.push(`/confirmation/${res.payload.payment.id}`)})                
                     // .then(() => this.props.history.push("/myaccount"))
         } else {
             return "errors"
         }
     };
-
-    update(field) {
-        return (e) => this.setState({ [field]: (e.currentTarget.value) })
-    }
     
+    updateEmail(email) {
+        this.setState({
+            email: email
+        })
+    }
     // handleChange(e) {
         // const re = /[0-9.]+/g;
         // if (e.target.value === '' || re.test(e.target.value)) {
@@ -68,12 +76,10 @@ class PaymentForm extends React.Component {
                                 <div className="form-header">
                                     <img src={window.test_user} alt=""/>
                                 </div>
-                                <select className="form-email"
-                                    // type="email"
-                                    placeholder="Email"
-                                    onChange={this.update('email')}>
-                                    {options} 
-                                </select>
+                                <div>
+                                    <SearchContainer
+                                    updateEmail={this.updateEmail}/>
+                                </div>
                                 {/* <input className="form-email"
                                     type="email" 
                                     placeholder="email"
@@ -90,11 +96,16 @@ class PaymentForm extends React.Component {
                                     // onChange={this.handleChange}
                                     // value={this.state.amount}
                                     />
-                                <input className="note-box"
+                                <input className="note-box-pay"
                                     type="text" 
                                     placeholder="Add a note"
                                     onChange={this.update('note')}
                                     />
+                                <div className="form-message-container">
+                                    <div className="message">
+                                        Are you sure you want to SEND this payment? There are no take-backs!
+                                    </div>
+                                </div>
                                 <div className="form-button">
                                     <input
                                         type="submit"
@@ -107,11 +118,6 @@ class PaymentForm extends React.Component {
                             <div className="cancel-link">
                                 <Link className="cancel-text" to="/myaccount">Cancel</Link>
                             </div>
-                        </div>
-                    </div>
-                    <div className="form-message-container">
-                        <div className="message">
-                            Are you sure you want to SEND this payment? There are no take-backs!
                         </div>
                     </div>
                 </div>
