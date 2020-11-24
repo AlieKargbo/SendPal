@@ -15,7 +15,6 @@ class EditRequestForm extends React.Component {
     }
     
     // componentDidMount(){
-    //     debugger
     //     this.props.fetchRequest(this.props.requestId);
     // }
 
@@ -24,7 +23,6 @@ class EditRequestForm extends React.Component {
     }
 
     handleSubmit() {
-        // debugger
         event.preventDefault();
         // this.props.currentUser // {id: 9, email: "LisaREALG@noblecheetah.io", balance: 1006}
         if (Number(this.state.amount) >= 0) {
@@ -41,10 +39,8 @@ class EditRequestForm extends React.Component {
 
     render() {
         // const { formType, request, updateRequest } = this.props;
-        // debugger
         // const request = this.props.requests;
         // if (!request) return null;
-        // debugger
         return (
             <div className="edit-request-container" >
                 <div className="edit-request-wrapper">

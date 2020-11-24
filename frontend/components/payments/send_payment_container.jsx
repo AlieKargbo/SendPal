@@ -4,7 +4,6 @@ import { createPayment, fetchAllPayments } from "../../actions/payment_actions";
 import { fetchUser, fetchAllUsers } from "../../actions/user_actions"
 
 const mapSTP = (state, ownProps) => {
-    // debugger
     return ({
         currentUser: state.entities.users[state.session.id],
         allUsers: Object.values(state.entities.users),

@@ -7,7 +7,6 @@ import { login, logout, signup } from "../../actions/session_actions";
 import { openModal } from "../../actions/modal_action";
 
 const mapSTP = (state, ownProps) => {
-    // debugger
     return ({
         authPath: (ownProps.location.pathname === "/login") || (ownProps.location.pathname === "/signup"),
         path: ownProps.location.pathname === "/",

@@ -9,7 +9,6 @@ class Api::PaymentsController < ApplicationController
         @payment = Payment.new(payment_params)
         payer = User.find_by(id: params[:payment][:payer_id])
         payee = User.find_by(id: params[:payment][:payee_id])
-        # debugger
         if @payment.save
             # current_user.balance = (@payer.balance - @payment.amount)
             # User.find_by(id: @payee.id).increase_payee_balance(@payment.amount)

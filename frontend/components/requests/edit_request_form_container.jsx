@@ -4,7 +4,6 @@ import { fetchRequest, updateRequest } from "../../actions/request_actions";
 import { closeModal } from '../../actions/modal_action';
 
 const mapSTP = (state, ownProps) => {
-    // debugger
     let request = state.entities.requests[state.ui.modal.id];
     let requestee = state.entities.users[state.entities.requests[state.ui.modal.id].requestee_id]
     return ({

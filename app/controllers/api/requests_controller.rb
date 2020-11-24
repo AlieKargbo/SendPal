@@ -10,7 +10,6 @@ class Api::RequestsController < ApplicationController
         requestor = User.find_by(id: params[:request][:requestor_id])
         requestee = User.find_by(id: params[:request][:requestee_id])
         
-        # debugger
         if @request.save
             requestor.update_attributes(balance: requestor.balance + @request.amount)
             requestee.update_attributes(balance: requestee.balance - @request.amount)
@@ -24,13 +23,11 @@ class Api::RequestsController < ApplicationController
     end
 
     def edit 
-        # debugger
         @request = Request.find(params[:id])
         render :show
     end
 
     def update
-        # debugger
         
         @request = Request.find(params[:id])
         if @request.update(request_params)
