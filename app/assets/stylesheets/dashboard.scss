@@ -108,6 +108,8 @@
 }
 
 #transaction-Btn{
+    // outline: none;
+    box-shadow: 2px 2px 5px 1px #44429d52;
     background-color: #005ea6;
     height: 48px;
     width: 48px;
@@ -161,6 +163,11 @@
     justify-content: space-evenly;
 }
 
+.pals-list > button {
+    outline: none;
+    box-shadow: 2px 2px 5px 1px #44429d52;
+}
+
 #pals {
     color: white;
     font-weight: bold;
@@ -187,7 +194,7 @@
 .activities-header, #activities-separator{
     text-align: left;
     padding-bottom: 4px;
-    margin: 20px 5px;
+    margin: 20px 3px;
     font-size: 18px;
     font-weight: 800;
     color: #0070ba;
