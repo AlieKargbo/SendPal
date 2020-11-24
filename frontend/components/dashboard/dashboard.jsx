@@ -147,10 +147,7 @@ class Dashboard extends React.Component {
                                 </ul>
                             </div>
 
-<<<<<<< HEAD
                             {/* <div className="pals-container"> */}
-=======
->>>>>>> ba0e31e... ???
                             {/* <div className="pals-container">
                                 <h3 className="pals-header">Send Again</h3>
                                 <ul className="pals-list">
