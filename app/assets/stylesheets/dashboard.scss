@@ -222,6 +222,36 @@
     flex-direction: column-reverse;
 }
 
+.request-list-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.request-list-body > button {
+    border: 1px solid #0070ba;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-size: 11px;
+    height: 20px;
+    text-decoration: none;
+    background-color: transparent;
+    color: #0070ba;
+    cursor: pointer;
+    &:active {
+        text-decoration: underline;
+    }
+    &:focus{
+        outline: 0;
+    }
+    &:hover {
+        border: 1.5px solid red;
+        font-weight: bold;
+        color: red;
+        background-color: white;
+        transition: background-color .4s ease-out;
+  }
+}
+
 .payment-list-items, .request-list-items{
     padding: 6px 0 4px 25px;
     border-bottom: 1px solid grey;

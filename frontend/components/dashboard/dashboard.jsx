@@ -23,13 +23,6 @@ class Dashboard extends React.Component {
         this.props.fetchPayments(this.props.user.id);
         this.props.fetchRequests(this.props.user.id);
     }
-    
-    // componentDidUpdate(prevProps) {
-    //     debugger
-    //     if (prevProps.location.state === "/confirmation/") {
-    //         this.props.history.push("/myaccount")
-    //     }
-    // }
 
     updateBalance(balance){
         // debugger
@@ -77,6 +70,7 @@ class Dashboard extends React.Component {
             activityList = this.props.requests.map(
                 (request, idx) => {
                     return (
+                    <>
                         <li 
                             onClick={() => this.props.openModal('request', request.id, this.updateBalance)}
                             key={idx} 
@@ -85,9 +79,15 @@ class Dashboard extends React.Component {
                                 <div className="request-user">{allUsers[request.requestee_id].email}</div>
                                 <div className="request-amount">+ ${request.amount}</div>
                             </div>
-                            <div className="request-date">{request.date}</div>
-                            <div className="request-note">"{request.note}"</div>
+                            <div className="request-list-body">
+                                <div className="request-body-items">
+                                    <div className="request-date">{request.date}</div>
+                                    <div className="request-note">"{request.note}"</div>
+                                </div>
+                            </div>
                         </li>
+                        {/* <button>Delete Request</button> */}
+                    </>
                     )
                 }
             )
@@ -147,7 +147,7 @@ class Dashboard extends React.Component {
                                 </ul>
                             </div>
 
-                            <div className="pals-container">
+                            {/* <div className="pals-container">
                                 <h3 className="pals-header">Send Again</h3>
                                 <ul className="pals-list">
                                     <button id="pals">A B</button>
@@ -155,7 +155,7 @@ class Dashboard extends React.Component {
                                     <button id="pals">E F</button>
                                     <button id="pals">G H</button>
                                 </ul>
-                            </div>
+                            </div> */}
 
                             <div className="activities-container">
                                 <div className="toggle-activity">
