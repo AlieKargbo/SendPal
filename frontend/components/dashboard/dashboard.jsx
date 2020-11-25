@@ -147,7 +147,7 @@ class Dashboard extends React.Component {
                                 </ul>
                             </div>
 
-                            <div className="pals-container">
+                            {/* <div className="pals-container">
                                 <h3 className="pals-header">Send Again</h3>
                                 <ul className="pals-list">
                                     <div className="pals-details">
@@ -167,7 +167,7 @@ class Dashboard extends React.Component {
                                         <p>icecube</p>
                                     </div>
                                 </ul>
-                            </div>
+                            </div> */}
 
                             <div className="activities-container">
                                 <div className="toggle-activity">
