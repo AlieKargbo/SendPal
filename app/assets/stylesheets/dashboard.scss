@@ -163,9 +163,14 @@
     justify-content: space-evenly;
 }
 
-.pals-list > button {
+.pals-details > button {
     outline: none;
     box-shadow: 2px 2px 5px 1px #44429d52;
+}
+
+.pals-details > p {
+    margin-top: 5px;
+    font-size: 12px;
 }
 
 #pals {
@@ -184,6 +189,7 @@
     display: flex;
     flex-direction: column;
     padding: 0 50px;
+    height: 390px;
 }
 
 .toggle-activity{

@@ -147,15 +147,27 @@ class Dashboard extends React.Component {
                                 </ul>
                             </div>
 
-                            {/* <div className="pals-container">
+                            <div className="pals-container">
                                 <h3 className="pals-header">Send Again</h3>
                                 <ul className="pals-list">
-                                    <button id="pals">A B</button>
-                                    <button id="pals">C D</button>
-                                    <button id="pals">E F</button>
-                                    <button id="pals">G H</button>
+                                    <div className="pals-details">
+                                        <button id="pals">V W</button>
+                                        <p>venuswilliams</p>
+                                    </div>
+                                    <div className="pals-details">
+                                        <button id="pals">M J</button>
+                                        <p>michaeljordan</p>
+                                    </div>
+                                    <div className="pals-details">
+                                        <button id="pals">L J</button>
+                                        <p>lebronjames</p>
+                                    </div>
+                                    <div className="pals-details">
+                                        <button id="pals">I C</button>
+                                        <p>icecube</p>
+                                    </div>
                                 </ul>
-                            </div> */}
+                            </div>
 
                             <div className="activities-container">
                                 <div className="toggle-activity">

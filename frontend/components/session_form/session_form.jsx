@@ -77,18 +77,18 @@ class SessionForm extends React.Component{
         
         const otherButton = (this.props.formType === "login") ? (
             <Link to="/signup" >
-                Sign Up
+                signup
             </Link >
         ) : (
             <Link to="/login" >
-                Log In
+                login
             </Link >    
         );
 
         const toggleText = (this.props.formType === "login") ? (
-            "Log In"
+            "login"
         ) : (
-            "Sign Up"
+            "signup"
         );
 
         let errors = this.props.errors.map((error, idx) => {
